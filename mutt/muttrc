@@ -22,4 +22,8 @@ set imap_keepalive = 300
 # how often to check for new mail (time in seconds)
 set mail_check = 120
 
+# enable threading by default
+set sort=threads
+set sort_aux=date
+
 source ~/.mutt/mutt-colors-solarized/mutt-colors-solarized-dark-16.muttrc

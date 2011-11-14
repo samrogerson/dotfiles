@@ -1,0 +1,10 @@
+# turn off annoying message about screen
+startup_message off
+
+# Window list at the bottom.
+hardstatus alwayslastline
+hardstatus string "%-w%{= BW}%50>%n %t%{-}%+w%<"
+
+# Don't block command output if the terminal stops responding
+# (like if the ssh connection times out for example).
+nonblock on

@@ -1,0 +1,7 @@
+[user]
+    email = samr@cern.ch
+    name = Sam Rogerson
+[color]
+    diff = auto
+    branch = auto
+    status = auto

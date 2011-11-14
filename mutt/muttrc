@@ -19,24 +19,5 @@ set imap_keepalive = 300
 
 # how often to check for new mail (time in seconds)
 set mail_check = 120
-# -*-muttrc-*-
 
-# Palette for use with the Linux console.  Black background.
-color hdrdefault blue black
-color quoted blue black
-color signature blue black
-color attachment red black
-color message brightred black
-color error brightred black
-color indicator black red
-color status brightgreen blue
-color tree white black
-color normal white black
-color markers red black
-color search white black
-color tilde brightmagenta black
-color index blue black ~F
-color index red black "~N|~O"
-
-# color body brightwhite black '\*+[^*]+\*+'
-# color body brightwhite black '_+[^_]+_+'
+source ~/.mutt/mutt-colors-solarized/mutt-colors-solarized-dark-16.muttrc

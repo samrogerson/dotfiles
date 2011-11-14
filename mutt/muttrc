@@ -8,6 +8,8 @@ mailboxes       = +INBOX
 set sendmail="/usr/bin/msmtp"
 set from=samr@cern.ch
 
+set record="~/mail/sent"
+
 # store message headers locally to speed things up
 set header_cache = ~/.mutt/hcache
 

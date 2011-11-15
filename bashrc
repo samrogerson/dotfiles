@@ -9,7 +9,7 @@ if [ -f ~/.bash_colors ]; then
     source ~/.bash_colors
 fi
 
-if [ -f ~/.dircolors ]; then
+if [ -f ~/.dir_colors ]; then
     eval `dircolors .dir_colors`
 fi
 

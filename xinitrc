@@ -11,6 +11,9 @@
 #  unset f
 #fi
 
+xrdb -merge .Xdefaults
+setxkbmap gb
+
 # add the fonts we needs (like terminus :) )
 xset +fp /usr/share/fonts/TTF/
 xset +fp /usr/share/fonts/local/

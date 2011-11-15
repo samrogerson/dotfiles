@@ -4,6 +4,10 @@
 #
 # Executed by startx (run your window manager from here)
 
+# for xfce this is necessary because /etc/xdg/xfce4/xinitrc:114 -nocpp option,
+# remove this fixes it
+xrdb -merge ~/.Xdefaults
+
 # set out keyboard to match being the uk
 setxkbmap gb
 
@@ -15,5 +19,3 @@ xset fp rehash
 xset m 0 0
 
 exec ck-launch-session startxfce4
-
-xrdb -merge .Xdefaults

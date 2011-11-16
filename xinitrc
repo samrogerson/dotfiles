@@ -8,11 +8,23 @@
 # remove this fixes it
 xrdb -merge ~/.Xdefaults
 
+# hide out mouse when not in use
+unclutter &
+
 # start urxvt daemon
 urxvtd -q -f -o &
 
 # set out keyboard to match being the uk
 setxkbmap gb
+
+# turn off pc speaker
+xset -b
+
+# D-Bus
+dbuslaunch="`which dbus-launch 2>/dev/null`"
+if [ -n "$dbuslaunch" ] && [ -x "$dbuslaunch" ] && [ -z "$DBUS_SESSION_BUS_ADDRESS" ]; then
+  eval `$dbuslaunch --sh-syntax --exit-with-session`
+fi
 
 # add the fonts we needs (like terminus :) )
 xset +fp /usr/share/fonts/TTF/
@@ -21,4 +33,5 @@ xset fp rehash
 # stop the mouse being retarded
 xset m 0 0
 
-exec ck-launch-session startxfce4
+#exec ck-launch-session startxfce4
+exec xmonad

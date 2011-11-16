@@ -8,6 +8,9 @@
 # remove this fixes it
 xrdb -merge ~/.Xdefaults
 
+# start urxvt daemon
+urxvtd -q -f -o &
+
 # set out keyboard to match being the uk
 setxkbmap gb
 

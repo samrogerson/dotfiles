@@ -10,7 +10,7 @@ if [ -f ~/.bash_colors ]; then
 fi
 
 if [ -f ~/.dir_colors ]; then
-    eval `dircolors .dir_colors`
+    eval `dircolors  ~/.dir_colors`
 fi
 
 if [ -f ~/.bash_aliases ]; then

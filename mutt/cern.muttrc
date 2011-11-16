@@ -1,0 +1,8 @@
+set from      = "samr@cern.ch"
+set sendmail  = "/usr/bin/msmtp -a cern"
+set postponed = "+CERN/Drafts"
+# dont save plain text
+unset record
+
+macro index E "<change-folder>+CERN/Archives<enter><limit>~B " "search everything"
+macro index D "<save-message>+CERN/Deleted Items<enter>"              "move message to the trash"

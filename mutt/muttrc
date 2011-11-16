@@ -1,30 +1,117 @@
-set folder=imaps://imap.cern.ch/
-set imap_user=samr@cern.ch
-set imap_pass=
-set spoolfile   = +INBOX
-mailboxes       = +INBOX
+# directories and commands
+set alias_file = ~/.mutt/alias
+set header_cache = ~/.mutt/cache/headers
+set message_cachedir = ~/.mutt/cache/bodies
+set certificate_file = ~/.mutt/certificates
+set mailcap_path = ~/.mutt/mailcap
+set signature = ~/.mutt/sig
+set tmpdir = ~/.mutt/temp
+set editor = "/usr/bin/vim"
 
-# use msmtp to send
-set sendmail="/usr/bin/msmtp"
-set from=samr@cern.ch
+# main options
+set mbox_type = Maildir
+set folder=~/Mail/
+set spoolfile = "+CERN/INBOX"
+set timeout = 3
+set mail_check = 0
+set sort_alias = alias
+set reverse_alias
+# STOP ASKING ME THINGS
+set delete
+unset confirmappend
+set quit
 
-set record="~/Mail/sent"
-
-# store message headers locally to speed things up
-set header_cache = ~/.mutt/hcache
-
-# allow mutt to open new imap connection automatically
-unset imap_passive
-
-# keep imap connection alive by polling intermittently (time in seconds)
-set imap_keepalive = 300
-
-# how often to check for new mail (time in seconds)
-set mail_check = 120
+unset mark_old
+set pipe_decode
+set thorough_search
 
 # enable threading by default
 set sort=threads
-set sort_aux=date
+set sort_aux=reverse-last-date-received
+set uncollapse_jump
+set sort_re
+set reply_regexp = "^(([Rr][Ee]?(\[[0-9]+\])?: *)?(\[[^]]+\] *)?)*"
 
-source ~/.mutt/mutt-colors-solarized/mutt-colors-solarized-dark-16.muttrc
+# pager options
+set pager_index_lines   = 10
+set pager_context       = 5
+set pager_stop
+set menu_scroll
+set smart_wrap
+set tilde
+unset markers
+auto_view text/html
+alternative_order text/plain text/enriched text/html
+set quote_regexp        = "^( {0,4}[>|:#%]| {0,4}[a-z0-9]+[>|]+)+"
+
+# formats
+set date_format         = "%d/%m/%y at %I:%M%P"
+set index_format        = "%3C [%Z] %D %-15.15F %s"
+set alias_format        = "%4n %t %-20a  %r"
+
+# composing mail
+set realname            = "Samuel Rogerson"
+set envelope_from
+set sig_dashes
+set edit_headers
+set fast_reply
+set sendmail_wait       = -1
+set askcc
+set fcc_attach
+unset mime_forward
+set forward_format      = "Fwd: %s"
+set forward_decode
+set attribution         = "On %d, %n wrote:"
+set reply_to
+set reverse_name
+set include
+set forward_quote
+
+# headers
+ignore *
+unignore from: to: cc: date: subject:
+hdr_order from: to: cc: date: subject:
+
+# get my offlineimap mailboxes
 source ~/.mutt/mailboxes
+
+# source my settings
+source $alias_file
+source ~/.mutt/colors.muttrc
+source ~/.mutt/cern.muttrc
+
+# in case i want multiple accoutns
+folder-hook CERN/* source ~/.mutt/cern.muttrc
+
+# headaches - turn them off
+bind index,pager \#    noop
+bind index i           noop
+
+
+# some sensible bindings
+bind pager i           exit
+bind pager /           search
+bind pager <up>        previous-line
+bind pager <down>      next-line
+bind pager k           previous-line
+bind pager j           next-line
+bind pager gg          top
+bind pager G           bottom
+bind index gg          first-entry
+bind index G           last-entry
+bind pager K           previous-undeleted
+bind pager J           next-undeleted
+bind index K           previous-unread
+bind index J           next-unread
+bind index,pager R     group-reply
+
+# macros
+macro index \Cr "<tag-prefix><clear-flag>N" "mark tagged messages as read"
+macro index B   "<limit>~b "                "search message bodies"
+macro index I   "<change-folder>!<enter>"   "go to Inbox"
+
+# save a decoded copy in ~
+macro index P   "<pipe-message>cat > ~/"    "save message as"
+
+# quick-sync ~/Mail immediately with offlineimap
+macro index Z   "<shell-escape>/usr/bin/offlineimap -q -o<enter>" "sync IMAP"

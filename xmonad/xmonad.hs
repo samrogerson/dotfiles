@@ -165,6 +165,7 @@ myLayout        =   avoidStruts $
 ------------------------------------------------------------------------
 myKeys          = myKeymap myConfig
 myKeymap conf   = [ ("S-M-c",               killAll                 )
+                  , ("M-c",                 kill                    )
                   , ("M-<Right>",           moveTo Next NonEmptyWS  )
                   , ("M-<Left>",            moveTo Prev NonEmptyWS  )
                   , ("M4-b",                spawn myBrowser         )

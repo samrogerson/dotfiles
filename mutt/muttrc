@@ -8,7 +8,7 @@ mailboxes       = +INBOX
 set sendmail="/usr/bin/msmtp"
 set from=samr@cern.ch
 
-set record="~/mail/sent"
+set record="~/Mail/sent"
 
 # store message headers locally to speed things up
 set header_cache = ~/.mutt/hcache
@@ -27,3 +27,4 @@ set sort=threads
 set sort_aux=date
 
 source ~/.mutt/mutt-colors-solarized/mutt-colors-solarized-dark-16.muttrc
+source ~/.mutt/mailboxes

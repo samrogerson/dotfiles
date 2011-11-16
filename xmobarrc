@@ -1,0 +1,17 @@
+Config  { font     = "xft:terminus:style=bold:pixelsize=12"
+        , bgColor       = "#073642"
+        , fgColor       = "#657b83"
+        , position      = Bottom
+        , lowerOnStart  = True
+        , commands      = [ Run Date "%a %b %_d %Y %H:%M:%S" "theDate" 10
+                          , Run StdinReader
+                          , Run Com "~/bin/report-batt" [] "mybatt" 100
+                          , Run Com "~/bin/report-temp" [] "mytemp" 100
+                          , Run Cpu ["-L","50","-H","80","--normal","yellow","--high","red"] 25
+                          , Run CpuFreq ["-t", "Freq:<cpu0>", "-L", "0", "-H", "2", "-l", "#6c71c4", "-n","#6c71c4", "-h", "#719e07"] 25
+                          , Run Swap ["-L","50","-H","80","--normal","yellow","--high","red"] 25
+                          , Run Wireless "wlan0" ["-t","<quality> <essid>"] 10
+                          ]
+        , sepChar       = "%"
+        , alignSep      = "}{"
+        , template      = " %StdinReader% }{ <fc=#2aa198>%wlan0wi%</fc> <fc=#93a1a1>%mybatt%</fc> <fc=#6c71c4>%cpu% %cpufreq% %mytemp% C %swap%</fc> <fc=#268bd2>%theDate%</fc> " }

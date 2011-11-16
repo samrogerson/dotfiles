@@ -1,0 +1,28 @@
+#!/bin/sh
+set -efu
+
+io=
+while getopts n:c:p: f; do
+    case $f in
+    n) NICE="$OPTARG";;
+    c) IONICE_CLASS="$OPTARG"; io=1;;
+    p) IONICE_PRIORITY="$OPTARG"; io=1;;
+    *) exit 2;;
+    esac
+done
+shift $((OPTIND - 1))
+cmd=$*
+
+if ! pgrep -u "$UID" -xf -- "$cmd" >/dev/null 2>&1; then
+    if [ -n "$io" ] && type ionice >/dev/null 2>&1; then
+        [ -n "$IONICE_PRIORITY" ] && cmd="-n $IONICE_PRIORITY $cmd"
+        [ -n "$IONICE_CLASS" ]    && cmd="-c $IONICE_CLASS $cmd"
+        cmd="/usr/bin/ionice $cmd"
+    fi
+
+    if type nice >/dev/null 2>&1; then
+	[ -n "$NICE" ] && cmd="/usr/bin/nice -n $NICE $cmd"
+    fi
+
+    exec $cmd
+fi

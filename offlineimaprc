@@ -1,6 +1,11 @@
 # Sample minimal config file.  Copy this to ~/.offlineimaprc and edit to
 # suit to get started fast.
 
+
+# crontab line below
+# */5 * * * * exec /home/hyper/bin/start_daemon -n19 -c2 -p7 python2 /usr/bin/offlineimap -u quiet
+
+
 [general]
 metadata = ~/.offlineimap
 accounts = CERN
@@ -30,7 +35,7 @@ ssl = yes
 # remoteport = 993
 remotehost = smtp.cern.ch
 remoteuser = samr
-remotepass = CUDDLES
+remotepass = wtH1g0wL2d
 keepalive = 60
 subscribedonly = no
 readonly = False

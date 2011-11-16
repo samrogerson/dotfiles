@@ -30,6 +30,7 @@ ssl = yes
 # remoteport = 993
 remotehost = smtp.cern.ch
 remoteuser = samr
+remotepass = CUDDLES
 keepalive = 60
 subscribedonly = no
 readonly = False
@@ -41,3 +42,5 @@ header = "mailboxes "
 peritem = "+%(accountname)s/%(foldername)s"
 sep = " "
 footer = "\n"
+
+# vim: ft=cfg tw=0

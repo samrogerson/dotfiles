@@ -60,6 +60,7 @@ toggleStrutsKey XConfig {XMonad.modMask = modMask} = (modMask, xK_b)
 ------------------------------------------------------------------------
 myTerminal      = "urxvtc"
 myBrowser       = "chromium"
+myMailClient    = "urxvtc -e mutt"
 
 -- | Whether focus follows the mouse pointer.
 myFocusFollowsMouse :: Bool
@@ -132,10 +133,12 @@ myManageHook =  composeAll . concat $
      , [className =? c --> moveTo "3:docs" | c <- docApps   ]
      , [className =? c --> moveTo "8:chat" | c <- chatApps  ]
      , [className =? c --> moveTo "9:mail" | c <- mailApps  ]
+     , [name =? "mutt" --> moveTo "9:mail" ]
      , [isFullscreen   --> doFullFloat ]
      ]
      where moveTo = doF . W.shift
            role = stringProperty "WM_WINDOW_ROLE"
+           name = stringProperty "WM_NAME"
 
 -- Workspaces
 ------------------------------------------------------------------------
@@ -169,6 +172,7 @@ myKeymap conf   = [ ("S-M-c",               killAll                 )
                   , ("M-<Right>",           moveTo Next NonEmptyWS  )
                   , ("M-<Left>",            moveTo Prev NonEmptyWS  )
                   , ("M4-b",                spawn myBrowser         )
+                  , ("M4-m",                spawn myMailClient      )
                   , ("M4-x",                goToSelected myGSConfig )
                   , ("M3",                spawn myBrowser           ) ]
 

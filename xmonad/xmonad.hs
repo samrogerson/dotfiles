@@ -1,6 +1,4 @@
 import XMonad
---- Configs
-import XMonad.Config.Xfce
 --- Hooks
 import XMonad.Hooks.ManageDocks
 import XMonad.Hooks.ManageHelpers
@@ -21,6 +19,7 @@ import System.Environment
 import System.IO
 --- Utils
 import XMonad.Util.EZConfig
+import XMonad.Util.Dmenu
 --- Data
 import Data.Ratio ((%))
 --- aliases
@@ -78,11 +77,10 @@ myLayout = avoidStruts $ onWorkspace "8:chat" imLayout $
 
     skypeRoster     = (ClassName "Skype") `And` (Not (Title "Options")) `And` (Not (Role "Chats")) `And` (Not (Role "CallWindowForm"))
 
-main = do
-    xmonad $ xfceConfig
-     { 
+main = xmonad defaultConfig
+    { 
       terminal = "urxvt"
-     ,manageHook = manageHook xfceConfig <+> myManageHook
+     ,manageHook = manageHook defaultConfig <+> myManageHook
      ,workspaces = myWorkspaces 
      ,layoutHook = smartBorders (myLayout) 
     }

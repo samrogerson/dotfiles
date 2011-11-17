@@ -20,8 +20,6 @@ fi
 export LC_ALL="C"
 export PS1="\[$BICyan\][ \[$Cyan\]\u@\h \[$IWhite\]\W \[$BICyan\]]\[$Color_Off\] "
 
-alias ls='ls --color=auto'
-
 #set a decent size
 HISTSIZE=100000
 #ignore duplicate consecuetive lines
@@ -30,3 +28,9 @@ export HISTCONTROL=$HISTCONTROL${HISTCONTROL+,}ignoredups
 export HISTCONTROL=erasedups
 #append to the bash_history file on exit, rather than over-writing
 shopt -s histappend 
+
+if [[ "$HOSTNAME" == *hep.ph.ic.ac.uk ]]; then
+   export PS1="\[$BIBlack$On_White\][ \[$Black$On_White\]\u@\h \[$IBlack$On_White\]\W \[$BIBlack$On_White\]]\[$Color_Off\] "
+   export PYTHONPATH=$HOME/local/lib64/python2.4/site-packages:$PYTHONPATH
+fi
+

@@ -6,7 +6,7 @@ set certificate_file = ~/.mutt/certificates
 set mailcap_path = ~/.mutt/mailcap
 set signature = ~/.mutt/sig
 set tmpdir = ~/.mutt/temp
-set editor = "/usr/bin/vim"
+set editor = "/usr/bin/vim +/^$"
 
 # main options
 set mbox_type = Maildir

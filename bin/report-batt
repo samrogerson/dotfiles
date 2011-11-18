@@ -42,6 +42,9 @@ battery_info $battery
     fi
 done
 
+WATTS=`echo "($TOTAL_PWRDRAW/100000)" | bc`
+WATTS=`printf "%.*f" 1 $WATTS`
+
 CHARGE_REMAINING=`echo "scale=2; ($TOTAL_PWRNOW/$TOTAL_PWRMAX)*100" | bc`
 CHARGE_REMAINING=${CHARGE_REMAINING/.*}
 TIME_REMAINING=`echo "scale=2;($TOTAL_PWRNOW/$TOTAL_PWRDRAW)*60" | bc`
@@ -67,5 +70,5 @@ else
     BATT_COLOR="#dc322f"
 fi
 
-echo "<fc=$BATT_COLOR>$POWERMODE $AC_PREFIX$CHARGE_REMAINING%$BATT_TIME </fc>"
+echo "<fc=$BATT_COLOR>$POWERMODE $AC_PREFIX$CHARGE_REMAINING%$BATT_TIME $WATTS W </fc>"
 

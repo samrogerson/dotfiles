@@ -60,7 +60,9 @@ toggleStrutsKey XConfig {XMonad.modMask = modMask} = (modMask, xK_b)
 ------------------------------------------------------------------------
 myTerminal      = "urxvtc"
 myBrowser       = "firefox"
+myAltBrowser    = "chromium"
 myMailClient    = "urxvtc -e mutt"
+myVolume        = "urxvtc -e alsamixer"
 
 -- | Whether focus follows the mouse pointer.
 myFocusFollowsMouse :: Bool
@@ -172,7 +174,9 @@ myKeymap conf   = [ ("S-M-c",               killAll                 )
                   , ("M-<Right>",           moveTo Next NonEmptyWS  )
                   , ("M-<Left>",            moveTo Prev NonEmptyWS  )
                   , ("M4-b",                spawn myBrowser         )
+                  , ("S-M4-b",              spawn myAltBrowser      )
                   , ("M4-m",                spawn myMailClient      )
+                  , ("M4-v",                spawn myVolume          )
                   , ("M4-x",                goToSelected myGSConfig )
                   , ("M3",                spawn myBrowser           ) ]
 

@@ -59,7 +59,7 @@ toggleStrutsKey XConfig {XMonad.modMask = modMask} = (modMask, xK_b)
 --APPS
 ------------------------------------------------------------------------
 myTerminal      = "urxvtc"
-myBrowser       = "chromium"
+myBrowser       = "firefox"
 myMailClient    = "urxvtc -e mutt"
 
 -- | Whether focus follows the mouse pointer.
@@ -121,7 +121,7 @@ myGSConfig      = defaultGSConfig
 ------------------------------------------------------------------------
 myIgnores = ["Do"]
 myFloats  = ["Canvas", "Browser", "Xfrun4"]
-webApps   = ["Chromium"]
+webApps   = ["Chromium", "Firefox"]
 docApps   = ["Apvlv", "Zathura", "Evince"]
 chatApps  = ["Irssi", "Skype", "Pidgin"]
 mailApps  = ["Claws-mail", "Thunderbird"]

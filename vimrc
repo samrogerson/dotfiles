@@ -13,6 +13,7 @@ syntax on
 set t_Co=256
 colorscheme solarized
 set background=dark
+set hlsearch
 
 " define some useful insert mode shortcuts for C/C++ syntax.
 imap  #en  #endif    /*  */<Esc>2hi

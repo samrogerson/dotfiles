@@ -63,6 +63,7 @@ myBrowser       = "firefox"
 myAltBrowser    = "chromium"
 myMailClient    = "urxvtc -e mutt"
 myVolume        = "urxvtc -e alsamixer"
+myWifiManager   = "urxvtc -e wicd-curses"
 
 -- | Whether focus follows the mouse pointer.
 myFocusFollowsMouse :: Bool
@@ -177,6 +178,7 @@ myKeymap conf   = [ ("S-M-c",               killAll                 )
                   , ("S-M4-b",              spawn myAltBrowser      )
                   , ("M4-m",                spawn myMailClient      )
                   , ("M4-v",                spawn myVolume          )
+                  , ("M4-w",                spawn myWifiManager     )
                   , ("M4-x",                goToSelected myGSConfig )
                   , ("M3",                spawn myBrowser           ) ]
 

@@ -90,7 +90,7 @@ cyan            = "#2aa198"
 green           = "#719e07"
 
 myModMask       = mod1Mask
-myBorderWidth   = 1
+myBorderWidth   = 2
 myBorder        = base02
 myBorderFocus   = green
 myFontSize s    = "xft:terminus:style=bold:pixelsize=" ++ show s

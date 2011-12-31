@@ -8,8 +8,17 @@
 # remove this fixes it
 xrdb -merge ~/.Xdefaults
 
+# set mouse pointer
+xsetroot -cursor_name left_ptr
 # hide out mouse when not in use
 unclutter &
+
+# set background using feh
+if [[ -f ~/.fehbg ]]; then
+    sh ~/.fehbg &
+#else
+   # feh --bg-scale $BACKGROUND_IMAGE
+fi
 
 # start urxvt daemon
 urxvtd -q -f -o &

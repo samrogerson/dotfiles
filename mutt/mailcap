@@ -1,3 +1,5 @@
 # lol
 text/html; lynx -dump -assume_charset=%{charset} -display_charset=utf-8 %s; copiousoutput; nametemplate=%s.html
 application/pdf;zathura %s
+application/postscript;evince %s
+image/*;feh --scale-down %s

@@ -1,0 +1,51 @@
+# Sample minimal config file.  Copy this to ~/.offlineimaprc and edit to
+# suit to get started fast.
+
+
+# crontab line below
+# */5 * * * * exec /home/hyper/bin/start_daemon -n19 -c2 -p7 python2 /usr/bin/offlineimap -u quiet
+
+
+[general]
+metadata = ~/.offlineimap
+accounts = CERN
+maxsyncaccounts = 1
+# Basic         -- Noninteractive interface suitable for cron'ing
+# Blinkenlights -- A fancy (terminal) interface
+ui = Blinkenlights
+ignore-readonly = no
+
+[ui.Curses.Blinkenlights]
+# Character used to indicate thread status.
+statuschar = .
+
+[Account CERN]
+localrepository = cern-local
+remoterepository = cern-remote
+autorefresh = 5
+quick = 10
+
+[Repository cern-local]
+type = Maildir
+localfolders = ~/Mail/CERN
+
+[Repository cern-remote]
+type = IMAP
+ssl = yes
+# remoteport = 993
+remotehost = smtp.cern.ch
+remoteuser = samr
+remotepass = CUDDLES
+keepalive = 60
+subscribedonly = no
+readonly = False
+
+[mbnames]
+enabled = yes
+filename = ~/.mutt/mailboxes
+header = "mailboxes "
+peritem = "+%(accountname)s/%(foldername)s"
+sep = " "
+footer = "\n"
+
+# vim: ft=cfg tw=0

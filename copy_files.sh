@@ -15,5 +15,8 @@ for f in $( ls -1 ); do
         else
             echo $f is neither file nor directory, ignoring
         fi
+        if [[ $f == "msmtprc" ]]; then
+            chmod 0600 ~/.$f
+        done
     fi
 done

@@ -18,7 +18,7 @@ download_rate = 0
 upload_rate = 0
 
 # Default directory to save the downloaded torrents.
-directory = /home/hyper/rtor/
+directory = ~/rtor/
 
 # Default session directory. Make sure you don't run multiple instance
 # of rtorrent using the same session directory. Perhaps using a
@@ -27,7 +27,7 @@ session = ./session
 
 # Watch a directory for new torrents, and stop those that have been
 # deleted.
-schedule = watch_directory,5,5,load_start=/home/hyper/watch/*.torrent
+schedule = watch_directory,5,5,load_start=~/watch/*.torrent
 #schedule = untied_directory,5,5,stop_untied=
 
 # Close torrents when diskspace is low.

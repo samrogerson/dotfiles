@@ -14,5 +14,5 @@ fi
 
 x=`amixer get "$DEVICE_NAME" | \
     egrep "$EG_EXP" | \
-    awk -v step=$STEP_SIZE -F " " '{ print $3+step}' | \
+    awk -v step=$STEP_SIZE -F " " '{ x=$3+step; if (x<0) x= 0; print x}' | \
     xargs -0 amixer set "$DEVICE_NAME"`

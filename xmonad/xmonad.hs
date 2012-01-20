@@ -124,7 +124,7 @@ myGSConfig      = defaultGSConfig
 --MANAGEHOOK
 ------------------------------------------------------------------------
 myIgnores = ["Do"]
-myFloats  = ["Canvas", "Browser", "Xfrun4"]
+myFloats  = ["Canvas", "Browser", "Xfrun4", "Vlc"]
 webApps   = ["Chromium", "Firefox"]
 docApps   = ["Apvlv", "Zathura", "Evince"]
 chatApps  = ["Irssi", "Skype", "Pidgin"]

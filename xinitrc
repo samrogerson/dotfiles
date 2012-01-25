@@ -14,7 +14,9 @@ xsetroot -cursor_name left_ptr
 unclutter &
 
 # set background using feh
-if [[ -f ~/.fehbg ]]; then
+if [[ -f ~/.fehrndbkg.sh ]]; then   
+    sh ~/.fehrndbkg.sh & 
+elif [[ -f ~/.fehbg ]]; then
     sh ~/.fehbg &
 #else
    # feh --bg-scale $BACKGROUND_IMAGE

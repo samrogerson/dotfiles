@@ -1,11 +1,9 @@
 #! /bin/bash
 
-BACKGROUND_FOLDER="~/.wallpaper/"
-
 shopt -s nullglob
 #setopt NULL_GLOB #for zsh
  
-cd $BACKGROUND_FOLDER
+cd ~/.wallpaper/
 
 while true; do
     files=()

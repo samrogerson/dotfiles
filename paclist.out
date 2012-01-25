@@ -1,0 +1,139 @@
+[1;36m alsa-firmware[1;37m ALSA firmware package
+[1;36m alsa-plugins[1;37m Extra alsa plugins
+[1;36m alsa-utils[1;37m An alternative implementation of Linux sound support
+[1;36m aspell-en[1;37m English dictionary for aspell
+[1;36m automake[1;37m A GNU tool for automatically creating Makefiles
+[1;36m bash[1;37m The GNU Bourne Again shell
+[1;36m binutils[1;37m A set of programs to assemble and manipulate binary and object files
+[1;36m bzip2[1;37m A high-quality data compression program
+[1;36m chromium[1;37m The open-source project behind Google Chrome, an attempt at creating a safer, faster, and more stable browser
+[1;36m conky[1;37m Lightweight system monitor for X
+[1;36m coreutils[1;37m The basic file, shell and text manipulation utilities of the GNU operating system
+[1;36m cronie[1;37m Daemon that runs specified programs at scheduled times and related tools
+[1;36m cryptsetup[1;37m Userspace setup tool for transparent encryption of block devices using dm-crypt
+[1;36m cups[1;37m The CUPS Printing System - deamon package
+[1;36m cups-pdf[1;37m PDF printer for cups
+[1;36m device-mapper[1;37m Device mapper userspace library and tools
+[1;36m dhcpcd[1;37m RFC2131 compliant DHCP client daemon
+[1;36m diffutils[1;37m Utility programs used for creating patch files
+[1;36m dmenu[1;37m A generic menu for X
+[1;36m e2fsprogs[1;37m Ext2/3/4 filesystem utilities
+[1;36m exo[1;37m Extensions to Xfce by os-cillation
+[1;36m fakeroot[1;37m Gives a fake root environment, useful for building packages as a non-privileged user
+[1;36m feh[1;37m Fast and light imlib2-based image viewer
+[1;36m file[1;37m File type identification utility
+[1;36m filesystem[1;37m Base filesystem
+[1;36m findutils[1;37m GNU utilities to locate files
+[1;36m firefox[1;37m Standalone web browser from mozilla.org
+[1;36m flashplugin[1;37m Adobe Flash Player
+[1;36m foomatic-db[1;37m Foomatic - The collected knowledge about printers, drivers, and driver options in XML files, used by foomatic-db-engine to generate PPD files.
+[1;36m foomatic-db-engine[1;37m Foomatic - Foomatic's database engine generates PPD files from the data in Foomatic's XML database. It also contains scripts to directly generate print queues and handle jobs.
+[1;36m foomatic-db-nonfree[1;37m Foomatic - database extension consisting of manufacturer-supplied PPD files released under non-free licenses
+[1;36m foomatic-filters[1;37m Foomatic - Filter scripts used by the printer spoolers to convert the incoming PostScript data into the printer's native format.
+[1;36m gamin[1;37m File and directory monitoring system defined to be a subset of the FAM (File Alteration Monitor)
+[1;36m garcon[1;37m implementation of the freedesktop.org menu specification
+[1;36m gawk[1;37m GNU version of awk
+[1;36m gcc-fortran[1;37m Fortran front-end for GCC
+[1;36m gcc-libs[1;37m Runtime libraries shipped by GCC
+[1;36m gettext[1;37m GNU internationalization library
+[1;36m ghostscript[1;37m An interpreter for the PostScript language
+[1;36m git[1;37m the fast distributed version control system
+[1;36m glibc[1;37m GNU C Library
+[1;36m grep[1;37m A string search utility
+[1;36m grub[1;37m A GNU multiboot boot loader
+[1;36m gsfonts[1;37m Ghostscript standard Type1 fonts from URW
+[1;36m gtk2-perl[1;37m Perl bindings for GTK+ 2.x
+[1;36m gutenprint[1;37m Top quality printer drivers for POSIX systems
+[1;36m gzip[1;37m GNU compression utility
+[1;36m heirloom-mailx[1;37m A commandline utility for sending and receiving email
+[1;36m hplip[1;37m Drivers for HP DeskJet, OfficeJet, Photosmart, Business Inkjet and some LaserJet
+[1;36m htop[1;37m Interactive process viewer
+[1;36m icedtea-web[1;37m provides a Free Software web browser plugin running applets written in the Java programming language and an implementation of Java Web Start, originally based on the NetX project
+[1;36m imake[1;37m X.Org imake program and related utilities
+[1;36m inetutils[1;37m A collection of common network programs
+[1;36m initscripts[1;37m System initialization/bootup scripts
+[1;36m iputils[1;37m IP Configuration Utilities (and Ping)
+[1;36m jfsutils[1;37m JFS filesystem utilities
+[1;36m less[1;37m A terminal based program for viewing text files
+[1;36m libpipeline[1;37m a C library for manipulating pipelines of subprocesses in a flexible and convenient way
+[1;36m libpulse[1;37m A featureful, general-purpose sound server (client library)
+[1;36m licenses[1;37m The standard licenses distribution package
+[1;36m linux[1;37m The Linux Kernel and modules
+[1;36m logrotate[1;37m Rotates system logs automatically
+[1;36m lvm2[1;37m Logical Volume Manager 2 utilities
+[1;36m lynx[1;37m A text browser for the World Wide Web
+[1;36m make[1;37m GNU make utility to maintain groups of programs
+[1;36m man-db[1;37m A utility for reading man pages
+[1;36m man-pages[1;37m Linux man pages
+[1;36m mdadm[1;37m A tool for managing/monitoring Linux md device arrays, also known as Software RAID
+[1;36m msmtp[1;37m A mini smtp client
+[1;36m mumble[1;37m A voice chat application similar to TeamSpeak
+[1;36m mutt[1;37m Small but very powerful text-based mail client
+[1;36m nano[1;37m Pico editor clone with enhancements
+[1;36m offlineimap[1;37m A powerful IMAP/Maildir synchronization tool
+[1;36m openjdk6[1;37m Free Java environment based on OpenJDK 6.0 with IcedTea6 replacing binary plugs.
+[1;36m openssh[1;37m Free version of the SSH connectivity tools
+[1;36m pacman[1;37m A library-based package manager with dependency support
+[1;36m patch[1;37m A utility to apply patch files to original sources
+[1;36m pciutils[1;37m PCI bus configuration space access library and tools
+[1;36m pcmciautils[1;37m Utilities for inserting and removing PCMCIA cards
+[1;36m perl[1;37m A highly capable, feature-rich programming language
+[1;36m pkg-config[1;37m A system for managing library compile/link flags
+[1;36m ppp[1;37m A daemon which implements the Point-to-Point Protocol for dial-up networking
+[1;36m procps[1;37m Utilities for monitoring your system and processes on your system
+[1;36m psmisc[1;37m Miscellaneous procfs tools
+[1;36m qingy[1;37m A DirectFB getty replacement
+[1;36m qingy-theme-arch[1;37m Arch Linux themes for qingy
+[1;36m reiserfsprogs[1;37m Reiserfs utilities
+[1;36m rxvt-unicode[1;37m An unicode enabled rxvt-clone terminal emulator (urxvt)
+[1;36m samba[1;37m Tools to access a server's filespace and printers via SMB
+[1;36m screen[1;37m Full-screen window manager that multiplexes a physical terminal
+[1;36m scrot[1;37m A simple command-line screenshot utility for X
+[1;36m sed[1;37m GNU stream editor
+[1;36m shadow[1;37m Password and account management tool suite with support for shadow files and PAM
+[1;36m skype[1;37m P2P software for high-quality voice communication
+[1;36m slock[1;37m A simple screen locker for X
+[1;36m splix[1;37m CUPS drivers for SPL (Samsung Printer Language) printers
+[1;36m subversion[1;37m A Modern Concurrent Version Control System
+[1;36m sudo[1;37m Give certain users the ability to run some commands as root
+[1;36m sysfsutils[1;37m System Utilities Based on Sysfs
+[1;36m syslog-ng[1;37m Next-generation syslogd with advanced networking and filtering capabilities
+[1;36m sysvinit[1;37m Linux System V Init
+[1;36m tar[1;37m Utility used to store, backup, and transport files
+[1;36m terminal[1;37m A modern terminal emulator primarly for the Xfce desktop environment
+[1;36m terminus-font[1;37m A superb, monospace bitmap font (for X11 and console)
+[1;36m texinfo[1;37m Utilities to work with and produce manuals, ASCII text, and on-line documentation from a single source file
+[1;36m texlive-core[1;37m TeX Live core distribution
+[1;36m thunar[1;37m Modern file manager for Xfce
+[1;36m tint2[1;37m A basic, good-looking task manager for WMs
+[1;36m truecrypt[1;37m Free open-source cross-platform disk encryption software
+[1;36m ttf-inconsolata[1;37m Monospace font for pretty code listings and for the terminal
+[1;36m ttf-ms-fonts[1;37m Core TTF Fonts from Microsoft
+[1;36m tumbler[1;37m D-Bus service for applications to request thumbnails
+[1;36m udev[1;37m The userspace dev tools (udev)
+[1;36m unclutter[1;37m A small program for hiding the mouse cursor
+[1;36m unzip[1;37m Unpacks .zip archives such as those made by PKZIP
+[1;36m urxvt-url-select[1;37m Copy and open URLs in rxvt-unicode using the keyboard
+[1;36m usbutils[1;37m USB Device Utilities
+[1;36m util-linux[1;37m Miscellaneous system utilities for Linux
+[1;36m vi[1;37m The original ex/vi text editor.
+[1;36m vim[1;37m Vi Improved, a highly configurable, improved version of the vi text editor
+[1;36m wget[1;37m A network utility to retrieve files from the Web
+[1;36m which[1;37m A utility to show the full path of commands
+[1;36m wpa_supplicant[1;37m A utility providing key negotiation for WPA wireless networks
+[1;36m xf86-video-ati[1;37m X.org ati video driver
+[1;36m xfconf[1;37m A simple client-server configuration storage and query system
+[1;36m xfsprogs[1;37m XFS filesystem utilities
+[1;36m xmobar[1;37m A Minimalistic Text Based Status Bar
+[1;36m xmonad[1;37m A lightweight X11 tiled window manager written in Haskell
+[1;36m xmonad-contrib[1;37m Add-ons for xmonad
+[1;36m xorg-server[1;37m Xorg X server
+[1;36m xorg-server-utils[1;37m Transition package depending on xorg server utilities
+[1;36m xorg-twm[1;37m Tab Window Manager for the X Window System
+[1;36m xorg-utils[1;37m Transition package depending on xorg utils
+[1;36m xorg-xclock[1;37m X clock
+[1;36m xorg-xinit[1;37m X.Org initialisation program
+[1;36m xterm[1;37m X Terminal Emulator
+[1;36m zathura[1;37m a PDF viewer
+[1;36m zip[1;37m Creates PKZIP-compatible .zip files
+[1;36m zsh[1;37m A very advanced and programmable command interpreter (shell) for UNIX

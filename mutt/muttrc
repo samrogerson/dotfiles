@@ -104,6 +104,7 @@ bind pager J           next-undeleted
 bind index K           previous-unread
 bind index J           next-unread
 bind index,pager R     group-reply
+bind index \#          break-thread
 
 # macros
 macro index \Cr "<tag-prefix><clear-flag>N" "mark tagged messages as read"

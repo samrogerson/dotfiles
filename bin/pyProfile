@@ -1,0 +1,16 @@
+#! /bin/bash
+
+script_name=$1
+script_base=${1%%.py}"_prof"
+
+if [[ ! -f $script_base.prof ]] && [[ ! -f $script_base.dot ]]; then
+    python -m cProfile -o $script_base.prof $@
+    python -m ~/bin/gprof2dot -f pstats -o $script_base.dot $script_base.prof
+    dot -o$script_base.png -Tpng $script_base.dot
+
+    if [[ -f $script_base.png ]]; then
+        rm $script_base.dot $script_base.prof
+    fi
+else
+    echo "Output files [$script_base.{prof,dot}] already exist"
+fi

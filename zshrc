@@ -33,6 +33,7 @@ plugins=(git archlinux )
 
 source $ZSH/oh-my-zsh.sh
 
-eval `dircolors ~/.dir_colors`
-
 # Customize to your needs...
+eval `dircolors ~/.dir_colors`
+alias sroot='cdir=`pwd`; cd ~/CERN/root/; source bin/thisroot.sh; cd $cdir; export cdir=""'
+export PATH=$PATH:/home/hyper/bin

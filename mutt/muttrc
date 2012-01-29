@@ -11,7 +11,7 @@ set editor = "/usr/bin/vim +/^$"
 # main options
 set mbox_type = Maildir
 set folder=~/Mail/
-set spoolfile = "+CERN/INBOX"
+set spoolfile = +"CERN/INBOX"
 set timeout = 3
 set mail_check = 0
 set sort_alias = alias
@@ -82,6 +82,7 @@ source ~/.mutt/cern.muttrc
 
 # in case i want multiple accoutns
 folder-hook CERN/* source ~/.mutt/cern.muttrc
+folder-hook gmail/* source ~/.mutt/gmail.muttrc
 
 # headaches - turn them off
 bind index,pager \#    noop

@@ -1,0 +1,5 @@
+set from      = "hyp3rfunk@gmail.com"
+set sendmail  = "/usr/bin/msmtp -a gmail"
+set postponed = "+gmail/Drafts"
+# dont save plain text
+unset record

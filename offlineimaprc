@@ -8,7 +8,7 @@
 
 [general]
 metadata = ~/.offlineimap
-accounts = CERN
+accounts = CERN, gmail
 maxsyncaccounts = 1
 # Basic         -- Noninteractive interface suitable for cron'ing
 # Blinkenlights -- A fancy (terminal) interface
@@ -25,6 +25,13 @@ remoterepository = cern-remote
 autorefresh = 5
 quick = 10
 
+[Account gmail]
+localrepository = gmail-local
+remoterepository = gmail-remote
+autorefresh = 5
+quick = 10
+
+# CERN
 [Repository cern-local]
 type = Maildir
 localfolders = ~/Mail/CERN
@@ -39,6 +46,22 @@ remotepass = CUDDLES
 keepalive = 60
 subscribedonly = no
 readonly = False
+
+# GMAIL
+[Repository gmail-local]
+type = Maildir
+localfolders = ~/Mail/gmail
+
+[Repository gmail-remote]
+type = Gmail
+type = Gmail 
+remoteuser = hyp3rfunk@gmail.com
+remotepass = CUDDLES
+realdelete = no
+# "[Gmail]/Some Folder" --> some_folder
+nametrans = lambda folder: re.sub('^inbox$', 'INBOX',
+                           re.sub(' +', '_',
+                           re.sub(r'.*/(.*)$', r'\1', folder).lower()))
 
 [mbnames]
 enabled = yes

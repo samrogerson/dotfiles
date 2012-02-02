@@ -1,20 +1,8 @@
 #! /bin/bash
 
-# attempt at mimicking martyn's script
-# should limit grep to first 5 lines
-# do :
-#   while read line; do
-#       if [[ $line =~ "^#*" ]]; then 
-#           pathstring=`echo $line | grep $pathloc`
-#       else
-#           break
-#       fi 
-#   done < $file
-# This would stop us scanning too far into the file
-
 pathloc="# path:"
 
-# take command line argument to operate on
+# take command line argument to operate on directory
 if [[ $# -lt 1 ]];
 then
     directory=`pwd`
@@ -30,16 +18,17 @@ dirlist=`find $directory -type d -not -name $basedir`
 filelist=`find $directory -maxdepth 1 -type f -not -name $thisfile \
                           -not -name ".dirinfo" -not -name "*.swp"`
 
-# lol symlinking: this way we can just git pull on the base dotfiles directory
-# and we get updates immediately
 for item in $dirlist $filelist; 
 do
- #  if [[ -d $item ]]; then item="$item/.dirinfo"
-   if [[ -d $item ]]; then 
-       pathstring=`grep "$pathloc" $item/.dirinfo`
-   elif [[ -f $item ]]; then
-       pathstring=`grep "$pathloc" $item`
-   fi
+   pathstring=""
+   if [[ -d $item ]]; then item="$item/.dirinfo"; fi
+   while read line && [[ $pathstring == "" ]]; do
+       if [[ $line =~ ^# || $line =~ ^$ ]]; then 
+           pathstring=`echo $line | grep "$pathloc"`
+       else
+           break
+       fi 
+   done < $item
    if [[ $pathstring == "" ]]; then
        continue
    fi

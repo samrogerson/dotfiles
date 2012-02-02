@@ -1,3 +1,4 @@
+" # path: $HOME/.vimrc
 " To invoke this file after vi startup read it into a buffer, e.g. x
 " then execute it by typing :@x (i.e. an ex command on bottom line).
 

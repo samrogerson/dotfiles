@@ -1,5 +1,7 @@
 #! /bin/bash
 
+# path: $HOME/.fehrndbkg.sh
+
 shopt -s nullglob
 #setopt NULL_GLOB #for zsh
  

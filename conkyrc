@@ -1,3 +1,5 @@
+# path: $HOME/.conkyrc
+
 # set to yes if you want Conky to be forked in the background
 background no
 

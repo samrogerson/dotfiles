@@ -1,5 +1,7 @@
 #! /bin/bash
 
+# path: $HOME/.bash_aliases
+
 alias ls='ls --color=always'
 alias vimless='vim -u /usr/share/vim/vim73/macros/less.vim'
 

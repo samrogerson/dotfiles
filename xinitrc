@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# ~/.xinitrc
+# path: $HOME/.xinitrc
 #
 # Executed by startx (run your window manager from here)
 

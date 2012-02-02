@@ -1,5 +1,5 @@
 #
-# ~/.bash_profile
+# path: $HOME/.bash_profile
 #
 
 [[ -f ~/.bashrc ]] && . ~/.bashrc

@@ -23,7 +23,7 @@ do
    pathstring=""
    if [[ -d $item ]]; then item="$item/.dirinfo"; fi
    while read line && [[ $pathstring == "" ]]; do
-       if [[ $line =~ ^# || $line =~ ^$ ]]; then 
+       if [[ $line =~ ^[#\"!] || $line =~ ^$ ]]; then 
            pathstring=`echo $line | grep "$pathloc"`
        else
            break

@@ -44,5 +44,7 @@ xset fp rehash
 # stop the mouse being retarded
 xset m 0 0
 
+ssh-agent
+
 #exec ck-launch-session startxfce4
 exec xmonad

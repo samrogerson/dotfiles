@@ -1,6 +1,16 @@
 #! /bin/bash
 
 # attempt at mimicking martyn's script
+# should limit grep to first 5 lines
+# do :
+#   while read line; do
+#       if [[ $line =~ "^#*" ]]; then 
+#           pathstring=`echo $line | grep $pathloc`
+#       else
+#           break
+#       fi 
+#   done < $file
+# This would stop us scanning too far into the file
 
 pathloc="# path:"
 
@@ -24,10 +34,14 @@ filelist=`find $directory -maxdepth 1 -type f -not -name $thisfile \
 # and we get updates immediately
 for item in $dirlist $filelist; 
 do
+ #  if [[ -d $item ]]; then item="$item/.dirinfo"
    if [[ -d $item ]]; then 
        pathstring=`grep "$pathloc" $item/.dirinfo`
    elif [[ -f $item ]]; then
        pathstring=`grep "$pathloc" $item`
+   fi
+   if [[ $pathstring == "" ]]; then
+       continue
    fi
    itempath=${pathstring##*: }
    itempath=`eval echo ${itempath}`

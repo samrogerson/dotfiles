@@ -1,4 +1,4 @@
-!! # path: $HOME/.Xdefaults2
+!! # path: $HOME/.Xdefaults
 
 URxvt*font:xft:Terminus:pixelsize=14
 URxvt*saveLines:12000

@@ -21,26 +21,26 @@ itemlist=`ls $directory`
 
 for item in $itemlist; 
 do
-   pathstring=""
-   if [[ -d $item ]]; 
-   then 
-       loc="$item/.dirinfo"; 
-   else
-       loc=$item
-   fi
-   while read line && [[ $pathstring == "" ]]; do
-       if [[ $line =~ ^[#\"!] || $line =~ ^$ ]]; then 
-           pathstring=`echo $line | grep "$pathloc"`
-       else
-           break
-       fi 
-   done < $loc
-   if [[ $pathstring == "" ]]; then
-       continue
-   fi
-   itempath=${pathstring##*: }
-   itempath=`eval echo ${itempath}`
-   if [[ ! -d $itempath ]] && [[ ! -f $itempath ]]; then
-       ln -s $directory/$item $itempath
-   fi
+    pathstring=""
+    if [[ -d $item ]]; 
+    then 
+        loc="$item/.dirinfo"; 
+    else
+        loc=$item
+    fi
+    while read line && [[ $pathstring == "" ]]; do
+        if [[ $line =~ ^[#\"!] || $line =~ ^$ ]]; then 
+            pathstring=`echo $line | grep "$pathloc"`
+        else
+            break
+        fi 
+    done < $loc
+    if [[ $pathstring == "" ]]; then
+        continue
+    fi
+    itempath=${pathstring##*: }
+    itempath=`eval echo ${itempath}`
+    if [[ ! -d $itempath ]] && [[ ! -f $itempath ]]; then
+        ln -s $directory/$item $itempath
+    fi
 done

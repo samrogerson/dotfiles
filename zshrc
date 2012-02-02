@@ -35,5 +35,8 @@ source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 eval `dircolors ~/.dir_colors`
-alias sroot='cdir=`pwd`; cd ~/CERN/root/; source bin/thisroot.sh; cd $cdir; export cdir=""'
-export PATH=$PATH:/home/hyper/bin
+eval `cat ~/.ssh_str`
+
+alias EVO='javaws /home/samr/bin/koala.jnlp'
+alias sroot='cdir=`pwd`; cd /home/samr/CERN/root/; source bin/thisroot.sh; cd $cdir; cdir=""'
+

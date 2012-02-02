@@ -44,7 +44,8 @@ xset fp rehash
 # stop the mouse being retarded
 xset m 0 0
 
-eval `ssh-agent`
+ssh_str=`ssh-agent | grep SSH_AUTH_SOCK`
+echo $ssh_str > ~/.ssh_str
 
 #exec ck-launch-session startxfce4
 exec xmonad

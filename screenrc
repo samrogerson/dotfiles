@@ -1,3 +1,5 @@
+# path: $HOME/.screenrc
+
 # turn off annoying message about screen
 startup_message off
 

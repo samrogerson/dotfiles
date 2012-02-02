@@ -1,3 +1,5 @@
+# path: $HOME/.gitconfig
+
 [user]
     email = samr@cern.ch
     name = Sam Rogerson

@@ -1,3 +1,5 @@
+# path: $HOME/.xmobarrc
+
 Config  { font     = "xft:terminus:style=bold:pixelsize=12"
         , bgColor       = "#073642"
         , fgColor       = "#657b83"

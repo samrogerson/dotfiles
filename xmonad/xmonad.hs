@@ -138,8 +138,9 @@ myManageHook =  composeAll . concat $
      , [className =? c --> moveTo "3:docs" | c <- docApps   ]
      , [className =? c --> moveTo "8:chat" | c <- chatApps  ]
      , [className =? c --> moveTo "9:mail" | c <- mailApps  ]
-     , [name =? "mutt" --> moveTo "9:mail" ]
-     , [isFullscreen   --> doFullFloat ]
+     , [name =? "mutt"  --> moveTo "9:mail" ]
+     , [name =? "Vievo" --> doFoat ]
+     , [isFullscreen    --> doFullFloat ]
      ]
      where moveTo = doF . W.shift
            role = stringProperty "WM_WINDOW_ROLE"

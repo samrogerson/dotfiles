@@ -29,7 +29,7 @@ do
         loc=$item
     fi
     while read line && [[ $pathstring == "" ]]; do
-        if [[ $line =~ ^[#\"!] || $line =~ ^$ ]]; then 
+        if [[ $line =~ ^[#\"!-] || $line =~ ^$ ]]; then 
             pathstring=`echo $line | grep "$pathloc"`
         else
             break

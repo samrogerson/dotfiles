@@ -38,8 +38,22 @@ do
     if [[ $pathstring == "" ]]; then
         continue
     fi
+
     itempath=${pathstring##*: }
     itempath=`eval echo ${itempath}`
+
+    if [[ -f $itempath ]] || [[ -d $itempath ]]; then 
+        echo "$itempath already exists"
+        read -n1 -p "Overwrite $itempath (y/n)?"
+        echo
+        if [[ "$REPLY" == [yY] ]]; then
+            echo Removing $itempath
+            rm -r $itempath
+        else
+            echo Skipping $itempath
+            continue
+        fi
+    fi
     if [[ ! -d $itempath ]] && [[ ! -f $itempath ]]; then
         ln -s $directory/$item $itempath
     fi

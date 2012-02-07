@@ -2,3 +2,7 @@
 *.o
 *.hi
 *.error
+xmonad/xmonad-*
+xmonad/xmonad.errors
+mutt/cache
+vim/.netrwhist

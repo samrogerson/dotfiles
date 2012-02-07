@@ -42,3 +42,4 @@ eval `cat ~/.ssh_str`
 alias EVO='javaws ~/bin/koala.jnlp'
 alias sroot='cdir=`pwd`; cd ~/CERN/root/; source bin/thisroot.sh; cd $cdir; cdir=""'
 
+export PATH=$PATH:$HOME/bin/

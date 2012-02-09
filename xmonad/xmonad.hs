@@ -185,7 +185,8 @@ myKeymap conf   = [ ("S-M-c",               killAll                 )
                   , ("M4-t",                spawn myPerfMonitor     )
                   , ("M4-s",                spawn myScreenshot      )
                   , ("M4-x",                goToSelected myGSConfig )
-                  , ("M3",                  spawn myBrowser         ) ]
+                  , ("M3",                  spawn myBrowser         )
+                  , ("M-<Backspace>",       focusUrgent             ) ]
 
 
 --STARTUP

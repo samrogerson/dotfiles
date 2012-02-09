@@ -6,4 +6,5 @@ xmonad/xmonad-*
 xmonad/xmonad.errors
 mutt/cache
 mutt/mailboxes
+mutt/temp
 vim/.netrwhist

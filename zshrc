@@ -40,5 +40,6 @@ eval `dircolors ~/.dir_colors`
 eval `cat ~/.ssh_str`
 
 alias sroot='cdir=`pwd`; cd ~/CERN/root/; source bin/thisroot.sh; cd $cdir; cdir=""'
+alias lx='screen -dRR lx'
 
 export PATH=$PATH:$HOME/bin/

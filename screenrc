@@ -13,7 +13,7 @@ startup_message off # turn off annoying message about screen
 crlf off            # No Microsoft linebreaks.
 startup_message off # Bypass the GPL notice, please.
 defscrollback 1000  # Screen remembers more history.
-shell -bash         # Bash is a rather nice shell.
+shell -zsh          # Bash is a rather nice shell.
 shelltitle "$ |"    # Blank shell title
 defmonitor on       # Turn monitoring on (see 'activity')
 activity "<%n>"     # Let you know when stuff happens!

@@ -9,6 +9,10 @@ set nocompatible
 " tab key indents by 4 spaces.
 set autoindent shiftwidth=4 expandtab tabstop=4 textwidth=0
 
+" more natural tab completion
+set wildmode=longest,list,full
+set wildmenu
+
 set nu
 syntax on
 set t_Co=256

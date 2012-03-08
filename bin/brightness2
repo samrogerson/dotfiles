@@ -1,1 +1,8 @@
-echo "$1" > /sys/class/backlight/toshiba/brightness
+#! /bin/bash
+
+max_brightness=`cat /sys/class/backlight/toshiba/max_brightness`
+if [[ "$1" -le "$max_brightness" ]]; then
+    echo "$1" > /sys/class/backlight/toshiba/brightness
+else
+    echo "$1 > max brightness($max_brightness)"
+fi

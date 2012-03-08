@@ -24,9 +24,9 @@ import XMonad.Layout.Decoration
 import XMonad.Layout.TabBarDecoration
 import XMonad.Layout.ResizeScreen
 --- System
-import System
-import System.Environment
-import System.IO
+---import System
+---import System.Environment
+---port System.IO
 --- Utils
 import XMonad.Util.EZConfig
 import XMonad.Util.Dmenu

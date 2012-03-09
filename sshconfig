@@ -1,0 +1,17 @@
+# path: $HOME/.ssh/config
+
+ControlMaster auto
+ControlPath /tmp/ssh_mux_%h_%p_%r
+ControlPersist 1h
+ForwardAgent yes
+
+# autossh -f -M 0 -N remote-host
+ServerAliveInterval 60
+ServerAliveCountMax 60
+
+Host lx0*
+  HostName %h.hep.ph.ic.ac.uk
+  User sr505
+Host lxplus
+  HostName %h.cern.ch
+  User samr

@@ -1,8 +1,15 @@
 #! /bin/bash
 
+brightness_control_file="/sys/class/backlight/toshiba/brightness"
 max_brightness=`cat /sys/class/backlight/toshiba/max_brightness`
-if [[ "$1" -le "$max_brightness" ]]; then
-    echo "$1" > /sys/class/backlight/toshiba/brightness
+
+brightness_percent=$1
+
+divisor=$((100/max_brightness))
+brightness=$((brightness_percent/divisor))
+
+if [[ "$brightness" -le "$max_brightness" ]]; then
+    echo "$brightness" > $brightness_control_file
 else
-    echo "$1 > max brightness($max_brightness)"
+    echo "$brightness > max brightness($max_brightness)"
 fi

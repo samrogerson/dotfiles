@@ -14,12 +14,9 @@ xsetroot -cursor_name left_ptr
 unclutter &
 
 # set background using feh
-if [[ -f ~/.fehrndbkg.sh ]]; then   
-    sh ~/.fehrndbkg.sh & 
-elif [[ -f ~/.fehbg ]]; then
-    sh ~/.fehbg &
-#else
-   # feh --bg-scale $BACKGROUND_IMAGE
+fehrndbkg="~/bin/fehrndbkg.sh"
+if [[ -f $fehrndbkg ]]; then
+    sh $fehrndbkg &
 fi
 
 # start urxvt daemon

@@ -1,5 +1,6 @@
 !! # path: $HOME/.Xdefaults
 
+xterm*faceName:xft:Terminus:pixelsize=14
 URxvt*font:xft:Terminus:pixelsize=14
 URxvt*saveLines:12000
 URxvt.urgentOnBell: true

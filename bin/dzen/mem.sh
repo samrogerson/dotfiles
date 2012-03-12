@@ -23,7 +23,6 @@ TWIDTH=125
 DWIDTH=150
  
 # events & actions
-ACT='button1=togglecollapse;button3=exit'
  
  
 #----------------------------------------------------------------------
@@ -45,4 +44,4 @@ Active:
 Cached:
 Swap  :' | paste -d ' ' - <(awk "$AWKS" /proc/meminfo | gdbar -fg '#aecf96' -bg '#000000' -w 50 -h 7); do
 sleep 5
-done | dzen2 -ta l -l 3 -fn $FNT -bg $BG -fg $FG -x $XPOS -y $YPOS -tw $TWIDTH -w $DWIDTH -sa c -e $ACT
+done

@@ -9,13 +9,7 @@ INTERFACE=eth0
 # update every x seconds
 SLEEP=1
 #colors
-FG='#ccc'
-BG='#222'
 #geometry
-WIDTH=250
-X=917
-Y=0
-FONT="-xos4-terminus-medium-r-normal--14-140-72-72-c-80-iso8859-1"
 
 # Here we remember the previous rx/tx counts
 RXB=`cat /sys/class/net/${INTERFACE}/statistics/rx_bytes`
@@ -39,4 +33,4 @@ while :; do
     RXB=$RXBN; TXB=$TXBN
 
     sleep $SLEEP
-done | dzen2 -fn $FONT -x $X -y $Y  -tw $WIDTH -fg $FG -bg $BG
+done

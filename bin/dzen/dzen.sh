@@ -7,6 +7,9 @@ dz_kill() {
     pkill network.sh
     pkill dzen2
 }
+
+screen_width=`xdpyinfo | awk '$1 ~ /dimensions/ {split($2,arr,"x"); print int(arr[1])}'`
+screen_height=`xdpyinfo | awk '$1 ~ /dimensions/ {split($2,arr,"x"); print int(arr[2])}'`
     
 FG='#ccc'
 BG='#222'

@@ -11,7 +11,7 @@ BG_FOCUS="#1E2320"
 #Launch dzen2 and establish the pipe
 if [[ ! -e /tmp/dzen2.pipe ]]
 then
-  socat PIPE:/tmp/dzen2.pipe EXEC:"dzen2 -p -ta l -x 0 -w 200 -fn -xos4-terminus-medium-r-normal--12-140-72-72-c-80-iso8859-1"&
+  socat -v PIPE:/tmp/dzen2.pipe EXEC:"dzen2 -p -ta l -x 0 -w 200 -fn -xos4-terminus-medium-r-normal--12-140-72-72-c-80-iso8859-1"&
 fi
 
 #Switch to the given desktop
@@ -34,13 +34,17 @@ do
   switchTo=`wmctrl -d | grep $d | cut -d\  -f1`
   if [[ -z "`wmctrl -d | grep $d | grep '*'`" ]]
   then
-    line+="^ca(1,~/bar.sh $switchTo)$d^ca()"
+    line+="^ca(1,./bar.sh $switchTo)$d^ca()"
   else
-    line+="^ca(1,~/bar.sh $switchTo)^bg($BG_FOCUS)^fg($FG_FOCUS)$d^fg()^bg()^ca()"
+    line+="^ca(1,./bar.sh $switchTo)^bg($BG_FOCUS)^fg($FG_FOCUS)$d^fg()^bg()^ca()"
   fi
 done
 
 #Forward the dzen input to dzen through the pipe
-echo $line | socat - PIPE:/tmp/dzen2.pipe
+while true; do
+    echo $line 
+    sleep 1
+done | dzen2 -ta l -x 0 -w 200 -fn -xos4-terminus-medium-r-normal--12-140-72-72-c-80-iso8859-1
+#socat - PIPE:/tmp/dzen2.pipe
 
 sleep 10

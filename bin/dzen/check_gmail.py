@@ -26,16 +26,18 @@
 
 import urllib2
 import feedparser         
+from os import getenv
 
 _url = "https://mail.google.com/gmail/feed/atom"
 
 ##################   Edit here      #######################
 
 #pwd = xxxx                            # pwd stored in script
-_pwdfile = '/home/samr/.gmail_notify_passwd'  # pwd stored in a file
+_pwdfile = '%s/.gmail_notify_passwd' % (getenv('HOME')) # pwd stored in a file
 _username = 'hyp3rfunk'
 _calmcolor = 'white'
 _alertcolor = 'red'
+_browser = 'chromium https://gmail.com'
 _maxmails = 5  # maximum new mails to show
 _maxwords = 3  # maximum words to show in each mail header
 
@@ -80,7 +82,7 @@ def showmail(feed):
         if len(emailtitle.split()) > _maxwords:
             emailtitle = ' '.join(emailtitle.split()[:_maxwords])
             
-        print "^fg(%s) %s from %s" % (_calmcolor, emailtitle, atom.entries[i].author)
+        print "^ca(1,%s)^fg(%s) %s from %s^ca()" % (_browser, _calmcolor, emailtitle, atom.entries[i].author)
     
 if __name__ == "__main__":
     feed = auth()  

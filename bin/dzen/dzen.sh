@@ -49,9 +49,3 @@ nwidth=$((dwidth-200))
 ./network.sh | dzen2 ${dzen_args[@]} -x $nwidth -w 200 &
 sleep 5
 dz_kill
-
-## mostly works now, but this is the wrong way to do it
-## we need to pick up on changes from xmonad: this needs to be spawned
-## on a per window manager basis: reserve space for it
-#(dzen2 -p "${dzen_args[@]}" -x 0 -w 500 < "$pipe") &
-#./bar.sh $pipe >> $pipe

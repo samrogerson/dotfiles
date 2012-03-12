@@ -23,10 +23,6 @@ import XMonad.Layout.Simplest
 import XMonad.Layout.Decoration
 import XMonad.Layout.TabBarDecoration
 import XMonad.Layout.ResizeScreen
---- System
----import System
----import System.Environment
----port System.IO
 --- Utils
 import XMonad.Util.EZConfig
 import XMonad.Util.Dmenu
@@ -43,10 +39,14 @@ main            = xmonad =<<
 
 myUrgencyHook   = withUrgencyHook NoUrgencyHook
 
+--DZEN
+myDzenBar       = "dzen2 -ta l -sa l -fg '#ccc' -bg '#222' -fn -xos4-terminus-medium-r-normal--14-140-72-72-c-80-iso8859-1"
+myDzenPP        = dzenPP -- pretty printing "PP"
+
 --XMOBAR
 ------------------------------------------------------------------------
 myBar           = "xmobar"
-myPP            = xmobarPP
+myPP            = xmobarPP -- pretty printing "PP"
                 { ppCurrent = xmobarColor base0 "" . wrap "[" "]" 
                 , ppVisible = wrap "(" ")"
                 --, ppHidden  = wrap " " " "

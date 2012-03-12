@@ -33,4 +33,3 @@ if [[ "$HOSTNAME" == *hep.ph.ic.ac.uk ]]; then
    export PS1="\[$BIBlack$On_White\][ \[$Black$On_White\]\u@\h \[$IBlack$On_White\]\W \[$BIBlack$On_White\]]\[$Color_Off\] "
    export PYTHONPATH=$HOME/local/lib64/python2.4/site-packages:$PYTHONPATH
 fi
-

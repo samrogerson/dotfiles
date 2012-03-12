@@ -5,6 +5,7 @@ dz_kill() {
     pkill cpu.sh
     pkill gmail.sh
     pkill network.sh
+    pkill date.sh
     pkill dzen2
 }
 
@@ -16,7 +17,7 @@ BG='#222'
 
 WIDTH=150
 Y=0
-FONT="-xos4-terminus-medium-r-normal--14-140-72-72-c-80-iso8859-1"
+FONT="-xos4-terminus-medium-r-normal--12-140-72-72-c-80-iso8859-1"
 ACT='button1=togglecollapse;button3=exit'
 
 DZEN_OPTS="-fn $FONT -fg $FG -bg $BG -y $Y -sa l -ta l -w $WIDTH"
@@ -29,6 +30,7 @@ dz_kill
 ./cpu.sh | dzen2 $DZEN_OPTS -x 150 &
 ./gmail.sh | dzen2 $DZEN_OPTS -x 300 -l 5 &
 ./network.sh | dzen2 $DZEN_OPTS -x 450 &
+./date.sh | dzen2 $DZEN_OPTS -x 800 &
 
 sleep 10
 dz_kill

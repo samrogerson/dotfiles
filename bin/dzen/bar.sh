@@ -9,10 +9,10 @@ FG_FOCUS="#F0DFAF"
 BG_FOCUS="#1E2320"
 
 #Launch dzen2 and establish the pipe
-#if [[ ! -e /tmp/dzen2.pipe ]]
-#then
-#  socat PIPE:/tmp/dzen2.pipe EXEC:"dzen2 -p -ta l"&
-#fi
+if [[ ! -e /tmp/dzen2.pipe ]]
+then
+  socat PIPE:/tmp/dzen2.pipe EXEC:"dzen2 -p -ta l -x 0 -w 200 -fn -xos4-terminus-medium-r-normal--12-140-72-72-c-80-iso8859-1"&
+fi
 
 #Switch to the given desktop
 if [[ ! -z $1 ]]
@@ -21,7 +21,7 @@ then
 fi
 
 #Get all desktop names
-DESKTOPS=(`wmctrl -d | cut -d\  -f14`)
+DESKTOPS=(`wmctrl -d | cut -d\  -f13`)
 
 #Create the dzen input
 #The click action calls the script with argument the clicked desktop, and
@@ -42,3 +42,5 @@ done
 
 #Forward the dzen input to dzen through the pipe
 echo $line | socat - PIPE:/tmp/dzen2.pipe
+
+sleep 10

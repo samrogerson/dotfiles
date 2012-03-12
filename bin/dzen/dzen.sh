@@ -6,7 +6,22 @@ dz_kill() {
     pkill gmail.sh
     pkill network.sh
     pkill date.sh
+    pkill bar.sh
     pkill dzen2
+}
+
+pipe='/tmp/dzen2-xmonad.pipe'
+mk_pipes() {
+    if [[ ! -e $pipe ]]
+    then
+        mkfifo $pipe
+    fi
+}
+rm_pipes() {
+    if [[ -e $pipe ]]
+    then
+        rm $pipe
+    fi
 }
 
 screen_width=`xdpyinfo | awk '$1 ~ /dimensions/ {split($2,arr,"x"); print int(arr[1])}'`
@@ -20,17 +35,23 @@ Y=0
 FONT="-xos4-terminus-medium-r-normal--12-140-72-72-c-80-iso8859-1"
 ACT='button1=togglecollapse;button3=exit'
 
-DZEN_OPTS="-fn $FONT -fg $FG -bg $BG -y $Y -sa l -ta l"
-
-# gmail -l 5
-# mem -l 3
+dzen_args=( -fn $FONT -fg $FG -bg $BG -y $Y -sa l -ta l )
 
 dz_kill
-./mem.sh | dzen2 $DZEN_OPTS -x 0 -w 150 -l 3 &
-./cpu.sh | dzen2 $DZEN_OPTS -x 150 -w 150 &
-./gmail.sh | dzen2 $DZEN_OPTS -x 300 -w 150 -l 5 &
-./network.sh | dzen2 $DZEN_OPTS -x 450 -w 150 &
-./date.sh | dzen2 $DZEN_OPTS -x 800 -w 150 &
+#mk_pipes
+./mem.sh | dzen2 ${dzen_args[@]} -x 0 -w 150 -l 3 &
+./cpu.sh | dzen2 ${dzen_args[@]} -x 150 -w 150 &
+./gmail.sh | dzen2 ${dzen_args[@]} -x 300 -w 150 -l 5 &
 
-sleep 10
+dwidth=$((screen_width-150))
+./date.sh | dzen2 ${dzen_args[@]} -x $dwidth -w 150 &
+nwidth=$((dwidth-200))
+./network.sh | dzen2 ${dzen_args[@]} -x $nwidth -w 200 &
+sleep 5
 dz_kill
+
+## mostly works now, but this is the wrong way to do it
+## we need to pick up on changes from xmonad: this needs to be spawned
+## on a per window manager basis: reserve space for it
+#(dzen2 -p "${dzen_args[@]}" -x 0 -w 500 < "$pipe") &
+#./bar.sh $pipe >> $pipe

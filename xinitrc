@@ -65,6 +65,6 @@ do
 	fi
 	sleep 20s
 done &
+exec dwm
 
 #exec xmonad
-exec dwm

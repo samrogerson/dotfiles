@@ -1,12 +1,22 @@
 #! /bin/bash
 
-brightness_control_file="/sys/class/backlight/toshiba/brightness"
-max_brightness=`cat /sys/class/backlight/toshiba/max_brightness`
+# list of viable controls
+brightness_class[0]="intel_backlight"
+brightness_class[1]="toshiba"
+
+# select brightness control
+i=0
+if [[ -z $2 ]]; then
+    i=$2
+fi
+
+brightness_control_file="/sys/class/backlight/${brightness_class[$i]}/brightness"
+max_brightness=`cat /sys/class/backlight/${brightness_class[$i]}/max_brightness`
 
 brightness_percent=$1
 
-divisor=$((100/max_brightness))
-brightness=$((brightness_percent/divisor))
+divisor=`echo "scale=4; 100/$max_brightness" | bc`
+brightness=`echo "$brightness_percent/$divisor" | bc`
 
 if [[ "$brightness" -le "$max_brightness" ]]; then
     echo "$brightness" > $brightness_control_file

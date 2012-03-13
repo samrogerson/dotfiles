@@ -22,9 +22,14 @@ static const Rule rules[] = {
 	 *	WM_CLASS(STRING) = instance, class
 	 *	WM_NAME(STRING) = title
 	 */
+    // this is bit mask: i.e. 9 is  1 << 8
 	/* class      instance    title       tags mask     isfloating   monitor */
 	{ "Gimp",     NULL,       NULL,       0,            True,        -1 },
-	{ "Firefox",  NULL,       NULL,       1 << 8,       False,       -1 },
+	{ "Firefox",  NULL,       NULL,       1 << 1,       False,       -1 },
+	{ "Chromium", NULL,       NULL,       1 << 1,       False,       -1 },
+	{ "Zathura",  NULL,       NULL,       1 << 2,       False,       -1 },
+	{ "Evince",   NULL,       NULL,       1 << 2,       False,       -1 },
+	{ NULL,       NULL,       "mutt",     1 << 8,       False,       -1 },
 };
 
 /* layout(s) */

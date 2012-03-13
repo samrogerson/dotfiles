@@ -31,7 +31,7 @@ unclutter &
 
 
 # set background using feh
-fehrndbkg="~/bin/fehrndbkg.sh"
+fehrndbkg="$HOME/bin/fehrndbkg.sh"
 if [[ -f $fehrndbkg ]]; then
     sh $fehrndbkg &
 fi

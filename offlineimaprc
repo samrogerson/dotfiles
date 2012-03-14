@@ -22,13 +22,13 @@ statuschar = .
 [Account CERN]
 localrepository = cern-local
 remoterepository = cern-remote
-autorefresh = 5
+autorefresh = 1
 quick = 10
 
 [Account gmail]
 localrepository = gmail-local
 remoterepository = gmail-remote
-autorefresh = 5
+autorefresh = 1
 quick = 10
 
 # CERN

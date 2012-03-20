@@ -81,9 +81,10 @@ source ~/.mutt/mailboxes
 # source my settings
 source $alias_file
 source ~/.mutt/colors.muttrc
-source ~/.mutt/cern.muttrc
+source ~/.mutt/lidovecot.muttrc
 
 # in case i want multiple accoutns
+folder-hook lidovecot/* source ~/.mutt/lidovecot.muttrc
 folder-hook CERN/* source ~/.mutt/cern.muttrc
 folder-hook gmail/* source ~/.mutt/gmail.muttrc
 

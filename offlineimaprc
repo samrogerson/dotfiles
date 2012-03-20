@@ -8,7 +8,7 @@
 
 [general]
 metadata = ~/.offlineimap
-accounts = CERN, gmail, lidovecot
+accounts = lidovecot
 maxsyncaccounts = 1
 # Basic         -- Noninteractive interface suitable for cron'ing
 # Blinkenlights -- A fancy (terminal) interface

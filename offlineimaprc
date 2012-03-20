@@ -8,7 +8,7 @@
 
 [general]
 metadata = ~/.offlineimap
-accounts = CERN, gmail
+accounts = CERN, gmail, lidovecot
 maxsyncaccounts = 1
 # Basic         -- Noninteractive interface suitable for cron'ing
 # Blinkenlights -- A fancy (terminal) interface
@@ -30,6 +30,12 @@ localrepository = gmail-local
 remoterepository = gmail-remote
 autorefresh = 1
 quick = 10
+
+[Account lidovecot]
+localrepository = lidovecot-local
+remoterepository = lidovecot-remote
+autorefresh = 5
+quick = 20
 
 # CERN
 [Repository cern-local]
@@ -62,6 +68,22 @@ realdelete = no
 nametrans = lambda folder: re.sub('^inbox$', 'INBOX',
                            re.sub(' +', '_',
                            re.sub(r'.*/(.*)$', r'\1', folder).lower()))
+
+# dovecot server on linode instance
+[Repository lidovecot-local]
+type = Maildir
+localfolders = ~/Mail/lidovecot
+
+[Repository lidovecot-remote]
+type = IMAP
+ssl = yes
+# remoteport = 993
+remotehost = 178.79.157.248
+remoteuser = hyper
+remotepass = CUDDLES
+keepalive = 60
+subscribedonly = no
+readonly = False
 
 [mbnames]
 enabled = yes

@@ -17,6 +17,7 @@ static const Bool topbar            = True;     /* False means bottom bar */
 /* tagging */
 static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
 
+static const char java_name[] = "net-sourceforge-jnlp-runtime-Boot";
 static const Rule rules[] = {
 	/* xprop(1):
 	 *	WM_CLASS(STRING) = instance, class
@@ -30,6 +31,9 @@ static const Rule rules[] = {
 	{ "Zathura",  NULL,       NULL,       1 << 2,       False,       -1 },
 	{ "Evince",   NULL,       NULL,       1 << 2,       False,       -1 },
 	{ NULL,       NULL,       "mutt",     1 << 8,       False,       -1 },
+    { java_name,  NULL,       NULL,       1 << 5,       True,        -1 },
+	{ NULL,       NULL,       "Vievo",    1 << 5,       True,        -1 },
+	{ "Skype",    NULL,       NULL,       1 << 7,       False,       -1 },
 };
 
 /* layout(s) */

@@ -14,6 +14,7 @@ maxsyncaccounts = 1
 # Blinkenlights -- A fancy (terminal) interface
 ui = Blinkenlights
 ignore-readonly = no
+pythonfile = ~/.offlineimap.py
 
 [ui.Curses.Blinkenlights]
 # Character used to indicate thread status.
@@ -48,7 +49,7 @@ ssl = yes
 # remoteport = 993
 remotehost = smtp.cern.ch
 remoteuser = samr
-remotepass = CUDDLES
+remotepass = keyring.get_password("offlineimap", "samr@cern.ch")
 keepalive = 60
 subscribedonly = no
 readonly = False
@@ -62,7 +63,7 @@ localfolders = ~/Mail/gmail
 type = Gmail
 type = Gmail 
 remoteuser = hyp3rfunk@gmail.com
-remotepass = CUDDLES
+remotepass = keyring.get_password("offlineimap", "hyp3rfunk@gmail.com")
 realdelete = no
 # "[Gmail]/Some Folder" --> some_folder
 nametrans = lambda folder: re.sub('^inbox$', 'INBOX',
@@ -80,7 +81,7 @@ ssl = yes
 # remoteport = 993
 remotehost = 178.79.157.248
 remoteuser = hyper
-remotepass = CUDDLES
+remotepass = keyring.get_password("offlineimap", "hyper@li2.com")
 keepalive = 60
 subscribedonly = no
 readonly = False

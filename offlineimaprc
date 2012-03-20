@@ -1,7 +1,6 @@
 # Sample minimal config file.  Copy this to ~/.offlineimaprc and edit to
 # suit to get started fast.
 
-
 # crontab line below
 # */5 * * * * exec /home/hyper/bin/start_daemon -n19 -c2 -p7 python2 /usr/bin/offlineimap -u quiet
 
@@ -49,7 +48,7 @@ ssl = yes
 # remoteport = 993
 remotehost = smtp.cern.ch
 remoteuser = samr
-remotepass = keyring.get_password("offlineimap", "samr@cern.ch")
+remotepasseval = keyring.get_password("offlineimap", "samr@cern.ch")
 keepalive = 60
 subscribedonly = no
 readonly = False
@@ -63,7 +62,7 @@ localfolders = ~/Mail/gmail
 type = Gmail
 type = Gmail 
 remoteuser = hyp3rfunk@gmail.com
-remotepass = keyring.get_password("offlineimap", "hyp3rfunk@gmail.com")
+remotepasseval = keyring.get_password("offlineimap", "hyp3rfunk@gmail.com")
 realdelete = no
 # "[Gmail]/Some Folder" --> some_folder
 nametrans = lambda folder: re.sub('^inbox$', 'INBOX',
@@ -81,7 +80,7 @@ ssl = yes
 # remoteport = 993
 remotehost = 178.79.157.248
 remoteuser = hyper
-remotepass = keyring.get_password("offlineimap", "hyper@li2.com")
+remotepasseval = keyring.get_password("offlineimap", "hyper@li2.com")
 keepalive = 60
 subscribedonly = no
 readonly = False

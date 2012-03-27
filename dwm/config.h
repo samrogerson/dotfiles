@@ -64,6 +64,7 @@ static const Layout layouts[] = {
 static const char *dmenucmd[]   = { "dmenu_run", "-fn", font, "-nb", normbgcolor, "-nf", normfgcolor, "-sb", selbgcolor, "-sf", selfgcolor, NULL };
 static const char *termcmd[]    = { "urxvtc", NULL };
 static const char *mailcmd[]    = { "urxvtc", "-e", "mutt" };
+static const char *volcmd[]     = { "urxvtc", "-e", "alsamixer" };
 static const char *browsercmd[] = { "chromium", NULL };
 
 static Key keys[] = {
@@ -93,6 +94,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
 	{ WINKEY,                       XK_b,      spawn,          {.v = browsercmd } },
 	{ WINKEY,                       XK_m,      spawn,          {.v = mailcmd } },
+	{ WINKEY,                       XK_v,      spawn,          {.v = volcmd } },
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
 	TAGKEYS(                        XK_3,                      2)

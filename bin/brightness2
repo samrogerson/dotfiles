@@ -18,8 +18,9 @@ brightness_percent=$1
 divisor=`echo "scale=4; 100/$max_brightness" | bc`
 brightness=`echo "$brightness_percent/$divisor" | bc`
 
-if [[ "$brightness" -le "$max_brightness" ]]; then
-    echo "$brightness" > $brightness_control_file
-else
+if [[ "$brightness" -gt "$max_brightness" ]]; then
     echo "$brightness > max brightness($max_brightness)"
+    echo "Setting to max"
+    brightness=$max_brightness
 fi
+echo "$brightness" > $brightness_control_file

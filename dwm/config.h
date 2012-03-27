@@ -65,6 +65,8 @@ static const char *dmenucmd[]   = { "dmenu_run", "-fn", font, "-nb", normbgcolor
 static const char *termcmd[]    = { "urxvtc", NULL };
 static const char *mailcmd[]    = { "urxvtc", "-e", "mutt" };
 static const char *volcmd[]     = { "urxvtc", "-e", "alsamixer" };
+static const char *netmoncmd[]  = { "urxvtc", "-e", "wicd-curses" };
+static const char *sysmoncmd[]  = { "urxvtc", "-e", "htop" };
 static const char *browsercmd[] = { "chromium", NULL };
 
 static Key keys[] = {
@@ -95,6 +97,8 @@ static Key keys[] = {
 	{ WINKEY,                       XK_b,      spawn,          {.v = browsercmd } },
 	{ WINKEY,                       XK_m,      spawn,          {.v = mailcmd } },
 	{ WINKEY,                       XK_v,      spawn,          {.v = volcmd } },
+	{ WINKEY,                       XK_w,      spawn,          {.v = netmoncmd } },
+	{ WINKEY,                       XK_t,      spawn,          {.v = sysmoncmd } },
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
 	TAGKEYS(                        XK_3,                      2)

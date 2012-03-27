@@ -1,4 +1,4 @@
-set from      = "samr@cern.com"
+set from      = "samr@cern.ch"
 set sendmail  = "/usr/bin/msmtp -a cern"
 set postponed = "+lidovecot/Drafts"
 # dont save plain text

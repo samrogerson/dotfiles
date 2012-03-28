@@ -34,6 +34,7 @@ static const Rule rules[] = {
     { java_name,  NULL,       NULL,       1 << 5,       True,        -1 },
 	{ NULL,       NULL,       "Vievo",    1 << 5,       True,        -1 },
 	{ "Skype",    NULL,       NULL,       1 << 7,       False,       -1 },
+	{ "sxiv",     NULL,       NULL,       0,            True,        -1 },
 };
 
 /* layout(s) */

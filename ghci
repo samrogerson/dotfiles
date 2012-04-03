@@ -1,0 +1,4 @@
+--
+-- path: $HOME/.ghci
+--
+:set prompt "ghci> "

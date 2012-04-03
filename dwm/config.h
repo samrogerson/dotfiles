@@ -2,13 +2,13 @@
 
 /* appearance */
 #define BOTTOM_BAR_HEIGHT 13
-static const char font[]            = "-*-terminus-medium-r-*-*-16-*-*-*-*-*-*-*";
-static const char normbordercolor[] = "#444444";
-static const char normbgcolor[]     = "#222222";
-static const char normfgcolor[]     = "#bbbbbb";
-static const char selbordercolor[]  = "#005577";
-static const char selbgcolor[]      = "#005577";
-static const char selfgcolor[]      = "#eeeeee";
+static const char font[]            = "-*-termsyn-medium-*-*-*-11-*-*-*-*-*-*-*";
+static const char normbordercolor[] = "#7B9FBA";
+static const char normbgcolor[]     = "#121212";
+static const char normfgcolor[]     = "#7B9FBA";
+static const char selbordercolor[]  = "#90A658";
+static const char selbgcolor[]      = "#121212";
+static const char selfgcolor[]      = "#90A658";
 static const unsigned int borderpx  = 1;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const Bool showbar           = True;     /* False means no bar */

@@ -3,6 +3,8 @@ own_window_type override
 own_window_colour 000000
 own_window_transparent no
 own_window_hints undecorated below sticky skip_taskbar skip_pager
+own_window_argb_value 170
+own_window_argb_visual yes
 double_buffer yes
 cpu_avg_samples 2
 net_avg_samples 2
@@ -20,4 +22,4 @@ no_buffers yes
 uppercase no
 
 TEXT
- $nodename ${color #0100ff}Uptime:${color white} $uptime ${color #0077ff}| CPU:${color #0077ff} ${color white}${cpu}%${color #0077ff} ${alignc}|  >> ${time} <<  ${alignr} FS: ${color lightgrey}${fs_used /}/${fs_size /}${color #0077ff} | /home: ${color lightgrey}${fs_used /home}/${fs_size /home}${color #0077ff}| Network:${color white} ${wireless_essid wlan0} ${color #0077ff}| Down: ${color white}${downspeed wlan0} ${color #0077ff}| Up: ${color white}${upspeed wlan0} ${color #0077ff}| Battery: ${color white}${battery BAT1} ${battery_time BAT1} ${color #0077ff}| Volume:${color white} ${exec amixer get Master | egrep -o "[0-9]+%" | head -1 | egrep -o "[0-9]*"}%
+ $nodename ${color #0077ff}Uptime:${color white} $uptime ${color #0077ff}| CPU:${color #0077ff} ${color white}${cpu}%${color #0077ff} ${alignc}|     ${time}     ${alignr} FS: ${color lightgrey}${fs_used /}/${fs_size /}${color #0077ff} | /home: ${color lightgrey}${fs_used /home}/${fs_size /home}${color #0077ff}| Network:${color white} ${wireless_essid wlan0} ${color #0077ff}| Down: ${color white}${downspeed wlan0} ${color #0077ff}| Up: ${color white}${upspeed wlan0} ${color #0077ff}| Battery: ${color white}${battery BAT1} ${battery_time BAT1} ${color #0077ff}| Volume:${color white} ${exec amixer get Master | egrep -o "[0-9]+%" | head -1 | egrep -o "[0-9]*"}%

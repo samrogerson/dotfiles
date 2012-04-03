@@ -22,7 +22,8 @@ setxkbmap gb
 xsetroot -cursor_name left_ptr
 
 # compositing
-xcompmgr &
+#xcompmgr &
+compton -cCfF
 
 # start urxvt daemon
 urxvtd -q -f -o &

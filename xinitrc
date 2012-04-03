@@ -21,14 +21,13 @@ setxkbmap gb
 # set mouse pointer
 xsetroot -cursor_name left_ptr
 
-eval `/usr/bin/ssh-agent`
+# compositing
+xcompmgr &
 
 # start urxvt daemon
 urxvtd -q -f -o &
 # hide out mouse when not in use
 unclutter &
-
-
 
 # set background using feh
 fehrndbkg="$HOME/bin/fehrndbkg.sh"
@@ -36,38 +35,18 @@ if [[ -f $fehrndbkg ]]; then
     sh $fehrndbkg &
 fi
 
-
-
 # D-Bus
 dbuslaunch="`which dbus-launch 2>/dev/null`"
 if [ -n "$dbuslaunch" ] && [ -x "$dbuslaunch" ] && [ -z "$DBUS_SESSION_BUS_ADDRESS" ]; then
   eval `$dbuslaunch --sh-syntax --exit-with-session`
 fi
 
-# 1280x720 = 720p X220
+# get a nice photo on login
 hash fswebcam && fswebcam -q --no-banner -r 1280x720 ~/private/login-photos/$(date +%Y-%m-%dT%H).jpg &
 hash chromium
 
-### status bar for dwm
-#while true
-#do
-#	VOL=$(amixer get Master | tail -1 | sed 's/.*\[\([0-9]*%\)\].*/\1/')
-#	LOCALTIME=$(date +%Z\=%Y-%m-%dT%H:%M)
-#	OTHERTIME=$(TZ=Europe/London date +%Z\=%H:%M)
-#	IP=$(for i in `ip r`; do echo $i; done | grep -A 1 src | tail -n1) # can get confused if you use vmware
-#	TEMP="$(($(cat /sys/class/thermal/thermal_zone0/temp) / 1000))C"
-#
-#	if acpi -a | grep off-line > /dev/null
-#	then
-#		BAT="Bat. $(acpi -b | awk '{ print $4 " " $5 }' | tr -d ',')"
-#		xsetroot -name "$IP $BAT $VOL $TEMP $LOCALTIME $OTHERTIME"
-#	else
-#		xsetroot -name "$IP $VOL $TEMP $LOCALTIME $OTHERTIME"
-#	fi
-#	sleep 20s
-#done &
-
 conky -x 0 -y 0 &
-exec dwm
 
+## window manager
+exec dwm
 #exec xmonad

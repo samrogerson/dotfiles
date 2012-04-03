@@ -31,10 +31,11 @@ urxvtd -q -f -o &
 unclutter &
 
 # set background using feh
-fehrndbkg="$HOME/bin/fehrndbkg.sh"
-if [[ -f $fehrndbkg ]]; then
-    sh $fehrndbkg &
-fi
+#fehrndbkg="$HOME/bin/fehrndbkg.sh"
+#if [[ -f $fehrndbkg ]]; then
+#    sh $fehrndbkg &
+feh --bg-scale ~/.wallpaper/archlinux-256809.jpeg
+#fi
 
 # D-Bus
 dbuslaunch="`which dbus-launch 2>/dev/null`"

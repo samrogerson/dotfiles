@@ -15,11 +15,11 @@ minimum_size 1360 10
 maximum_width 1600
 border_width 1
 draw_outline no
-default_color white
+default_color lightgrey
 alignment bottom_left
 use_spacer right
 no_buffers yes
 uppercase no
 
 TEXT
- $nodename ${color #0077ff}Uptime:${color white} $uptime ${color #0077ff}| CPU:${color #0077ff} ${color white}${cpu}%${color #0077ff} ${alignr} FS: ${color lightgrey}${fs_used /}/${fs_size /}${color #0077ff} | /home: ${color lightgrey}${fs_used /home}/${fs_size /home}${color #0077ff}| Network:${color white} ${wireless_essid wlan0} ${color #0077ff}| Down: ${color white}${downspeed wlan0} ${color #0077ff}| Up: ${color white}${upspeed wlan0} ${color #0077ff}| Battery: ${color white}${battery BAT1} ${battery_time BAT1} ${color #0077ff}| Volume:${color white} ${exec amixer get Master | egrep -o "[0-9]+%" | head -1 | egrep -o "[0-9]*"}% ${color #0077ff}| ${time}
+ ${color lightgrey}$nodename ${color #7B9FBA}Uptime:${color #90A659} $uptime ${color #7B9FBA}| CPU: ${color #90A659}${cpu}%${color #7B9FBA} ${alignr} FS: ${color #90A659}${fs_used /}/${fs_size /}${color #7B9FBA} | /home: ${color #90A659}${fs_used /home}/${fs_size /home}${color #7B9FBA}| Network:${color #90A659} ${wireless_essid wlan0} ${color #7B9FBA}| Down: ${color #90A659}${downspeed wlan0} ${color #7B9FBA}| Up: ${color #90A659}${upspeed wlan0} ${color #7B9FBA}| Battery: ${color #90A659}${battery BAT1} ${battery_time BAT1} ${color #7B9FBA}| Volume:${color #90A659} ${exec amixer get Master | egrep -o "[0-9]+%" | head -1 | egrep -o "[0-9]*"}% ${color #7B9FBA}| ${color lightgrey}${time}

@@ -8,3 +8,5 @@ mutt/cache
 mutt/mailboxes
 mutt/temp
 vim/.netrwhist
+dwm/dwm
+st/st

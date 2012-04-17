@@ -30,6 +30,7 @@ static const Rule rules[] = {
 	{ "Chromium", NULL,       NULL,       1 << 1,       False,       -1 },
 	{ "Zathura",  NULL,       NULL,       1 << 2,       False,       -1 },
 	{ "Evince",   NULL,       NULL,       1 << 2,       False,       -1 },
+	{ "Mumble",   NULL,       NULL,       1 << 3,       True,        -1 },
 	{ NULL,       NULL,       "mutt",     1 << 8,       False,       -1 },
     { java_name,  NULL,       NULL,       1 << 5,       True,        -1 },
 	{ NULL,       NULL,       "Vievo",    1 << 5,       True,        -1 },

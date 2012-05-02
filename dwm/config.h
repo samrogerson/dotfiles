@@ -37,6 +37,7 @@ static const Rule rules[] = {
 	{ "Skype",    NULL,       NULL,       1 << 7,       False,       -1 },
 	{ "sxiv",     NULL,       NULL,       0,            True,        -1 },
 	{ "Canvas",   NULL,       NULL,       0,            True,        -1 },
+	{ "Wine",     NULL,       NULL,       1 << 6,       True,        -1 },
 };
 
 /* layout(s) */

@@ -1,0 +1,1 @@
+WINEDEBUG=-all LIBGL_DRIVERS_PATH=/usr/lib32/xorg/modules/dri wine ~/.wine/drive_c/Program\ Files/Steam/Steam.exe >/dev/null 2>&1

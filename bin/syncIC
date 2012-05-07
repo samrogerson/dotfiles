@@ -1,4 +1,4 @@
 #! /bin/bash
 
-rsync -avz sr505@lx06:public_html/* ~/public_html/
 rsync -avz ~/public_html/* sr505@lx06:public_html/
+rsync -avz sr505@lx06:public_html/* ~/public_html/

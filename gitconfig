@@ -7,3 +7,8 @@
     diff = auto
     branch = auto
     status = auto
+	grep = always
+    interactive = auto
+    pager = true
+    showbranch = auto
+    ui = auto

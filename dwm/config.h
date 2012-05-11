@@ -72,6 +72,7 @@ static const char *volcmd[]     = { "urxvtc", "-e", "alsamixer" };
 static const char *netmoncmd[]  = { "urxvtc", "-e", "wicd-curses" };
 static const char *sysmoncmd[]  = { "urxvtc", "-e", "htop" };
 static const char *browsercmd[] = { "chromium", NULL };
+static const char *logout[]     = { "pkill", "-9", "startdwm" };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -103,6 +104,7 @@ static Key keys[] = {
 	{ WINKEY,                       XK_v,      spawn,          {.v = volcmd } },
 	{ WINKEY,                       XK_w,      spawn,          {.v = netmoncmd } },
 	{ WINKEY,                       XK_t,      spawn,          {.v = sysmoncmd } },
+	{ MODKEY|ControlMask,           XK_q,      spawn,          {.v = logout } },
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
 	TAGKEYS(                        XK_3,                      2)

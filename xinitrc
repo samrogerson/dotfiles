@@ -50,4 +50,4 @@ hash chromium
 conky -x 0 -y 0 &
 
 ## window manager
-. $HOME/bin/startdwm
+$HOME/bin/startdwm

@@ -37,6 +37,8 @@ unclutter &
 feh --bg-scale ~/.wallpaper/archlinux-256809.jpeg
 #fi
 
+synclient PalmDetect=1
+
 # D-Bus
 dbuslaunch="`which dbus-launch 2>/dev/null`"
 if [ -n "$dbuslaunch" ] && [ -x "$dbuslaunch" ] && [ -z "$DBUS_SESSION_BUS_ADDRESS" ]; then

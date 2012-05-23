@@ -24,3 +24,7 @@ Host li1
 Host li2
   HostName 178.79.157.248
   User hyper
+
+Host fnal
+  HostName cmslpc-sl5.fnal.gov
+  User samr

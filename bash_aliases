@@ -19,10 +19,13 @@ alias gc='git commit'
 alias ga='git add'
 
 
-# --- ROOT --- #
-alias sroot='source /vols/cms03/samr/root/bin/thisroot.sh'
-
-# --- HEP --- #
-alias QSTAT='/home/hep/sr505/Scripts/QSTAT.py'
-
-alias pA='/home/hep/sr505/mastercode-tools-old/processAll.x'
+if [[ "$HOSTNAME" == *.hep.ph.ic.ac.uk ]]; then
+    # --- ROOT --- #
+    alias sroot='source /vols/cms03/samr/root/bin/thisroot.sh'
+    # --- HEP --- #
+    alias QSTAT='/home/hep/sr505/Scripts/QSTAT.py'
+    # --- MC --- #
+    alias pA='/home/hep/sr505/mastercode-tools-old/processAll.x'
+    # --- OLD GIT --- #
+    alias gss='git status'
+fi

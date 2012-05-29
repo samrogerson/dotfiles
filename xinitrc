@@ -9,6 +9,7 @@
 xrdb -merge ~/.Xdefaults
 
 # add the fonts we needs (like terminus :) )
+#xset +fp /usr/share/fonts/truetype/
 xset +fp /usr/share/fonts/TTF/
 xset +fp /usr/share/fonts/local/
 xset fp rehash

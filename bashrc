@@ -41,4 +41,6 @@ elif [[ "$HOSTNAME" == *.fnal.gov ]]; then
     source /uscmst1/prod/sw/cms/bashrc prod
     export SCRAM_ARCH=slc5_amd64_gcc462
     export TERM="xterm-256color"
+    source /uscmst1/prod/sw/cms/cmsset_default.sh
 fi
+reset

@@ -10,6 +10,8 @@ set nocompatible
 set autoindent shiftwidth=4 expandtab tabstop=4 textwidth=0
 
 set guioptions-=T
+set guioptions-=m
+set guioptions-=r
 
 " more natural tab completion
 set wildmode=longest,list,full

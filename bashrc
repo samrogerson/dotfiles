@@ -29,6 +29,7 @@ shopt -s histappend
 export PATH=$PATH:$HOME/bin/
 export LC_ALL="C"
 export PS1="\[$BICyan\][ \[$Cyan\]\u@\h \[$IWhite\]\W \[$BICyan\]]\[$Color_Off\] "
+export EDITOR="/usr/bin/vim"
 
 stty erase 
 
@@ -45,4 +46,3 @@ elif [[ "$HOSTNAME" == *.fnal.gov ]]; then
 #    export TERM="xterm-256color"
     source /uscmst1/prod/sw/cms/cmsset_default.sh
 fi
-export EDITOR="/usr/bin/vim"

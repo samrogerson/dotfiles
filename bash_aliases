@@ -27,5 +27,5 @@ if [[ "$HOSTNAME" == *.hep.ph.ic.ac.uk ]]; then
     # --- MC --- #
     alias pA='/home/hep/sr505/mastercode-tools-old/processAll.x'
     # --- OLD GIT --- #
-    alias gss='git status'
+#    alias gss='git status'
 fi

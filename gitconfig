@@ -1,5 +1,8 @@
 # path: $HOME/.gitconfig
 
+[github]
+    user = hyperfunk
+    password = !python ~/bin/ghpw
 [user]
     email = samr@cern.ch
     name = Sam Rogerson

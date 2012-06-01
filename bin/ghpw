@@ -1,0 +1,4 @@
+#! /usr/bin/env python
+import keyring
+pw=keyring.get_password('github','hyperfunk')
+print pw

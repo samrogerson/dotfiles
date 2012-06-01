@@ -26,7 +26,7 @@ export HISTCONTROL=erasedups
 #append to the bash_history file on exit, rather than over-writing
 shopt -s histappend 
 
-export PATH=$PATH:$HOME/bin/
+export PATH=$PATH:$HOME/bin/:$HOME/local/bin/
 export LC_ALL="C"
 export PS1="\[$BICyan\][ \[$Cyan\]\u@\h \[$IWhite\]\W \[$BICyan\]]\[$Color_Off\] "
 export EDITOR="/usr/bin/vim"
@@ -45,4 +45,6 @@ elif [[ "$HOSTNAME" == *.fnal.gov ]]; then
     export SCRAM_ARCH=slc5_amd64_gcc462
 #    export TERM="xterm-256color"
     source /uscmst1/prod/sw/cms/cmsset_default.sh
+elif [[ "$HOSTNAME" == *.cern.ch ]]; then
+    export SCRAM_ARCH=slc5_amd64_gcc462
 fi

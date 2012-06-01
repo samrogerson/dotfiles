@@ -18,6 +18,11 @@ Host lx0*
 Host lxplus
   HostName %h.cern.ch
   User samr
+
+Host lxplus*
+  HostName %h.cern.ch
+  User samr
+
 Host li1
   HostName 178.79.130.86
   User samr

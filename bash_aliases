@@ -24,6 +24,7 @@ if [[ "$HOSTNAME" == *.hep.ph.ic.ac.uk ]]; then
     alias sroot='source /vols/cms03/samr/root/bin/thisroot.sh'
     # --- HEP --- #
     alias QSTAT='/home/hep/sr505/Scripts/QSTAT.py'
+    alias qw='while true; do clear; QSTAT; sleep 7; done'
     # --- MC --- #
     alias pA='/home/hep/sr505/mastercode-tools-old/processAll.x'
     # --- OLD GIT --- #

@@ -6,8 +6,8 @@ URxvt.background: rgba:0000/2b00/3600/dddd
 URxvt*termName: rxvt-256color
 
 !!URxvt*font:xft:Terminus:pixelsize=14
-URxvt*font:xft:termsyn-medium:pixelsize=14
-!!URxvt*font:xft:monaco-medium:pixelsize=11
+!!URxvt*font:xft:monaco-medium:pixelsize=11:antialias=true:hinting=true
+URxvt*font:xft:termsyn-medium:pixelsize=16:antialias=true:hinting=true
 URxvt*saveLines:12000
 URxvt.urgentOnBell: true
 URxvt*scrollBar:false

@@ -40,6 +40,6 @@ then
     # draw a pretty graph
     if [[ -f /usr/bin/pacgraph ]]
     then
-        pacgraph --svg -f ${base_dir}/pacgraph
+        pacgraph -f ${base_dir}/pacgraph
     fi
 fi

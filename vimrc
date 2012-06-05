@@ -1,8 +1,6 @@
 " # path: $HOME/.vimrc
-" To invoke this file after vi startup read it into a buffer, e.g. x
-" then execute it by typing :@x (i.e. an ex command on bottom line).
+call pathogen#infect()
 
-" cos really who cares about vi :)
 set nocompatible
 
 " use auto-indenting by 4 spaces. ensure tabs are never inserted and
@@ -13,14 +11,20 @@ set guioptions-=T
 set guioptions-=m
 set guioptions-=r
 
+if has('gui_running')
+    set background=light
+else
+    set background=dark
+endif
+colorscheme solarized
+
 " more natural tab completion
 set wildmode=longest,list,full
 set wildmenu
 
 set nu
 syntax on
-colorscheme solarized
-set background=dark
+filetype plugin indent on
 set hlsearch
 
 " define some useful insert mode shortcuts for C/C++ syntax.
@@ -66,4 +70,3 @@ nmap <Up> <nop>
 nmap <Down> <nop>
 
 filetype plugin on
-

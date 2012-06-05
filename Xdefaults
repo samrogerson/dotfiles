@@ -8,6 +8,8 @@ URxvt*termName: rxvt-256color
 !!URxvt*font:xft:Terminus:pixelsize=14
 !!URxvt*font:xft:monaco-medium:pixelsize=11:antialias=true:hinting=true
 URxvt*font:xft:termsyn-medium:pixelsize=16:antialias=true:hinting=true
+!!URxvt*font:-*-monaco-medium-r-normal--0-0-0-0-p-0-*-16
+
 URxvt*saveLines:12000
 URxvt.urgentOnBell: true
 URxvt*scrollBar:false

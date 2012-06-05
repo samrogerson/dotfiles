@@ -1,6 +1,6 @@
 
-#define FONT " -misc-termsyn-medium-r-normal--11-79-100-100-c-60-iso8859-1"
-#define BOLDFONT " -misc-termsyn-bold-r-normal--11-79-100-100-c-60-iso8859-1"
+#define FONT "-*-termsyn-medium-r-normal--17-*-*-*-*-*-*-*"
+#define BOLDFONT "-*-termsyn-bold-r-normal--17-*-*-*-*-*-*-*"
 
 /* Space in pixels around the terminal buffer */
 #define BORDER 2

@@ -30,6 +30,7 @@
 /etc/modules.conf
 /etc/network.d/athenee
 /etc/network.d/athenee-chris
+/etc/pacman.conf.pacnew
 /etc/pacman.d/gnupg/
 /etc/pacman.d/gnupg/gpg.conf
 /etc/pacman.d/gnupg/pubring.gpg
@@ -2758,7 +2759,6 @@
 /usr/share/fonts/truetype/
 /usr/share/fonts/truetype/fonts.dir
 /usr/share/fonts/truetype/fonts.scale
-/usr/share/fonts/truetype/Monaco_Linux.ttf
 /usr/share/fonts/TTF/fonts.dir
 /usr/share/fonts/TTF/fonts.scale
 /usr/share/fonts/Type1/fonts.dir

@@ -18,7 +18,7 @@ set noswapfile
 set guioptions-=T
 set guioptions-=m
 set guioptions-=r
-set guifont=Termsyn 16
+set guifont=Termsyn\ 16
 
 
 syntax enable

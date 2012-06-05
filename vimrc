@@ -19,12 +19,17 @@ set guioptions-=T
 set guioptions-=m
 set guioptions-=r
 
+
 syntax enable
-if has('gui_running')
-    set background=light
-else
-    set background=dark
-endif
+"if has('gui_running')
+"    set background=light
+"else
+"    set background=dark
+"endif
+set background=dark
+let g:solarized_termtrans=1
+let g:solarized_contrast="high"
+let g:solarized_visibility="high"
 colorscheme solarized
 
 " more natural tab completion

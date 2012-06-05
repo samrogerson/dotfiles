@@ -8,5 +8,6 @@ mutt/cache
 mutt/mailboxes
 mutt/temp
 vim/colors/solarized.vim
+vim/.netrwhist
 dwm/dwm
 st/st

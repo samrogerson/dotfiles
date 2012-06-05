@@ -11,10 +11,10 @@
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
 	/* 8 normal colors */
-	"black",
+	"#002b36", //bkg
 	"red3",
-	"green3",
-	"yellow3",
+	"#cb4b16",
+	"#859900",
 	"blue2",
 	"magenta3",
 	"cyan3",
@@ -22,10 +22,10 @@ static const char *colorname[] = {
 
 	/* 8 bright colors */
 	"gray50",
-	"red",
-	"green",
-	"yellow",
-	"#5c5cff",
+	"#cb4b16", // imports
+	"#586e75", // comments / lin no
+	"#b58900",
+	"#268bd2", // directory
 	"magenta",
 	"cyan",
 	"white",

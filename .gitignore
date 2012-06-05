@@ -7,6 +7,6 @@ xmonad/xmonad.errors
 mutt/cache
 mutt/mailboxes
 mutt/temp
-vim/.netrwhist
+vim/colors/solarized.vim
 dwm/dwm
 st/st

@@ -1,0 +1,5 @@
+#! /bin/bash
+
+pacman -Qq   > allPackages.lst
+pacman -Qqe  > explPackages.lst
+pacman -Qqet > explNoDepPackages.lst

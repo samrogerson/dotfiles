@@ -1,5 +1,45 @@
 #! /bin/bash
 
-pacman -Qq   > allPackages.lst
-pacman -Qqe  > explPackages.lst
-pacman -Qqet > explNoDepPackages.lst
+base_dir="${HOME}/Projects/dotfiles/pkgs/"
+
+pacdisowned() {
+  tmp=${TMPDIR-/tmp}/pacman-disowned-$UID-$$
+  db=$tmp/db
+  fs=$tmp/fs
+
+  mkdir "$tmp"
+  trap  'rm -rf "$tmp"' EXIT
+
+  pacman -Qlq | sort -u > "$db"
+
+  find /bin /etc /lib /sbin /usr \
+      ! -name lost+found \
+        \( -type d -printf '%p/\n' -o -print \) | sort > "$fs"
+
+  comm -23 "$fs" "$db"
+}
+
+# list generation
+# all installed packages
+pacman -Qq   > ${base_dir}/allPackages.lst
+# all explicitly installed packages
+pacman -Qqe  > ${base_dir}/explPackages.lst
+# all explicitly installed packages on which no packages depend
+pacman -Qqet > ${base_dir}/explNoDepPackages.lst
+# non-explicitly installed packages on which no packages depend
+pacman -Qqdt > ${base_dir}/orphans.lst
+
+if [[ $1 == "full" ]]
+then
+    # list all installed packages by size
+    pacman -Qi | awk '/^Name/ {pkg=$3} /Size/ {print $4$5,pkg}' \
+        | sort -n > ${base_dir}/bySize.lst
+
+    pacdisowned > ${base_dir}/disowned.lst
+
+    # draw a pretty graph
+    if [[ -f /usr/bin/pacgraph ]]
+    then
+        pacgraph --svg -f ${base_dir}/pacgraph
+    fi
+fi

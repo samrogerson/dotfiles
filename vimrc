@@ -2,7 +2,17 @@
 call pathogen#infect()
 
 set nocompatible
-set autoindent shiftwidth=4 expandtab tabstop=4 textwidth=0
+set autoindent
+set shiftwidth=4
+set expandtab
+set smarttab
+set tabstop=4
+set textwidth=80
+set smartcase
+set incsearch
+set wildignore=*.swp,*.bak,*.pyc
+set nobackup
+set noswapfile
 
 " remove bars from gui
 set guioptions-=T

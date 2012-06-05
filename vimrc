@@ -2,15 +2,14 @@
 call pathogen#infect()
 
 set nocompatible
-
-" use auto-indenting by 4 spaces. ensure tabs are never inserted and
-" tab key indents by 4 spaces.
 set autoindent shiftwidth=4 expandtab tabstop=4 textwidth=0
 
+" remove bars from gui
 set guioptions-=T
 set guioptions-=m
 set guioptions-=r
 
+syntax enable
 if has('gui_running')
     set background=light
 else
@@ -23,7 +22,6 @@ set wildmode=longest,list,full
 set wildmenu
 
 set nu
-syntax on
 filetype plugin indent on
 set hlsearch
 

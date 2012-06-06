@@ -52,5 +52,11 @@ hash chromium
 
 conky -x 0 -y 0 &
 
+# swap caps lock and escape
+xmodmap -e "remove Lock = Caps_Lock"
+xmodmap -e "keysym Escape = Caps_Lock"
+xmodmap -e "keysym Caps_Lock = Escape"
+xmodmap -e "add Lock = Caps_Lock"
+
 ## window manager
 $HOME/bin/startdwm

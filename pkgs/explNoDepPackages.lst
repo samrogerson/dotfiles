@@ -31,7 +31,7 @@ flashplugin
 flex
 fswebcam
 gcc-fortran
-ghc
+gettext
 gimp
 git
 gomplay-git
@@ -56,8 +56,6 @@ lib32-intel-dri
 lib32-libldap
 lib32-mpg123
 lib32-v4l-utils
-libreoffice-base
-libreoffice-sdk
 libtool
 licenses
 links
@@ -66,6 +64,7 @@ linux-headers
 logrotate
 lvm2
 lynx
+make
 man-pages
 mdadm
 mercurial
@@ -111,6 +110,7 @@ terminus-font
 termsyn
 texlive-latexextra
 texlive-publishers
+ttf-inconsolata
 ttf-ms-fonts
 unclutter
 uniconvertor
@@ -123,7 +123,6 @@ vi
 vloopback-svn
 which
 wicd
-wine_gecko
 wireshark-cli
 wmctrl
 wmname

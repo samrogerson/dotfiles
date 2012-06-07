@@ -37,7 +37,6 @@
 36.00KiB xorg-iceauth
 36.00KiB xorg-xev
 36.00KiB xorg-xwud
-40.00KiB lib32-attr
 40.00KiB lib32-libxdamage
 40.00KiB lib32-libxdmcp
 40.00KiB wmctrl
@@ -46,7 +45,6 @@
 40.00KiB xorg-xcmsdb
 40.00KiB xorg-xdpyinfo
 40.00KiB xorg-xset
-44.00KiB hyphen
 44.00KiB lib32-libxau
 44.00KiB xcompmgr
 44.00KiB xf86-input-vmmouse
@@ -99,6 +97,7 @@
 68.00KiB eventlog
 68.00KiB lib32-libxcursor
 68.00KiB libirman
+68.00KiB ttf-inconsolata
 68.00KiB xf86-input-evdev
 68.00KiB xf86-input-mouse
 68.00KiB xorg-xpr
@@ -143,7 +142,6 @@
 104.00KiB vloopback-svn
 104.00KiB xorg-xkbutils
 105.00KiB libdmx
-116.00KiB lib32-acl
 116.00KiB libpciaccess
 116.00KiB logrotate
 116.00KiB pkg-config
@@ -196,7 +194,6 @@
 200.00KiB alsa-oss
 200.00KiB usbutils
 200.00KiB xorg-x11perf
-208.00KiB graphite
 208.00KiB libcap
 208.00KiB libdvdread
 208.00KiB libxkbfile
@@ -279,7 +276,6 @@
 380.00KiB lib32-expat
 388.00KiB lib32-mpg123
 388.00KiB pciutils
-396.00KiB lib32-libxt
 400.00KiB glib-networking
 400.00KiB libmodplug
 404.00KiB netcfg
@@ -296,7 +292,6 @@
 460.00KiB xbitmaps
 464.00KiB apvlv
 464.00KiB archlinux-keyring
-468.00KiB lib32-mesa
 468.00KiB libgxps
 468.00KiB socat
 472.00KiB heirloom-mailx
@@ -323,7 +318,6 @@
 552.00KiB libogg
 553.00KiB nettle
 559.00KiB libxext
-564.00KiB libidl2
 568.00KiB cloog
 568.00KiB libglade
 568.00KiB zip
@@ -359,7 +353,6 @@
 712.00KiB enca
 721.00KiB hunspell
 728.00KiB gtkspell
-737.00KiB hsqldb-java
 740.00KiB wpa_supplicant
 744.00KiB dbus-glib
 752.00KiB gsettings-desktop-schemas
@@ -465,7 +458,6 @@
 1645.00KiB dbus-core
 1668.00KiB libsndfile
 1692.00KiB ntp
-1736.00KiB rasqal
 1740.00KiB findutils
 1740.00KiB imlib2
 1744.00KiB sdl
@@ -473,7 +465,6 @@
 1784.00KiB t1lib
 1792.00KiB x264
 1796.00KiB xvidcore
-1852.00KiB redland
 1860.00KiB curl
 1864.00KiB libvpx
 1864.00KiB xmlrpc-c
@@ -489,12 +480,10 @@
 1980.00KiB flac
 2004.00KiB gmp
 2024.00KiB libtheora
-2028.00KiB raptor
 2032.00KiB polkit
 2052.00KiB libevent
 2056.00KiB python2-gobject2
 2060.00KiB lirc-utils
-2076.00KiB orbit2
 2080.00KiB alsa-utils
 2092.00KiB grub
 2160.00KiB wicd
@@ -561,7 +550,6 @@
 4208.00KiB links
 4248.00KiB krb5
 4304.00KiB poppler
-4312.00KiB lib32-gettext
 4408.00KiB kbd
 4480.00KiB linux-api-headers
 4528.00KiB lynx
@@ -588,7 +576,6 @@
 7016.00KiB gnupg
 7108.00KiB mumble
 7488.00KiB util-linux
-7638.00KiB libreoffice-base
 7684.00KiB gconf
 8168.00KiB groff
 8188.00KiB xorg-fonts-misc
@@ -638,7 +625,6 @@
 23224.00KiB flashplugin
 25084.00KiB shared-color-profiles
 25284.00KiB ppl
-25480.00KiB libreoffice-en-GB
 25820.00KiB vim-runtime
 26374.00KiB icu
 28704.00KiB qtwebkit
@@ -647,7 +633,6 @@
 30340.00KiB texlive-latexextra
 30624.00KiB lib32-ati-dri
 31356.00KiB subversion
-31544.00KiB wine_gecko
 34132.00KiB lib32-qt
 37612.00KiB glibc
 37812.00KiB firefox
@@ -675,9 +660,5 @@
 92316.00KiB qt
 93880.00KiB gcc-gcj
 100996.00KiB chromium
-108488.00KiB libreoffice-sdk
 143852.00KiB boost
-229804.00KiB libreoffice-common
-239996.00KiB wine
 258485.00KiB texlive-core
-741936.00KiB ghc

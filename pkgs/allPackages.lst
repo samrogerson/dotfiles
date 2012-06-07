@@ -113,7 +113,6 @@ gdbm
 gdk-pixbuf2
 gegl
 gettext
-ghc
 ghostscript
 giblib
 giflib
@@ -137,7 +136,6 @@ gomstreamer-git
 gperf
 gpgme
 gpm
-graphite
 graphviz
 grep
 groff
@@ -164,11 +162,9 @@ hdparm
 heirloom-mailx
 hicolor-icon-theme
 hspell
-hsqldb-java
 htop
 hunspell
 hwids
-hyphen
 iana-etc
 icedtea-web-java7
 icon-naming-utils
@@ -207,17 +203,14 @@ lcms
 lcms2
 ldns
 less
-lib32-acl
 lib32-alsa-lib
 lib32-ati-dri
-lib32-attr
 lib32-bzip2
 lib32-dbus-core
 lib32-expat
 lib32-fontconfig
 lib32-freetype2
 lib32-gcc-libs
-lib32-gettext
 lib32-glib2
 lib32-glibc
 lib32-intel-dri
@@ -246,10 +239,8 @@ lib32-libxi
 lib32-libxrandr
 lib32-libxrender
 lib32-libxss
-lib32-libxt
 lib32-libxv
 lib32-libxxf86vm
-lib32-mesa
 lib32-mpg123
 lib32-openssl
 lib32-pcre
@@ -300,7 +291,6 @@ libgusb
 libgxps
 libice
 libid3tag
-libidl2
 libidn
 libiec61883
 libieee1284
@@ -329,10 +319,6 @@ libpng
 libproxy
 libpulse
 libraw1394
-libreoffice-base
-libreoffice-common
-libreoffice-en-GB
-libreoffice-sdk
 librsvg
 libsamplerate
 libsasl
@@ -441,7 +427,6 @@ opencore-amr
 openjpeg
 openssh
 openssl
-orbit2
 orc
 p11-kit
 pacgraph
@@ -502,12 +487,9 @@ python2-urwid
 qt
 qtwebkit
 randrproto
-raptor
-rasqal
 readline
 recode
 recordproto
-redland
 reiserfsprogs
 renderproto
 rhino
@@ -560,6 +542,7 @@ texlive-latexextra
 texlive-publishers
 ttf-dejavu
 ttf-freefont
+ttf-inconsolata
 ttf-ms-fonts
 tzdata
 unclutter
@@ -581,8 +564,6 @@ wavpack
 wget
 which
 wicd
-wine
-wine_gecko
 wireless_tools
 wireshark-cli
 wmctrl

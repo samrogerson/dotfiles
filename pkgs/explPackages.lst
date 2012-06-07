@@ -49,7 +49,6 @@ gcc-fortran
 gcc-gcj
 gcc-gcj-ecj
 gettext
-ghc
 ghostscript
 gimp
 git
@@ -84,9 +83,6 @@ lib32-libldap
 lib32-mpg123
 lib32-v4l-utils
 libpipeline
-libreoffice-base
-libreoffice-common
-libreoffice-sdk
 libtool
 licenses
 links
@@ -162,6 +158,7 @@ texinfo
 texlive-core
 texlive-latexextra
 texlive-publishers
+ttf-inconsolata
 ttf-ms-fonts
 unclutter
 uniconvertor
@@ -177,8 +174,6 @@ vloopback-svn
 wget
 which
 wicd
-wine
-wine_gecko
 wireshark-cli
 wmctrl
 wmname

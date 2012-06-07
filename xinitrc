@@ -60,7 +60,9 @@ xmodmap -e "add Lock = Caps_Lock"
 
 ## window manager
 if [[ -f $HOME/bin/startdwm ]]; then
-    $HOME/bin/stardwm
+    $HOME/bin/startdwm
 else
     exec dwm
 fi
+
+#read -n1 -p "lulZ"

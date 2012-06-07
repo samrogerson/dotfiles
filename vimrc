@@ -144,12 +144,13 @@ else
     set background=dark
 endif
 
-colorscheme solarized
-
 " solarized settings
 let g:solarized_termtrans=0
-let g:solarized_contrast="high"
+let g:solarized_contrast="normal"
 let g:solarized_visibility="high"
+
+colorscheme solarized
+
 
 " Set utf8 as standard encoding and en_US as the standard language
 set encoding=utf8

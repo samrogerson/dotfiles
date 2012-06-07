@@ -83,7 +83,7 @@ set wildmode=longest,list,full
 set wildmenu
 
 " Ignore compiled files
-set wildignore=*.o,*~,*.pyc
+set wildignore=*.o,*~,*.pyc,*.so,*.d
 
 "Always show current position
 set ruler

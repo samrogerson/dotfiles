@@ -59,4 +59,8 @@ xmodmap -e "keysym Caps_Lock = Escape"
 xmodmap -e "add Lock = Caps_Lock"
 
 ## window manager
-$HOME/bin/startdwm
+if [[ -f $HOME/bin/startdwm ]]; then
+    $HOME/bin/stardwm
+else
+    exec dwm
+fi

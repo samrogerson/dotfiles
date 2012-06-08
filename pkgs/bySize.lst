@@ -2,7 +2,6 @@
 4.00KiB xorg-server-utils
 4.00KiB xorg-utils
 8.00KiB dnssec-anchors
-8.00KiB gomplay-git
 12.00KiB archey
 12.00KiB wmname
 12.00KiB xorg-mkfontdir
@@ -27,7 +26,6 @@
 28.00KiB xorg-smproxy
 28.00KiB xorg-xlsfonts
 32.00KiB alsi
-32.00KiB gomstreamer-git
 32.00KiB xorg-setxkbmap
 36.00KiB compositeproto
 36.00KiB lib32-libxss
@@ -69,7 +67,6 @@
 52.00KiB xorg-xdriinfo
 52.00KiB xorg-xinit
 52.00KiB xorg-xrefresh
-56.00KiB libwbclient
 56.00KiB libxinerama
 56.00KiB scrnsaverproto
 56.00KiB scrot
@@ -96,7 +93,6 @@
 68.00KiB dmxproto
 68.00KiB eventlog
 68.00KiB lib32-libxcursor
-68.00KiB libirman
 68.00KiB ttf-inconsolata
 68.00KiB xf86-input-evdev
 68.00KiB xf86-input-mouse
@@ -106,7 +102,6 @@
 72.00KiB libtiger
 72.00KiB xorg-xrdb
 76.00KiB dmenu
-76.00KiB filesystem
 76.00KiB lib32-libxi
 76.00KiB libdatrie
 76.00KiB pacgraph
@@ -165,7 +160,6 @@
 140.00KiB lib32-bzip2
 140.00KiB libxdmcp
 140.00KiB xorg-server-common
-144.00KiB cifs-utils
 144.00KiB v4l2ucp
 148.00KiB libglapi
 148.00KiB patch
@@ -173,7 +167,6 @@
 152.00KiB libxpm
 152.00KiB xf86-input-synaptics
 156.00KiB desktop-file-utils
-156.00KiB talloc
 160.00KiB enchant
 160.00KiB gsm
 160.00KiB perl-xml-simple
@@ -181,8 +174,8 @@
 169.00KiB libxtst
 172.00KiB libxrandr
 172.00KiB sysfsutils
+176.00KiB acpid
 176.00KiB libassuan
-176.00KiB libcap-ng
 180.00KiB libffi
 184.00KiB python2-gconf
 188.00KiB cronie
@@ -207,7 +200,6 @@
 224.00KiB ethtool
 224.00KiB gperf
 224.00KiB libdvdnav
-224.00KiB tdb
 228.00KiB bc
 228.00KiB fakeroot
 228.00KiB giblib
@@ -215,11 +207,9 @@
 228.00KiB lib32-libice
 228.00KiB libgssglue
 232.00KiB libmpeg2
-236.00KiB faac
-236.00KiB libvdpau
 244.00KiB a52dec
 244.00KiB cpufrequtils
-244.00KiB libusb
+244.00KiB libusbx
 248.00KiB pm-utils
 252.00KiB gzip
 256.00KiB dhcpcd
@@ -246,13 +236,12 @@
 304.00KiB libraw1394
 308.00KiB iputils
 308.00KiB libgusb
+312.00KiB filesystem
 312.00KiB lib32-dbus-core
 312.00KiB libass
-312.00KiB libftdi
 312.00KiB libksba
 312.00KiB wireless_tools
 316.00KiB lib32-libdrm
-320.00KiB libcddb
 320.00KiB libmpdclient
 320.00KiB libsm
 328.00KiB babl
@@ -264,7 +253,6 @@
 340.00KiB vi
 344.00KiB libmpc
 348.00KiB alsa-plugins
-352.00KiB cdparanoia
 352.00KiB mkinitcpio-busybox
 356.00KiB freeglut
 360.00KiB zlib
@@ -303,7 +291,6 @@
 496.00KiB libart-lgpl
 496.00KiB python2-feedparser
 500.00KiB python2-pyparsing
-512.00KiB rsync
 520.00KiB fribidi
 520.00KiB libdvbpsi
 536.00KiB acl
@@ -322,6 +309,7 @@
 568.00KiB libglade
 568.00KiB zip
 572.00KiB python2-dateutil
+572.00KiB rsync
 580.00KiB dconf
 588.00KiB inputproto
 588.00KiB libebml
@@ -332,7 +320,6 @@
 608.00KiB atkmm
 608.00KiB msmtp
 616.00KiB libpcap
-620.00KiB libbluray
 624.00KiB cryptsetup
 624.00KiB xterm
 636.00KiB expat
@@ -377,6 +364,7 @@
 872.00KiB screen
 880.00KiB fuse
 888.00KiB apr-util
+892.00KiB xorg-docs
 908.00KiB iptables
 908.00KiB procps-ng
 920.00KiB iana-etc
@@ -388,8 +376,7 @@
 940.00KiB zvbi
 944.00KiB offlineimap
 948.00KiB lib32-libmng
-949.00KiB libcups
-952.00KiB xorg-docs
+961.00KiB libcups
 972.00KiB gc
 976.00KiB libltdl
 992.00KiB lib32-libjpeg-turbo
@@ -453,7 +440,6 @@
 1576.00KiB lib32-libldap
 1576.00KiB v4l-utils
 1580.00KiB lib32-libxcb
-1628.00KiB libcdio
 1636.00KiB lib32-pcre
 1645.00KiB dbus-core
 1668.00KiB libsndfile
@@ -483,7 +469,6 @@
 2032.00KiB polkit
 2052.00KiB libevent
 2056.00KiB python2-gobject2
-2060.00KiB lirc-utils
 2080.00KiB alsa-utils
 2092.00KiB grub
 2160.00KiB wicd
@@ -529,7 +514,7 @@
 3168.00KiB pdftk
 3176.00KiB gvim
 3196.00KiB libsoup
-3308.00KiB systemd-tools
+3316.00KiB systemd-tools
 3348.00KiB pacman
 3412.00KiB cairo
 3451.00KiB shared-mime-info
@@ -557,7 +542,6 @@
 4565.00KiB libxcb
 4684.00KiB recode
 5008.00KiB glibmm
-5084.00KiB libmp4v2
 5300.00KiB python2-docutils
 5462.00KiB xkeyboard-config
 5468.00KiB shadow
@@ -566,7 +550,7 @@
 5543.00KiB tzdata
 5592.00KiB ttf-ms-fonts
 6192.00KiB nss
-6331.00KiB gnutls
+6363.00KiB gnutls
 6464.00KiB mutt
 6536.00KiB lib32-openssl
 6576.00KiB libgphoto2
@@ -589,7 +573,6 @@
 9852.00KiB ncurses
 9952.00KiB imagemagick
 10576.00KiB ttf-freefont
-11000.00KiB mplayer
 11308.00KiB gstreamer0.10-base
 11332.00KiB ffmpeg
 11780.00KiB openssl
@@ -610,7 +593,7 @@
 15399.00KiB man-pages
 15668.00KiB db
 15968.00KiB xorg-fonts-75dpi
-16292.00KiB git
+16300.00KiB git
 16444.00KiB python2-numpy
 16652.00KiB gcc-fortran
 17260.00KiB xorg-fonts-100dpi
@@ -625,7 +608,7 @@
 23224.00KiB flashplugin
 25084.00KiB shared-color-profiles
 25284.00KiB ppl
-25820.00KiB vim-runtime
+25872.00KiB vim-runtime
 26374.00KiB icu
 28704.00KiB qtwebkit
 28916.00KiB skype
@@ -635,8 +618,8 @@
 31356.00KiB subversion
 34132.00KiB lib32-qt
 37612.00KiB glibc
-37812.00KiB firefox
 38548.00KiB vlc
+38868.00KiB firefox
 39664.00KiB linux-firmware
 41170.00KiB jdk7-openjdk
 46468.00KiB linux-headers
@@ -646,7 +629,6 @@
 56032.00KiB gtk3
 57088.00KiB gtk2
 58400.00KiB linux
-63728.00KiB smbclient
 64092.00KiB clang
 65708.00KiB wireshark-cli
 70508.00KiB gimp

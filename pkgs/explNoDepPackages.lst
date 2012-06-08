@@ -1,4 +1,5 @@
 acpi
+acpid
 alsa-oss
 alsa-plugins
 alsa-utils
@@ -34,7 +35,6 @@ gcc-fortran
 gettext
 gimp
 git
-gomplay-git
 grub
 gstreamer0.10-good-plugins
 gtk
@@ -69,7 +69,6 @@ man-pages
 mdadm
 mercurial
 mozplugger-chromium
-mplayer
 msmtp
 mumble
 mutt
@@ -120,7 +119,9 @@ urxvt-url-select
 usbutils
 v4l2ucp
 vi
+vlc
 vloopback-svn
+wget
 which
 wicd
 wireshark-cli

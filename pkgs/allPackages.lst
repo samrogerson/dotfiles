@@ -2,6 +2,7 @@ a52dec
 aalib
 acl
 acpi
+acpid
 alsa-lib
 alsa-oss
 alsa-plugins
@@ -38,9 +39,7 @@ ca-certificates-java
 cabextract
 cairo
 cairomm
-cdparanoia
 chromium
-cifs-utils
 clang
 clang-analyzer
 cloog
@@ -80,7 +79,6 @@ ethtool
 eventlog
 evince
 expat
-faac
 faad2
 fakeroot
 feh
@@ -131,8 +129,6 @@ gnome-icon-theme
 gnome-icon-theme-symbolic
 gnupg
 gnutls
-gomplay-git
-gomstreamer-git
 gperf
 gpgme
 gpm
@@ -255,12 +251,8 @@ libass
 libassuan
 libasyncns
 libavc1394
-libbluray
 libcaca
 libcap
-libcap-ng
-libcddb
-libcdio
 libcroco
 libcups
 libdaemon
@@ -278,7 +270,6 @@ libevent
 libexif
 libffi
 libfontenc
-libftdi
 libgcrypt
 libgl
 libglade
@@ -294,7 +285,6 @@ libid3tag
 libidn
 libiec61883
 libieee1284
-libirman
 libjpeg-turbo
 libkate
 libksba
@@ -304,7 +294,6 @@ libmad
 libmatroska
 libmng
 libmodplug
-libmp4v2
 libmpc
 libmpcdec
 libmpdclient
@@ -340,13 +329,11 @@ libtirpc
 libtool
 libtorrent
 libupnp
-libusb
 libusb-compat
+libusbx
 libva
-libvdpau
 libvorbis
 libvpx
-libwbclient
 libwmf
 libx11
 libxau
@@ -383,7 +370,6 @@ linux
 linux-api-headers
 linux-firmware
 linux-headers
-lirc-utils
 llvm
 logrotate
 lsb-release
@@ -405,7 +391,6 @@ mozilla-common
 mozplugger-chromium
 mpfr
 mpg123
-mplayer
 msmtp
 mtdev
 mumble
@@ -514,7 +499,6 @@ sip
 sk1libs
 skype
 slock
-smbclient
 socat
 speex
 sqlite
@@ -529,10 +513,8 @@ systemd-tools
 sysvinit
 t1lib
 taglib
-talloc
 tamsyn-font
 tar
-tdb
 terminus-font
 termsyn
 texinfo

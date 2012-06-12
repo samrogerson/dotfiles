@@ -8,6 +8,8 @@ alias vimless='vim -u /usr/share/vim/vim70/macros/less.vim'
 
 alias netcfg='sudo netcfg'
 
+alias tmux='tmux -2'
+
 # --- GIT --- #
 alias gss='git status --short'
 alias gb='git branch'

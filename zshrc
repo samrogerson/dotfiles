@@ -41,5 +41,6 @@ eval `dircolors ~/.dir_colors`
 alias sroot='cdir=`pwd`; cd ~/CERN/root/; source bin/thisroot.sh; cd $cdir; cdir=""'
 alias lx='screen -dRR lx'
 alias vimless='vim -u /usr/share/vim/vim73/macros/less.vim'
+alias tmux='tmux -2'
 
 export PATH=$PATH:$HOME/bin/

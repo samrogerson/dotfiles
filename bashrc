@@ -2,6 +2,7 @@
 # path: $HOME/.bashrc
 #
 
+export PATH=$HOME/bin/:$HOME/local/bin/:$PATH
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
@@ -25,7 +26,6 @@ export HISTCONTROL=$HISTCONTROL${HISTCONTROL+,}ignoredups
 export HISTCONTROL=erasedups
 #append to the bash_history file on exit, rather than over-writing
 shopt -s histappend 
-export PATH=$HOME/bin/:$HOME/local/bin/:$PATH
 export LC_ALL="en_US.UTF-8"
 export PS1="\[$BICyan\][ \[$Cyan\]\u@\h \[$IWhite\]\W \[$BICyan\]]\[$Color_Off\] "
 export EDITOR="/usr/bin/vim"

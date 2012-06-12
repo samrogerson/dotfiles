@@ -43,4 +43,4 @@ alias lx='screen -dRR lx'
 alias vimless='vim -u /usr/share/vim/vim73/macros/less.vim'
 alias tmux='tmux -2'
 
-export PATH=$PATH:$HOME/bin/
+export PATH=$PATH:$HOME/bin/:$HOME/.gem/ruby/1.9.1/bin:

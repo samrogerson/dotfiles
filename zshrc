@@ -41,6 +41,6 @@ eval `dircolors ~/.dir_colors`
 alias sroot='cdir=`pwd`; cd ~/CERN/root/; source bin/thisroot.sh; cd $cdir; cdir=""'
 alias lx='screen -dRR lx'
 alias vimless='vim -u /usr/share/vim/vim73/macros/less.vim'
-alias tmux='tmux -2'
+alias tmux='tmux -2 new -s'
 
 export PATH=$PATH:$HOME/bin/:$HOME/.gem/ruby/1.9.1/bin:

@@ -4,7 +4,13 @@
 
 export PATH=$HOME/bin/:$HOME/local/bin/:$PATH
 # If not running interactively, don't do anything
-[[ $- != *i* ]] && return
+if [[ $- != *i* ]]; then
+    # allow remote qstat
+    if [[ "$HOSTNAME" == *hep.ph.ic.ac.uk ]]; then
+        export SGE_ROOT=/usr/share/gridengine
+    fi
+    return
+fi
 
 if [ -f ~/.bash_colors ]; then
     source ~/.bash_colors

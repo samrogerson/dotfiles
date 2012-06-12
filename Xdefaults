@@ -1,32 +1,56 @@
 !! # path: $HOME/.Xdefaults
+!-------------------------------------------------------------------------------
+! Xft settings
+!-------------------------------------------------------------------------------
 
-xterm*faceName:xft:Terminus:pixelsize=14
-!!xterm*faceName:-misc-inconsolata-medium-r-normal--0-0-0-0-p-0-iso8859-2:size=10
-!!xterm*faceName:xft:inconsolata
+Xft.dpi:                    96
+Xft.antialias:              false
+Xft.rgba:                   rgb
+Xft.hinting:                true
+Xft.hintstyle:              hintslight
 
+!-------------------------------------------------------------------------------
+! URxvt settings
+! Colours lifted from Solarized (http://ethanschoonover.com/solarized)
+! More info at:
+! http://pod.tst.eu/http://cvs.schmorp.de/rxvt-unicode/doc/rxvt.1.pod
+!-------------------------------------------------------------------------------
 
-URxvt.depth: 32
-URxvt.background: rgba:0000/2b00/3600/dddd
-URxvt*termName: rxvt-256color
-!!URxvt*font:xft:Terminus:pixelsize=14:antialias=true:hinting=true
-!!URxvt*font:xft:monaco-medium:pixelsize=11:antialias=true:hinting=true
-!!URxvt*font:-*-monaco-medium-r-normal--0-0-0-0-p-0-*-16
-!!URxvt*font:xft:andale mono:pixelsize=13:antialias=true:hinting=true
-URxvt*font:xft:termsyn-medium:pixelsize=17:antialias=true:hinting=true
+URxvt.depth:                32
+URxvt.geometry:             90x30
+URxvt.transparent:          false
+URxvt.fading:               0
+! URxvt.urgentOnBell:         true
+! URxvt.visualBell:           true
+URxvt.loginShell:           true
+URxvt.saveLines:            12000
+URxvt.internalBorder:       3
+URxvt.lineSpace:            0
 
+! Fonts
+URxvt.allow_bold:           true
+URxvt*font:xft:termsyn-medium
+URxvt*boldFont:xft:termsyn-bold
 
-URxvt*saveLines:12000
-URxvt.urgentOnBell: true
-URxvt*scrollBar:false
-URxvt.perl-ext: default,url-select
-URxvt.perl-ext-common:  default,url-select,tabbed
-URxvt.tabbed.tabbar-fg: 2
-URxvt.tabbed.tabbar-bg: 0
-URxvt.tabbed.tab-fg:    3
-URxvt.tabbed.tab-bg:    0
-URxvt.keysym.M-u:       perl:url-select:select_next
-URxvt.urlLauncher:      chromium
-URxvt.underlineURLs:    true
+! Fix font space
+URxvt*letterSpace: 0
+
+! Scrollbar
+URxvt.scrollStyle:          rxvt
+URxvt.scrollBar:            false
+
+! Perl extensions
+URxvt.perl-ext-common:      default,url-select,matcher
+URxvt.matcher.button:       1
+URxvt.urlLauncher:          chromium
+
+! Cursor
+URxvt.cursorBlink:          true
+URxvt.cursorColor:          #657b83
+URxvt.cursorUnderline:      false
+
+! Pointer
+URxvt.pointerBlank:         true
 
 !! drop in Solarized colorscheme for Xresources/Xdefaults
 

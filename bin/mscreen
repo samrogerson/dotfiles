@@ -1,6 +1,8 @@
 #! /bin/bash
 OIFS=$IFS
 IFS=','
+disconnected=`xrandr | awk '/ disconnected/{ printf $1"," }'`
+echo ${disconnected}
 connected=`xrandr | awk '/ connected/{ printf $1"," }'`
 max_res=`xrandr | awk '/[\* ]\+/ { printf $1"," }'`
 
@@ -15,6 +17,11 @@ for res in ${max_res}; do
     resolutions[$r]=$res
     r=$(($r+1))
 done
+
+for ds in ${disconnected}; do
+    xrandr --output ${ds} --off
+done
+
 
 if [[ ${#resolutions[@]} -ne ${#screens[@]} ]]; then 
     echo "Found ${#screens[@]} screens and ${#resolutions[@]} preferred modes"

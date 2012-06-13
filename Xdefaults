@@ -20,6 +20,7 @@ URxvt.depth:                32
 URxvt.geometry:             90x30
 URxvt.transparent:          false
 URxvt.fading:               0
+URxvt*termName:             rxvt-256color
 ! URxvt.urgentOnBell:         true
 ! URxvt.visualBell:           true
 URxvt.loginShell:           true
@@ -29,8 +30,8 @@ URxvt.lineSpace:            0
 
 ! Fonts
 URxvt.allow_bold:           true
-URxvt*font:xft:termsyn-medium
-URxvt*boldFont:xft:termsyn-bold
+URxvt*font:xft:termsyn-medium:size=17
+URxvt*boldFont:xft:termsyn-bold:size=17
 
 ! Fix font space
 URxvt*letterSpace: 0

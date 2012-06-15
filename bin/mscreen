@@ -37,4 +37,8 @@ else
     done
 fi
 
+if [[ -f ~/.fehbg ]]; then
+    . ~/.fehbg
+fi
+
 IFS=$OIFS

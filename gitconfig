@@ -15,3 +15,5 @@
     pager = true
     showbranch = auto
     ui = auto
+[alias]
+    graph = log --decorate --graph --oneline

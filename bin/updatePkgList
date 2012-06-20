@@ -1,6 +1,10 @@
 #! /bin/bash
 
 base_dir="${HOME}/Projects/dotfiles/pkgs/"
+if [[ $2 != "" ]];
+then
+    base_dir=${2}
+fi
 
 pacdisowned() {
   tmp=${TMPDIR-/tmp}/pacman-disowned-$UID-$$

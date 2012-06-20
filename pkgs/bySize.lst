@@ -221,7 +221,6 @@
 272.00KiB girara-gtk2
 272.00KiB libgpg-error
 276.00KiB dot2tex
-276.00KiB libnotify
 276.00KiB xorg-font-util
 284.00KiB libshout
 284.00KiB m4
@@ -272,6 +271,7 @@
 412.00KiB libieee1284
 413.00KiB libtasn1
 428.00KiB p11-kit
+428.00KiB tmux
 440.00KiB powertop
 444.00KiB feh
 456.00KiB lib32-libpng
@@ -370,6 +370,7 @@
 920.00KiB iana-etc
 928.00KiB flex
 928.00KiB libupnp
+932.00KiB lsof
 936.00KiB lcms
 936.00KiB ppp
 940.00KiB mcpp
@@ -487,6 +488,7 @@
 2504.00KiB python-imaging
 2508.00KiB jack
 2508.00KiB sudo
+2552.00KiB python-distribute
 2556.00KiB openssh
 2640.00KiB python2-pytz
 2644.00KiB file
@@ -549,6 +551,7 @@
 5520.00KiB lapack
 5543.00KiB tzdata
 5592.00KiB ttf-ms-fonts
+5600.00KiB ipython
 6192.00KiB nss
 6363.00KiB gnutls
 6464.00KiB mutt
@@ -619,7 +622,6 @@
 34132.00KiB lib32-qt
 37612.00KiB glibc
 38548.00KiB vlc
-38868.00KiB firefox
 39664.00KiB linux-firmware
 41170.00KiB jdk7-openjdk
 46468.00KiB linux-headers

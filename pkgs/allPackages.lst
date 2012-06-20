@@ -86,7 +86,6 @@ ffmpeg
 file
 filesystem
 findutils
-firefox
 fixesproto
 flac
 flashplugin
@@ -175,6 +174,7 @@ intel-dri
 iproute2
 iptables
 iputils
+ipython
 isl
 jack
 jasper
@@ -299,7 +299,6 @@ libmpcdec
 libmpdclient
 libmpeg2
 libnl
-libnotify
 libogg
 libpcap
 libpciaccess
@@ -373,6 +372,7 @@ linux-headers
 llvm
 logrotate
 lsb-release
+lsof
 lua
 lvm2
 lynx
@@ -453,6 +453,7 @@ pygobject2-devel
 pygtk
 pyqt
 python
+python-distribute
 python-imaging
 python-reportlab
 python2
@@ -522,6 +523,7 @@ texlive-bin
 texlive-core
 texlive-latexextra
 texlive-publishers
+tmux
 ttf-dejavu
 ttf-freefont
 ttf-inconsolata

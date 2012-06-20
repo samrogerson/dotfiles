@@ -27,7 +27,6 @@ dot2tex
 evince
 fakeroot
 feh
-firefox
 flashplugin
 flex
 fswebcam
@@ -46,6 +45,7 @@ initscripts
 inkscape
 iptables
 iputils
+ipython
 jfsutils
 jna
 junit
@@ -62,6 +62,7 @@ links
 linux
 linux-headers
 logrotate
+lsof
 lvm2
 lynx
 make
@@ -109,6 +110,7 @@ terminus-font
 termsyn
 texlive-latexextra
 texlive-publishers
+tmux
 ttf-inconsolata
 ttf-ms-fonts
 unclutter

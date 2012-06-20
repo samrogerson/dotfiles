@@ -40,7 +40,6 @@ feh
 file
 filesystem
 findutils
-firefox
 flashplugin
 flex
 fswebcam
@@ -70,6 +69,7 @@ initscripts
 inkscape
 iptables
 iputils
+ipython
 jdk7-openjdk
 jfsutils
 jna
@@ -88,6 +88,7 @@ links
 linux
 linux-headers
 logrotate
+lsof
 lvm2
 lynx
 m4
@@ -156,6 +157,7 @@ texinfo
 texlive-core
 texlive-latexextra
 texlive-publishers
+tmux
 ttf-inconsolata
 ttf-ms-fonts
 unclutter

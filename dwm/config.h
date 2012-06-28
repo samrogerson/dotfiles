@@ -71,12 +71,12 @@ static const Layout layouts[] = {
 /* commands */
 static const char *dmenucmd[]   = { "dmenu_run", "-fn", font, "-nb", normbgcolor, "-nf", normfgcolor, "-sb", selbgcolor, "-sf", selfgcolor, NULL };
 static const char *termcmd[]    = { "urxvtc", NULL };
-static const char *mailcmd[]    = { "urxvtc", "-e", "mutt" };
-static const char *volcmd[]     = { "urxvtc", "-e", "alsamixer" };
-static const char *netmoncmd[]  = { "urxvtc", "-e", "wicd-curses" };
-static const char *sysmoncmd[]  = { "urxvtc", "-e", "htop" };
+static const char *mailcmd[]    = { "urxvtc", "-e", "mutt", NULL };
+static const char *volcmd[]     = { "urxvtc", "-e", "alsamixer", NULL };
+static const char *netmoncmd[]  = { "urxvtc", "-e", "wicd-curses", NULL };
+static const char *sysmoncmd[]  = { "urxvtc", "-e", "htop", NULL };
 static const char *browsercmd[] = { "chromium", NULL };
-static const char *logout[]     = { "pkill", "-9", "startdwm" };
+static const char *logout[]     = { "pkill", "-9", "startdwm", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */

@@ -195,6 +195,8 @@ set ai "Auto indent
 set si "Smart indent
 set wrap "Wrap lines
 
+set cc=79 "Colourcolumn 79
+
 
 """"""""""""""""""""""""""""""
 " => Visual mode related

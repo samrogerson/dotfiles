@@ -36,7 +36,7 @@ shopt -s checkwinsize
 
 export LC_ALL="en_US.UTF-8"
 export PS1="\[$BICyan\][ \[$Cyan\]\u@\h \[$IWhite\]\W \[$BICyan\]]\[$Color_Off\] "
-export EDITOR="/usr/bin/vim"
+export EDITOR="vim"
 
 stty erase 
 

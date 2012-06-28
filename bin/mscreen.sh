@@ -2,7 +2,6 @@
 OIFS=$IFS
 IFS=','
 disconnected=`xrandr | awk '/ disconnected/{ printf $1"," }'`
-echo ${disconnected}
 connected=`xrandr | awk '/ connected/{ printf $1"," }'`
 max_res=`xrandr | awk '/[\* ]\+/ { printf $1"," }'`
 

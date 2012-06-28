@@ -15,7 +15,8 @@ static const Bool showbar           = True;     /* False means no bar */
 static const Bool topbar            = True;     /* False means bottom bar */
 
 /* tagging */
-static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
+static const char *tags[] = { "term", "web", "doc", "voip", "misc", "misc2",
+                              "misc3", "chat", "mail" };
 
 static const char java_name[] = "net-sourceforge-jnlp-runtime-Boot";
 static const char nmon_name[] = "wicd-curses";

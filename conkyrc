@@ -35,12 +35,11 @@ uppercase no
 # þ ý T ÿ - ® ´ ¦ Ç ê  \
 # $uptime 
 #¶ ${exec amixer get Master | egrep -o "[0-9]+%" | head -1 | egrep -o "[0-9]*"}% \
+#FS ${fs_used /}/${fs_size /} \
 
 TEXT
 $nodename ¹ \
 × ${cpu}% \
-${alignr} \
-FS ${fs_used /}/${fs_size /} \
 £ ${wireless_essid wlan0} ß ${downspeed wlan0} Þ ${upspeed wlan0} \
 ð ${battery BAT1} ${battery_time BAT1 } \
 | ${time}

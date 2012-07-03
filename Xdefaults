@@ -30,8 +30,8 @@ URxvt.lineSpace:            0
 
 ! Fonts
 URxvt.allow_bold:           true
-URxvt*font:xft:termsyn-medium:size=17
-URxvt*boldFont:xft:termsyn-bold:size=17
+URxvt*font:xft:termsyn.icons-medium:size=17
+URxvt*boldFont:xft:termsyn.icons-bold:size=17
 
 ! Fix font space
 URxvt*letterSpace: 0

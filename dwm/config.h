@@ -79,6 +79,7 @@ static const char *netmoncmd[]  = { "urxvtc", "-e", "wicd-curses", NULL };
 static const char *sysmoncmd[]  = { "urxvtc", "-e", "htop", NULL };
 static const char *browsercmd[] = { "chromium", NULL };
 static const char *logout[]     = { "pkill", "-9", "startdwm", NULL };
+static const char *ref_screen[] = { "mscreen", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -106,7 +107,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_comma,  tagmon,         {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
 	{ WINKEY,                       XK_b,      spawn,          {.v = browsercmd } },
-	{ WINKEY,                       XK_m,      spawn,          {.v = mailcmd } },
+	{ WINKEY,                       XK_m,      spawn,          {.v = ref_screen } },
 	{ WINKEY,                       XK_v,      spawn,          {.v = volcmd } },
 	{ WINKEY,                       XK_w,      spawn,          {.v = netmoncmd } },
 	{ WINKEY,                       XK_t,      spawn,          {.v = sysmoncmd } },

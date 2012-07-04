@@ -62,6 +62,10 @@ else
     BATT_TIME=" $BATT_TIME"
 fi
 
+if [ $CHARGE_REMAINING -eq 100 ]; then
+    AC_PREFIX="ð  "
+fi
+
 if [ $CHARGE_REMAINING -gt 70 ]; then
     BATT_COLOR="#719e07"
 elif [ $CHARGE_REMAINING -gt 30 ]; then

@@ -43,6 +43,7 @@ static const Rule rules[] = {
 	{ "Wine",     NULL,       NULL,       1 << 6,       True,        -1 },
 	{ NULL,       NULL,       nmon_name,  0,            True,        -1 },
 	{ NULL,       NULL,       vcon_name,  0,            True,        -1 },
+	{ "Tk",       NULL,       NULL,       0,            True,        -1 },
 };
 
 /* layout(s) */

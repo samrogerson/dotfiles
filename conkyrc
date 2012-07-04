@@ -36,6 +36,6 @@ uppercase no
 TEXT
 $nodename ¹ \
 × ${cpu}% \
-£ ${wireless_essid wlan0} Ú ${downspeed wlan0} Û ${upspeed wlan0} \
+­ ${wireless_essid wlan0} Ú ${downspeed wlan0} Û ${upspeed wlan0} \
 ${exec report-batt} ${battery_time BAT1 } \
 | ${time}

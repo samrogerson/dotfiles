@@ -4,6 +4,8 @@ from subprocess import check_output
 from collections import defaultdict
 from optparse import OptionParser
 
+import tkinter as tk
+
 def opts():
     parser = OptionParser("usage: %prog [options] [args]")
     parser.add_option("-o", "--output", action="store", dest="one_screen"  ,
@@ -36,11 +38,32 @@ def get_screens(screen_types = ["LVDS", "VGA"]):
                 screens[current_screen_type]['refresh_rate'] = ref
     return screens
 
+def spawn_screen():
+
+    def reply():
+        from tkinter.messagebox import showinfo
+        showinfo(title='popup', message='button pressed')
+
+    def print_it(event):
+        print(var.get())
+
+    window = tk.Tk()
+    #button = tk.Button(window, text='press', command=reply)
+    #button.pack()
+    #window.mainloop()
+
+    var = tk.StringVar()
+    var.set("a")
+    omenu = tk.OptionMenu(window, var, "a","b","c", command=print_it)
+    omenu.pack()
+    window.mainloop()
+
 
 def main():
-    options, args = opts()
-    screens = get_screens()
-    print(screens)
+    spawn_screen()
+    #options, args = opts()
+    #screens = get_screens()
+    #print(screens)
 
 
 if __name__=='__main__':

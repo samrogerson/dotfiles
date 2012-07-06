@@ -24,9 +24,9 @@ border_width 1
 draw_outline no
 default_color lightgrey
 alignment bottom_left
-#use_spacer right
 no_buffers yes
 uppercase no
+use_spacer left
 
 
 # $uptime 
@@ -36,6 +36,6 @@ uppercase no
 TEXT
 $nodename ¹ \
 × ${cpu}% \
-­ ${wireless_essid wlan0} Ú ${downspeed wlan0} Û ${upspeed wlan0} \
+­ ${wireless_essid wlan0} Ú ${downspeed} Û ${upspeed} \
 ${exec report-batt} \
 | ${time}

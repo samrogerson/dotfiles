@@ -62,6 +62,12 @@ else
     BATT_TIME=" $BATT_TIME"
 fi
 
+if [ $BATT_TIME != "" ]; then
+    BATT_TIME="($BATT_TIME )"
+else
+    BATT_TIME="        "
+fi
+
 if [ $CHARGE_REMAINING -eq 100 ]; then
     AC_PREFIX="ð  "
 fi
@@ -75,4 +81,4 @@ else
 fi
 
 #echo "<fc=$BATT_COLOR>$POWERMODE $AC_PREFIX$CHARGE_REMAINING%$BATT_TIME $WATTS W </fc>"
-echo "$AC_PREFIX$CHARGE_REMAINING% ($BATT_TIME )"
+echo "$AC_PREFIX$CHARGE_REMAINING% $BATT_TIME"

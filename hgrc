@@ -1,3 +1,5 @@
 # path: $HOME/.hgrc
 [ui]
 username = hyperfunk <hyp3rfunk@gmail.com>
+[extensions]
+mq =

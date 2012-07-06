@@ -1,4 +1,1 @@
-Author: Jan Christoph Ebersbach <jceb@e-jc.de>
-URL: http://dwm.suckless.org/patches/pertag
-
-This patch keeps layout, mwfact, barpos and nmaster per tag.
+pertag patch

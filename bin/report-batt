@@ -62,7 +62,7 @@ else
     BATT_TIME=" $BATT_TIME"
 fi
 
-if [ $BATT_TIME != "" ]; then
+if [[ $BATT_TIME != "" ]]; then
     BATT_TIME="($BATT_TIME )"
 else
     BATT_TIME="        "

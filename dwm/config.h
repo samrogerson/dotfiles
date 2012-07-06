@@ -1,7 +1,6 @@
 /* See LICENSE file for copyright and license details. */
 
 /* appearance */
-//#define BOTTOM_BAR_HEIGHT 13
 static const char font[]            = "-*-termsyn.icons-medium-*-*-*-15-*-*-*-*-*-*-*";
 static const char normbordercolor[] = "#7B9FBA";
 static const char normbgcolor[]     = "#121212";

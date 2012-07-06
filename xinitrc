@@ -58,7 +58,7 @@ xmodmap -e "add Lock = Caps_Lock"
 
 if [[ -f $HOME/bin/dwmstatus.sh ]]; then
     $HOME/bin/dwmstatus.sh &
-done
+fi
 
 ## window manager
 if [[ -f $HOME/bin/startdwm ]]; then

@@ -2016,8 +2016,6 @@ updategeom(void) {
 			updatebarpos(mons);
 		}
 	}
-    mons->wh -= BOTTOM_BAR_HEIGHT;
-    mons->mh -= BOTTOM_BAR_HEIGHT;
 	if(dirty) {
 		selmon = mons;
 		selmon = wintomon(root);

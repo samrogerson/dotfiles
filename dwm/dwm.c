@@ -238,7 +238,7 @@ static void toggleview(const Arg *arg);
 static void unfocus(Client *c, Bool setfocus);
 static void unmanage(Client *c, Bool destroyed);
 static void unmapnotify(XEvent *e);
-static Bool updategeom(void);
+static void updategeom(void);
 static void updatebarpos(Monitor *m);
 static void updatebars(void);
 static void updateclientlist(void);
@@ -270,7 +270,7 @@ static void (*handler[LASTEvent]) (XEvent *) = {
 	[ConfigureRequest] = configurerequest,
 	[ConfigureNotify] = configurenotify,
 	[DestroyNotify] = destroynotify,
-	//[EnterNotify] = enternotify,
+	/*[EnterNotify] = enternotify,*/
 	[Expose] = expose,
 	[FocusIn] = focusin,
 	[KeyPress] = keypress,
@@ -585,22 +585,18 @@ void
 configurenotify(XEvent *e) {
 	Monitor *m;
 	XConfigureEvent *ev = &e->xconfigure;
-	Bool dirty;
 
 	if(ev->window == root) {
-		dirty = (sw != ev->width);
 		sw = ev->width;
 		sh = ev->height;
-		if(updategeom() || dirty) {
-			if(dc.drawable != 0)
-				XFreePixmap(dpy, dc.drawable);
-			dc.drawable = XCreatePixmap(dpy, root, sw, bh, DefaultDepth(dpy, screen));
-			updatebars();
-			for(m = mons; m; m = m->next)
-				XMoveResizeWindow(dpy, m->barwin, m->wx, m->by, m->ww, bh);
-			focus(NULL);
-			arrange(NULL);
-		}
+		if(dc.drawable != 0)
+			XFreePixmap(dpy, dc.drawable);
+		dc.drawable = XCreatePixmap(dpy, root, sw, bh, DefaultDepth(dpy, screen));
+		updatebars();
+		for(m = mons; m; m = m->next)
+			XMoveResizeWindow(dpy, m->barwin, m->wx, m->by, m->ww, bh);
+		focus(NULL);
+		arrange(NULL);
 	}
 }
 
@@ -660,7 +656,7 @@ configurerequest(XEvent *e) {
 Monitor *
 createmon(void) {
 	Monitor *m;
-    int i;
+	int i;
 
 	if(!(m = (Monitor *)calloc(1, sizeof(Monitor))))
 		die("fatal: could not malloc() %u bytes\n", sizeof(Monitor));
@@ -894,7 +890,7 @@ focus(Client *c) {
 	else {
 		XSetInputFocus(dpy, root, RevertToPointerRoot, CurrentTime);
 		XDeleteProperty(dpy, root, netatom[NetActiveWindow]);
-    }
+	}
 	selmon->sel = c;
 	drawbars();
 }
@@ -915,7 +911,8 @@ focusmon(const Arg *arg) {
 		return;
 	if((m = dirtomon(arg->i)) == selmon)
 		return;
-	unfocus(selmon->sel, True);
+	unfocus(selmon->sel, False); /* s/True/False/ fixes input focus issues
+					in gedit and anjuta */
 	selmon = m;
 	focus(NULL);
 }
@@ -1105,8 +1102,8 @@ initfont(const char *fontstr) {
 static Bool
 isuniquegeom(XineramaScreenInfo *unique, size_t n, XineramaScreenInfo *info) {
 	while(n--)
-		if(unique[n].x_org == info->x_org && unique[n].y_org == info->y_org
-		&& unique[n].width == info->width && unique[n].height == info->height)
+		/* treat origin (x, y) as fixpoint for uniqueness only, first screen wins */
+		if(unique[n].x_org == info->x_org && unique[n].y_org == info->y_org)
 			return False;
 	return True;
 }
@@ -1119,7 +1116,7 @@ keypress(XEvent *e) {
 	XKeyEvent *ev;
 
 	ev = &e->xkey;
- 	keysym = XkbKeycodeToKeysym(dpy, (KeyCode)ev->keycode, 0, 0);
+	keysym = XkbKeycodeToKeysym(dpy, (KeyCode)ev->keycode, 0, 0);
 	for(i = 0; i < LENGTH(keys); i++)
 		if(keysym == keys[i].keysym
 		&& CLEANMASK(keys[i].mod) == CLEANMASK(ev->state)
@@ -1265,6 +1262,8 @@ movemouse(const Arg *arg) {
 
 	if(!(c = selmon->sel))
 		return;
+	if(c->isfullscreen) /* no support moving fullscreen windows by mouse */
+		return;
 	restack(selmon);
 	ocx = c->x;
 	ocy = c->y;
@@ -1298,11 +1297,8 @@ movemouse(const Arg *arg) {
 				&& (abs(nx - c->x) > snap || abs(ny - c->y) > snap))
 					togglefloating(NULL);
 			}
-			if(!selmon->lt[selmon->sellt]->arrange || c->isfloating) {
-				if(c->isfullscreen)
-					setfullscreen(c, False);
+			if(!selmon->lt[selmon->sellt]->arrange || c->isfloating)
 				resize(c, nx, ny, c->w, c->h, True);
-            }
 			break;
 		}
 	} while(ev.type != ButtonRelease);
@@ -1412,6 +1408,8 @@ resizemouse(const Arg *arg) {
 
 	if(!(c = selmon->sel))
 		return;
+	if(c->isfullscreen) /* no support resizing fullscreen windows by mouse */
+		return;
 	restack(selmon);
 	ocx = c->x;
 	ocy = c->y;
@@ -1437,11 +1435,8 @@ resizemouse(const Arg *arg) {
 				&& (abs(nw - c->w) > snap || abs(nh - c->h) > snap))
 					togglefloating(NULL);
 			}
-			if(!selmon->lt[selmon->sellt]->arrange || c->isfloating) {
-				if(c->isfullscreen)
-					setfullscreen(c, False);
+			if(!selmon->lt[selmon->sellt]->arrange || c->isfloating)
 				resize(c, c->x, c->y, nw, nh, True);
-			}
 			break;
 		}
 	} while(ev.type != ButtonRelease);
@@ -1792,12 +1787,12 @@ void
 togglefloating(const Arg *arg) {
 	if(!selmon->sel)
 		return;
+	if(selmon->sel->isfullscreen) /* no support for fullscreen windows */
+		return;
 	selmon->sel->isfloating = !selmon->sel->isfloating || selmon->sel->isfixed;
 	if(selmon->sel->isfloating)
 		resize(selmon->sel, selmon->sel->x, selmon->sel->y,
 		       selmon->sel->w, selmon->sel->h, False);
-	else if(selmon->sel->isfullscreen)
-		setfullscreen(selmon->sel, False);
 	arrange(selmon);
 }
 
@@ -1941,86 +1936,74 @@ updateclientlist() {
 			                (unsigned char *) &(c->win), 1);
 }
 
-Bool
+void
 updategeom(void) {
-	Bool dirty = False;
+	/* Starting with dwm 6.1 this function uses a new (simpler) strategy:
+	 * whenever screen changes are reported, we destroy all monitors
+	 * and recreate all unique origin monitors and add all clients to
+	 * the first monitor, only. In several circumstances this may suck,
+	 * but dealing with all corner-cases sucks even more.*/
 
 #ifdef XINERAMA
 	if(XineramaIsActive(dpy)) {
-		int i, j, n, nn;
+		int i, j, n;
 		Client *c;
-		Monitor *m;
-		XineramaScreenInfo *info = XineramaQueryScreens(dpy, &nn);
+		Monitor *m, *oldmons = mons;
+		XineramaScreenInfo *info = XineramaQueryScreens(dpy, &n);
 		XineramaScreenInfo *unique = NULL;
 
-		for(n = 0, m = mons; m; m = m->next, n++);
 		/* only consider unique geometries as separate screens */
-		if(!(unique = (XineramaScreenInfo *)malloc(sizeof(XineramaScreenInfo) * nn)))
-			die("fatal: could not malloc() %u bytes\n", sizeof(XineramaScreenInfo) * nn);
-		for(i = 0, j = 0; i < nn; i++)
+		if(!(unique = (XineramaScreenInfo *)malloc(sizeof(XineramaScreenInfo) * n)))
+			die("fatal: could not malloc() %u bytes\n", sizeof(XineramaScreenInfo) * n);
+		for(i = 0, j = 0; i < n; i++)
 			if(isuniquegeom(unique, j, &info[i]))
 				memcpy(&unique[j++], &info[i], sizeof(XineramaScreenInfo));
 		XFree(info);
-		nn = j;
-		if(n <= nn) {
-			for(i = 0; i < (nn - n); i++) { /* new monitors available */
-				for(m = mons; m && m->next; m = m->next);
-				if(m)
-					m->next = createmon();
-				else
-					mons = createmon();
-			}
-			for(i = 0, m = mons; i < nn && m; m = m->next, i++)
-				if(i >= n
-				|| (unique[i].x_org != m->mx || unique[i].y_org != m->my
-				    || unique[i].width != m->mw || unique[i].height != m->mh))
-				{
-					dirty = True;
-					m->num = i;
-					m->mx = m->wx = unique[i].x_org;
-					m->my = m->wy = unique[i].y_org;
-					m->mw = m->ww = unique[i].width;
-					m->mh = m->wh = unique[i].height;
-					updatebarpos(m);
-				}
+		/* create new monitor structure */
+		n = j;
+		mons = m = createmon(); /* new first monitor */
+		for(i = 1; i < n; i++) {
+			m->next = createmon();
+			m = m->next;
 		}
-		else { /* less monitors available nn < n */
-			for(i = nn; i < n; i++) {
-				for(m = mons; m && m->next; m = m->next);
-				while(m->clients) {
-					dirty = True;
-					c = m->clients;
-					m->clients = c->next;
-					detachstack(c);
-					c->mon = mons;
-					attach(c);
-					attachstack(c);
-				}
-				if(m == selmon)
-					selmon = mons;
-				cleanupmon(m);
-			}
+		for(i = 0, m = mons; i < n && m; m = m->next, i++) {
+			m->num = i;
+			m->mx = m->wx = unique[i].x_org;
+			m->my = m->wy = unique[i].y_org;
+			m->mw = m->ww = unique[i].width;
+			m->mh = m->wh = unique[i].height;
+			updatebarpos(m);
 		}
 		free(unique);
+		/* re-attach old clients and cleanup old monitor structure */
+		while(oldmons) {
+			m = oldmons;
+			while(m->clients) {
+				c = m->clients;
+				m->clients = c->next;
+				detachstack(c);
+				c->mon = mons;
+				attach(c);
+				attachstack(c);
+			}
+			oldmons = m->next;
+			cleanupmon(m);
+		}
 	}
 	else
 #endif /* XINERAMA */
 	/* default monitor setup */
 	{
-		if(!mons)
+		if(!mons) /* only true if !XINERAMA compile flag */
 			mons = createmon();
 		if(mons->mw != sw || mons->mh != sh) {
-			dirty = True;
 			mons->mw = mons->ww = sw;
 			mons->mh = mons->wh = sh;
 			updatebarpos(mons);
 		}
 	}
-	if(dirty) {
-		selmon = mons;
-		selmon = wintomon(root);
-	}
-	return dirty;
+	selmon = mons;
+	selmon = wintomon(root);
 }
 
 void

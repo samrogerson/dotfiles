@@ -1,3 +1,4 @@
 
 [Default Applications]
 application/pdf=zathura.desktop
+application/postscript=zathura.desktop

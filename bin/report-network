@@ -1,0 +1,6 @@
+#! /bin/bash
+
+interface=`ifconfig | awk -F":" '/BROADCAST.*RUNNING/ {print $1}'`
+IPv4=`ifconfig | awk '/^[ ]+inet / {if($2 != "127.0.0.1") print $2}'`
+
+echo $interface $IPv4

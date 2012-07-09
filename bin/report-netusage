@@ -1,0 +1,37 @@
+#! /bin/bash
+
+n_interfaces=${#interfaces[@]}
+
+declare -A interface_stats
+
+for arg in $@; do
+    interface_stats["$arg"_R1]=`cat /sys/class/net/$arg/statistics/rx_bytes`
+    interface_stats["$arg"_T1]=`cat /sys/class/net/$arg/statistics/tx_bytes`
+done
+
+sleep 1
+
+for arg in $@; do
+    interface_stats["$arg"_R2]=`cat /sys/class/net/$arg/statistics/rx_bytes`
+    interface_stats["$arg"_T2]=`cat /sys/class/net/$arg/statistics/tx_bytes`
+
+    interface_stats["$arg"_RXKBPS]=`expr ${interface_stats["$arg"_R2]} - \
+                                         ${interface_stats["$arg"_R1]}`
+    interface_stats["$arg"_RXKBPS]=`expr ${interface_stats["$arg"_RXKBPS]} / \
+                                         1024`
+    interface_stats["$arg"_TXKBPS]=`expr ${interface_stats["$arg"_T2]} - \
+                                         ${interface_stats["$arg"_T1]}`
+    interface_stats["$arg"_TXKBPS]=`expr ${interface_stats["$arg"_TXKBPS]} / \
+                                         1024`
+done
+
+total_up_kbps=0
+total_down_kbps=0
+for arg in $@; do
+    total_up_kbps=`expr $total_up_kbps + ${interface_stats["$arg"_TXKBPS]}`
+    total_down_kbps=`expr $total_down_kbps + ${interface_stats["$arg"_RXKBPS]}`
+done
+
+echo Ú $total_down_kbps KB/s Û $total_up_kbps KB/s
+
+

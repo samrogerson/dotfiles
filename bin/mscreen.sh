@@ -1,4 +1,10 @@
 #! /bin/bash
+
+if [[ -f ~/Projects/mscreen/mscreen ]]; then
+    ~/Projects/mscreen/mscreen
+    exit
+fi
+
 OIFS=$IFS
 IFS=','
 disconnected=`xrandr | awk '/ disconnected/{ printf $1"," }'`

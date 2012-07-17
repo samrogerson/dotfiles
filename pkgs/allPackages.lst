@@ -53,12 +53,12 @@ cracklib
 cronie
 cryptsetup
 curl
+cx_freeze
 damageproto
 db
 dbus
 dbus-core
 dbus-glib
-dbus-python
 dconf
 desktop-file-utils
 device-mapper
@@ -106,6 +106,7 @@ gcc-gcj-ecj
 gcc-libs
 gconf
 gd
+gdb
 gdbm
 gdk-pixbuf2
 gegl
@@ -171,10 +172,10 @@ initscripts
 inkscape
 inputproto
 intel-dri
+intltool
 iproute2
 iptables
 iputils
-ipython
 isl
 jack
 jasper
@@ -190,6 +191,7 @@ junit
 kbd
 kbproto
 keyutils
+khrplatform-devel
 kmod
 krb5
 lame
@@ -266,6 +268,7 @@ libdvdnav
 libdvdread
 libebml
 libedit
+libegl
 libevent
 libexif
 libffi
@@ -289,6 +292,7 @@ libjpeg-turbo
 libkate
 libksba
 libldap
+liblqr
 libltdl
 libmad
 libmatroska
@@ -319,6 +323,7 @@ libsoup
 libsoup-gnome
 libspectre
 libssh2
+libsystemd
 libtasn1
 libthai
 libtheora
@@ -372,6 +377,7 @@ linux-headers
 llvm
 logrotate
 lsb-release
+lshwd
 lsof
 lua
 lvm2
@@ -418,6 +424,7 @@ pacgraph
 pacman
 pacman-mirrorlist
 pam
+pambase
 pango
 pangomm
 patch
@@ -452,13 +459,17 @@ pth
 pygobject2-devel
 pygtk
 pyqt
+pyqt-common
 python
-python-distribute
+python-dbus
+python-dbus-common
 python-imaging
 python-reportlab
+python-sip
 python2
 python2-cairo
 python2-dateutil
+python2-dbus
 python2-docutils
 python2-feedparser
 python2-gconf
@@ -516,6 +527,7 @@ t1lib
 taglib
 tamsyn-font
 tar
+tcl
 terminus-font
 termsyn
 texinfo
@@ -523,6 +535,7 @@ texlive-bin
 texlive-core
 texlive-latexextra
 texlive-publishers
+tk
 tmux
 ttf-dejavu
 ttf-freefont
@@ -571,7 +584,7 @@ xf86-input-mouse
 xf86-input-synaptics
 xf86-input-vmmouse
 xf86-input-void
-xf86-video-intel
+xf86-video-intel-uxa
 xf86dgaproto
 xf86vidmodeproto
 xfsprogs

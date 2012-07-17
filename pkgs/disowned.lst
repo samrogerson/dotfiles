@@ -23,11 +23,15 @@
 /etc/fonts/conf.d/90-synthetic.conf
 /etc/gconf/gconf.xml.defaults/%gconf-tree.xml
 /etc/group-
+/etc/group.pacnew
 /etc/gshadow-
+/etc/gshadow.pacnew
 /etc/gtk-2.0/gdk-pixbuf.loaders
 /etc/gtk-2.0/gtk.immodules
 /etc/ld.so.cache
+/etc/locale.gen.pacnew
 /etc/localtime
+/etc/machine-id
 /etc/modules.conf
 /etc/network.d/athenee
 /etc/network.d/athenee-chris
@@ -40,6 +44,7 @@
 /etc/pacman.d/gnupg/secring.gpg
 /etc/pacman.d/gnupg/trustdb.gpg
 /etc/pacman.d/mirrorlist.pacnew
+/etc/pam.d/login.pacnew
 /etc/pango/pango.modules
 /etc/passwd-
 /etc/pm/sleep.d/01sshclean
@@ -421,6 +426,7 @@
 /usr/bin/ipython-qtconsole
 /usr/bin/pip
 /usr/bin/pip-2.7
+/usr/bin/pycallgraph
 /usr/bin/roosh
 /usr/bin/root2hd5
 /usr/bin/root-browser
@@ -2000,6 +2006,14 @@
 /usr/lib/python2.7/site-packages/protobuf-2.4.1-py2.7.egg/google/protobuf/service_reflection.pyc
 /usr/lib/python2.7/site-packages/protobuf-2.4.1-py2.7.egg/google/protobuf/text_format.py
 /usr/lib/python2.7/site-packages/protobuf-2.4.1-py2.7.egg/google/protobuf/text_format.pyc
+/usr/lib/python2.7/site-packages/pycallgraph-0.5.1-py2.7.egg-info/
+/usr/lib/python2.7/site-packages/pycallgraph-0.5.1-py2.7.egg-info/dependency_links.txt
+/usr/lib/python2.7/site-packages/pycallgraph-0.5.1-py2.7.egg-info/installed-files.txt
+/usr/lib/python2.7/site-packages/pycallgraph-0.5.1-py2.7.egg-info/PKG-INFO
+/usr/lib/python2.7/site-packages/pycallgraph-0.5.1-py2.7.egg-info/SOURCES.txt
+/usr/lib/python2.7/site-packages/pycallgraph-0.5.1-py2.7.egg-info/top_level.txt
+/usr/lib/python2.7/site-packages/pycallgraph.py
+/usr/lib/python2.7/site-packages/pycallgraph.pyc
 /usr/lib/python2.7/site-packages/python_cjson-1.0.5-py2.7.egg-info/
 /usr/lib/python2.7/site-packages/python_cjson-1.0.5-py2.7.egg-info/dependency_links.txt
 /usr/lib/python2.7/site-packages/python_cjson-1.0.5-py2.7.egg-info/installed-files.txt

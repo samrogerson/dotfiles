@@ -28,6 +28,7 @@ coreutils
 cpufrequtils
 cronie
 cryptsetup
+cx_freeze
 device-mapper
 dhcpcd
 diffutils
@@ -48,6 +49,7 @@ gcc
 gcc-fortran
 gcc-gcj
 gcc-gcj-ecj
+gdb
 gettext
 ghostscript
 gimp
@@ -67,9 +69,9 @@ htop
 icedtea-web-java7
 initscripts
 inkscape
+intltool
 iptables
 iputils
-ipython
 jdk7-openjdk
 jfsutils
 jna
@@ -88,6 +90,7 @@ links
 linux
 linux-headers
 logrotate
+lshwd
 lsof
 lvm2
 lynx
@@ -157,6 +160,7 @@ texinfo
 texlive-core
 texlive-latexextra
 texlive-publishers
+tk
 tmux
 ttf-inconsolata
 ttf-ms-fonts
@@ -188,7 +192,7 @@ xf86-input-mouse
 xf86-input-synaptics
 xf86-input-vmmouse
 xf86-input-void
-xf86-video-intel
+xf86-video-intel-uxa
 xfsprogs
 xmobar
 xorg-docs

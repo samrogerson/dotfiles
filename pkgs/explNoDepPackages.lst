@@ -22,6 +22,7 @@ compton-git
 conky
 cpufrequtils
 cryptsetup
+cx_freeze
 dmenu
 dot2tex
 evince
@@ -31,6 +32,7 @@ flashplugin
 flex
 fswebcam
 gcc-fortran
+gdb
 gettext
 gimp
 git
@@ -43,9 +45,9 @@ htop
 icedtea-web-java7
 initscripts
 inkscape
+intltool
 iptables
 iputils
-ipython
 jfsutils
 jna
 junit
@@ -62,6 +64,7 @@ links
 linux
 linux-headers
 logrotate
+lshwd
 lsof
 lvm2
 lynx
@@ -110,6 +113,7 @@ terminus-font
 termsyn
 texlive-latexextra
 texlive-publishers
+tk
 tmux
 ttf-inconsolata
 ttf-ms-fonts
@@ -118,7 +122,6 @@ uniconvertor
 unrar
 unzip
 urxvt-url-select
-usbutils
 v4l2ucp
 vi
 vlc
@@ -139,7 +142,7 @@ xf86-input-mouse
 xf86-input-synaptics
 xf86-input-vmmouse
 xf86-input-void
-xf86-video-intel
+xf86-video-intel-uxa
 xfsprogs
 xmobar
 xorg-docs

@@ -27,6 +27,7 @@
     <jar href="Koala.jar" download="eager"/>
     <property name="edu.caltech.hep.koala.jnlpVersion" value="7"/>
     <property name="sun.java2d.noddraw" value="true"/>
+    <property name="sun.net.maxDatagramSockets" value="1024"/>
     <property name="edu.caltech.hep.koala.dir" value=".KoalaNext"/>
     <property name="edu.caltech.hep.koala.extraTitle" value=""/>
     <property name="edu.caltech.hep.koala.loginRegister" value="true"/>
@@ -49,7 +50,6 @@
     <property name="edu.caltech.hep.koala.debug"    value="false"/>
     <property name="edu.caltech.hep.koala.video"    value="true"/>
     <property name="edu.caltech.hep.koala.onlyTCP"  value="false"/>
-    <property name="edu.caltech.hep.koala.autoLoginERROR" value="codedUser is null!"/>
     <property name="edu.caltech.hep.koala.optionalPlugins"  value="koala.RTP"/>
     <property name="lisa.apmon.destinations"        value="127.0.0.1:8884"/>
 
@@ -61,7 +61,7 @@
     <property name="CLIENTS_COEF"                   value="0.3"/>
     <property name="TRAFFIC_COEF"                   value="0.01"/>
     <property name="RTT_COEF"                       value="1.0"/>
-    <property name="EU_panda"                       value="lautta.tv.funet.fi/evo-us.cern.ch/evo1-slovakia.evo.upjs.sk"/>
+    <property name="EU_panda"                       value="fargesia.tv.funet.fi/evo-us.cern.ch/evo1-slovakia.evo.upjs.sk"/>
     <property name="NA_panda"                       value="137.164.37.102/137.164.37.101/evo11.uslhcnet.org"/>
     <property name="AS_panda"                       value="evo-panda1.kek.jp/panda1.kisti.re.kr/panda2.kisti.re.kr"/>
     <property name="OC_panda"                       value="evo.ivec.org/evo.bestgrid.org/evo-1.nsp.melbourne.nectar.org.au"/>
@@ -73,8 +73,7 @@
     <jar href="lib/jini-ext.jar"   main="false" download="eager"/>
     <jar href="lib/liquidlnf.jar"  main="false" download="eager"/>
     <jar href="lib/EVOfonts.jar"   main="false" download="eager"/>
-    <jar href="lib/gluegen-rt.jar" main="false" download="eager"/>
-    <jar href="lib/jogl.jar"       main="false" download="eager"/>
+    <jar href="lib/SeeVogh_OGL.jar"     main="false" download="eager"/>
     <jar href="lib/BrowserLauncher2-1_3.jar"  main="false" download="eager"/>
     <jar href="sp/EVO_SPCtrls.jar"      main="false" download="eager"/>
     <jar href="sp/EVO_Transcoder.jar"   main="false" download="eager"/>
@@ -100,7 +99,7 @@
         <property name="edu.caltech.hep.koala.apmon"    value="true"/>
         <nativelib href="lib/Wnative32.jar"/>
         <nativelib href="lib/idleWin.jar"/>
-        <nativelib href="lib/OGLlib_win.jar"/>
+        <nativelib href="lib/SeeVogh_OGLLibWin32.jar"/>
         <jar href="sp/bin/EVO_Transcoder_win.jar"   main="false" download="eager"/>
         <jar href="sp/bin/EVO_H323_Agent_win.jar"   main="false" download="eager"/>
         <jar href="sp/bin/ViEVO_win.jar"            main="false" download="eager"/>
@@ -115,7 +114,7 @@
         <property name="lisa.monitor.system"            value="true"/>
         <property name="edu.caltech.hep.koala.apmon"    value="true"/>
         <nativelib href="lib/idleLin.jar"/>
-        <nativelib href="lib/OGLlib_lin.jar"/>
+        <nativelib href="lib/SeeVogh_OGLLibLin32.jar"/>
         <jar href="sp/bin/EVO_H323_Agent_lin.jar"   main="false" download="eager"/>
         <jar href="sp/bin/ViEVO_lin.jar"            main="false" download="eager"/>
         <jar href="sp/bin/EVO_Transcoder_lin.jar"   main="false" download="eager"/>
@@ -130,7 +129,7 @@
         <property name="lisa.monitor.system"            value="true"/>
         <property name="edu.caltech.hep.koala.apmon"    value="true"/>
         <nativelib href="lib/idleLin.jar"/>
-        <nativelib href="lib/OGLlib_lin64.jar"/>
+        <nativelib href="lib/SeeVogh_OGLLibLin64.jar"/>
         <jar href="sp/bin/EVO_H323_Agent_lin64.jar" main="false" download="eager"/>
         <jar href="sp/bin/ViEVO_lin64.jar"          main="false" download="eager"/>
         <jar href="sp/bin/EVO_Transcoder_lin64.jar" main="false" download="eager"/>

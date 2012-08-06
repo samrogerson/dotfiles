@@ -1,4 +1,5 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" path: $HOME/.vimrc
 " Maintainer: 
 "       Amir Salihefendic
 "       http://amix.dk - amix@amix.dk

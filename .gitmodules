@@ -10,9 +10,3 @@
 [submodule "oh-my-zsh"]
 	path = oh-my-zsh
 	url = git://github.com/robbyrussell/oh-my-zsh.git
-[submodule "minibufexpl.vim"]
-	path = minibufexpl.vim
-	url = git://github.com/fholgado/minibufexpl.vim.git
-[submodule "vim/bundle/minibufexpl.vim"]
-	path = vim/bundle/minibufexpl.vim
-	url = git://github.com/fholgado/minibufexpl.vim.git

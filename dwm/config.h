@@ -1,7 +1,7 @@
 /* See LICENSE file for copyright and license details. */
 
 /* appearance */
-static const char font[]            = "-*-termsyn.icons-medium-*-*-*-15-*-*-*-*-*-*-*";
+static const char font[]            = "-*-termsyn.icons-medium-r-normal--14-*-*-*-*-*-*-*";
 static const char normbordercolor[] = "#7B9FBA";
 static const char normbgcolor[]     = "#121212";
 static const char normfgcolor[]     = "#7B9FBA";

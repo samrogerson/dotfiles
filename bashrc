@@ -34,7 +34,6 @@ export HISTCONTROL=erasedups
 shopt -s histappend 
 shopt -s checkwinsize
 
-export LC_ALL="en_US.UTF-8"
 export PS1="\[$BICyan\][ \[$Cyan\]\u@\h \[$IWhite\]\W \[$BICyan\]]\[$Color_Off\] "
 export EDITOR="vim"
 

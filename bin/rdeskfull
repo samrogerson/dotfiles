@@ -1,0 +1,6 @@
+#! /bin/bash
+
+ip=$1
+full_res=`xrandr | awk '/\*/ {print $1}'`
+
+rdesktop -g ${full_res} ${ip}

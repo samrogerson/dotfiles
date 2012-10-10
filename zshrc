@@ -38,7 +38,7 @@ source $ZSH/oh-my-zsh.sh
 # Customize to your needs...
 eval `dircolors ~/.dir_colors`
 
-alias sroot='cdir=`pwd`; cd ~/CERN/root/; source bin/thisroot.sh; cd $cdir; cdir=""'
+alias sroot='cdir=`pwd`; cd ~/packages/root/; source bin/thisroot.sh; cd $cdir; cdir=""'
 alias vimless='vim -u /usr/share/vim/vim73/macros/less.vim'
 alias tmux='tmux -2'
 

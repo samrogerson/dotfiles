@@ -14,6 +14,7 @@ Xft.hintstyle:              hintslight
 !-------------------------------------------------------------------------------
 xterm*faceName:          terminus
 xterm*faceSize:          11
+xterm*eightBitInput:     false
 
 !-------------------------------------------------------------------------------
 ! URxvt settings

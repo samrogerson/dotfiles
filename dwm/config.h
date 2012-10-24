@@ -15,7 +15,7 @@ static const Bool topbar            = True;     /* False means bottom bar */
 
 /* tagging */
 static const char *tags[] = { "term", "web", "doc", "voip", "misc", "misc2",
-                              "misc3", "chat", "mail" };
+                              "music", "chat", "mail" };
 
 static const char java_name[] = "net-sourceforge-jnlp-runtime-Boot";
 static const char nmon_name[] = "wicd-curses";
@@ -30,7 +30,7 @@ static const Rule rules[] = {
 	/* class      instance    title       tags mask     isfloating   monitor */
 	{ "Gimp",     NULL,       NULL,       0,            True,        -1 },
 	{ "Firefox",  NULL,       NULL,       1 << 1,       False,       -1 },
-	{ "Chromium", NULL,       NULL,       1 << 1,       False,       -1 },
+	{ "Chromium", "chromium", NULL,       1 << 1,       False,       -1 },
 	{ "Zathura",  NULL,       NULL,       1 << 2,       False,       -1 },
 	{ "Evince",   NULL,       NULL,       1 << 2,       False,       -1 },
 	{ "Mumble",   NULL,       NULL,       1 << 3,       True,        -1 },
@@ -38,7 +38,7 @@ static const Rule rules[] = {
     { java_name,  NULL,       NULL,       1 << 5,       True,        -1 },
 	{ NULL,       NULL,       "Vievo",    1 << 5,       True,        -1 },
 	{ "Skype",    NULL,       NULL,       1 << 7,       False,       -1 },
-	{ NULL,       mail_inst,  NULL,       1 << 8,       False,       -1 },
+	{ "Chromium", mail_inst,  NULL,       1 << 8,       False,       -1 },
 	{ "sxiv",     NULL,       NULL,       0,            True,        -1 },
 	{ "Canvas",   NULL,       NULL,       0,            True,        -1 },
 	{ "Wine",     NULL,       NULL,       1 << 6,       True,        -1 },

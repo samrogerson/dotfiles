@@ -37,11 +37,12 @@ static const Rule rules[] = {
 	{ NULL,       NULL,       "mutt",     1 << 8,       False,       -1 },
     { java_name,  NULL,       NULL,       1 << 5,       True,        -1 },
 	{ NULL,       NULL,       "Vievo",    1 << 5,       True,        -1 },
+	{ "Wine",     NULL,       NULL,       1 << 5,       True,        -1 },
+	{ NULL,       NULL,       "despotify",1 << 6,       False,       -1 },
 	{ "Skype",    NULL,       NULL,       1 << 7,       False,       -1 },
 	{ "Chromium", mail_inst,  NULL,       1 << 8,       False,       -1 },
 	{ "sxiv",     NULL,       NULL,       0,            True,        -1 },
 	{ "Canvas",   NULL,       NULL,       0,            True,        -1 },
-	{ "Wine",     NULL,       NULL,       1 << 6,       True,        -1 },
 	{ NULL,       NULL,       nmon_name,  0,            True,        -1 },
 	{ NULL,       NULL,       vcon_name,  0,            True,        -1 },
 	{ "Tk",       NULL,       NULL,       0,            True,        -1 },
@@ -81,6 +82,7 @@ static const char *mailcmd[]    = { "chromium", "--app=http://www.gmail.com", NU
 static const char *volcmd[]     = { "urxvtc", "-e", "alsamixer", NULL };
 static const char *netmoncmd[]  = { "urxvtc", "-e", "wicd-curses", NULL };
 static const char *sysmoncmd[]  = { "urxvtc", "-e", "htop", NULL };
+static const char *musiccmd[]   = { "urxvtc", "-e", "despotify", NULL };
 static const char *browsercmd[] = { "chromium", NULL };
 static const char *logout[]     = { "pkill", "-9", "startdwm", NULL };
 //static const char *ref_screen[] = { "mscreen", NULL };
@@ -115,6 +117,7 @@ static Key keys[] = {
 	{ WINKEY,                       XK_v,      spawn,          {.v = volcmd } },
 	{ WINKEY,                       XK_w,      spawn,          {.v = netmoncmd } },
 	{ WINKEY,                       XK_t,      spawn,          {.v = sysmoncmd } },
+	{ WINKEY,                       XK_p,      spawn,          {.v = musiccmd } },
 	{ MODKEY|ControlMask,           XK_q,      spawn,          {.v = logout } },
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)

@@ -18,7 +18,7 @@ xset m 0 0
 # turn off pc speaker
 xset -b
 # set out keyboard to match being the uk
-setxkbmap us
+setxkbmap gb
 # set mouse pointer
 xsetroot -cursor_name left_ptr
 

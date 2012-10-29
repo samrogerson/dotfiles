@@ -1,0 +1,24 @@
+--- a/core/unix/src/TUnixSystem.cxx	2012-10-10 23:02:23.358719872 -0000
++++ b/core/unix/src/TUnixSystem.cxx	2012-10-10 23:26:10.024994982 -0000
+@@ -4919,6 +4919,10 @@
+ 
+ //---- System, CPU and Memory info ---------------------------------------------
+ 
++#if defined(R__LINUX)
++#include <sys/resource.h>
++#endif
++
+ #if defined(R__MACOSX)
+ #include <sys/resource.h>
+ #include <mach/mach.h>
+--- a/build/rmkdepend/main.c	2012-10-06 23:02:23.584949844 -0000
++++ b/build/rmkdepend/main.c	2012-10-06 23:22:01.193486723 -0000
+@@ -60,7 +60,7 @@
+ #  endif
+ # elif defined(__CYGWIN__)
+ extern int fchmod(int, mode_t);
+-#else
++# elif !defined(__linux)
+ extern int fchmod(int, int);
+ # endif
+ #endif

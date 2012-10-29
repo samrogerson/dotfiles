@@ -1,7 +1,7 @@
 /* See LICENSE file for copyright and license details. */
 
 /* appearance */
-static const char font[]            = "-*-termsyn.icons-medium-*-*-*-15-*-*-*-*-*-*-*";
+static const char font[]            = "-*-termsyn.icons-medium-r-normal--14-*-*-*-*-*-*-*";
 static const char normbordercolor[] = "#7B9FBA";
 static const char normbgcolor[]     = "#121212";
 static const char normfgcolor[]     = "#7B9FBA";
@@ -15,11 +15,12 @@ static const Bool topbar            = True;     /* False means bottom bar */
 
 /* tagging */
 static const char *tags[] = { "term", "web", "doc", "voip", "misc", "misc2",
-                              "misc3", "chat", "mail" };
+                              "music", "chat", "mail" };
 
 static const char java_name[] = "net-sourceforge-jnlp-runtime-Boot";
 static const char nmon_name[] = "wicd-curses";
 static const char vcon_name[] = "alsamixer";
+static const char mail_inst[] = "www.gmail.com";
 static const Rule rules[] = {
 	/* xprop(1):
 	 *	WM_CLASS(STRING) = instance, class
@@ -29,17 +30,20 @@ static const Rule rules[] = {
 	/* class      instance    title       tags mask     isfloating   monitor */
 	{ "Gimp",     NULL,       NULL,       0,            True,        -1 },
 	{ "Firefox",  NULL,       NULL,       1 << 1,       False,       -1 },
-	{ "Chromium", NULL,       NULL,       1 << 1,       False,       -1 },
+	{ "Chromium", "chromium", NULL,       1 << 1,       False,       -1 },
 	{ "Zathura",  NULL,       NULL,       1 << 2,       False,       -1 },
 	{ "Evince",   NULL,       NULL,       1 << 2,       False,       -1 },
 	{ "Mumble",   NULL,       NULL,       1 << 3,       True,        -1 },
 	{ NULL,       NULL,       "mutt",     1 << 8,       False,       -1 },
     { java_name,  NULL,       NULL,       1 << 5,       True,        -1 },
 	{ NULL,       NULL,       "Vievo",    1 << 5,       True,        -1 },
+	{ "Wine",     NULL,       NULL,       1 << 5,       True,        -1 },
+	{ NULL,       NULL,       "despotify",1 << 6,       False,       -1 },
 	{ "Skype",    NULL,       NULL,       1 << 7,       False,       -1 },
+	{ "Chromium", mail_inst,  NULL,       1 << 8,       False,       -1 },
+	{ NULL,       NULL,       "su",       0,            True,        -1 },
 	{ "sxiv",     NULL,       NULL,       0,            True,        -1 },
 	{ "Canvas",   NULL,       NULL,       0,            True,        -1 },
-	{ "Wine",     NULL,       NULL,       1 << 6,       True,        -1 },
 	{ NULL,       NULL,       nmon_name,  0,            True,        -1 },
 	{ NULL,       NULL,       vcon_name,  0,            True,        -1 },
 	{ "Tk",       NULL,       NULL,       0,            True,        -1 },
@@ -70,15 +74,20 @@ static const Layout layouts[] = {
 #define SHCMD(cmd) { .v = (const char*[]){ "/bin/sh", "-c", cmd, NULL } }
 
 /* commands */
-static const char *dmenucmd[]   = { "dmenu_run", "-fn", font, "-nb", normbgcolor, "-nf", normfgcolor, "-sb", selbgcolor, "-sf", selfgcolor, NULL };
+static const char *dmenucmd[]   = { "dmenu_run", "-fn", font,
+    "-nb", normbgcolor, "-nf", normfgcolor, "-sb", selbgcolor,
+    "-sf", selfgcolor, NULL };
 static const char *termcmd[]    = { "urxvtc", NULL };
-static const char *mailcmd[]    = { "urxvtc", "-e", "mutt", NULL };
+//static const char *mailcmd[]    = { "urxvtc", "-e", "mutt", NULL };
+static const char *mailcmd[]    = { "chromium", "--app=http://www.gmail.com", NULL };
 static const char *volcmd[]     = { "urxvtc", "-e", "alsamixer", NULL };
 static const char *netmoncmd[]  = { "urxvtc", "-e", "wicd-curses", NULL };
 static const char *sysmoncmd[]  = { "urxvtc", "-e", "htop", NULL };
+static const char *musiccmd[]   = { "urxvtc", "-e", "despotify", NULL };
+static const char *rootterm[]   = { "urxvtc", "-e", "su", NULL };
 static const char *browsercmd[] = { "chromium", NULL };
 static const char *logout[]     = { "pkill", "-9", "startdwm", NULL };
-static const char *ref_screen[] = { "mscreen", NULL };
+//static const char *ref_screen[] = { "mscreen", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -106,10 +115,12 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_comma,  tagmon,         {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
 	{ WINKEY,                       XK_b,      spawn,          {.v = browsercmd } },
-	{ WINKEY,                       XK_m,      spawn,          {.v = ref_screen } },
+	{ WINKEY,                       XK_m,      spawn,          {.v = mailcmd } },
 	{ WINKEY,                       XK_v,      spawn,          {.v = volcmd } },
 	{ WINKEY,                       XK_w,      spawn,          {.v = netmoncmd } },
 	{ WINKEY,                       XK_t,      spawn,          {.v = sysmoncmd } },
+	{ WINKEY,                       XK_p,      spawn,          {.v = musiccmd } },
+	{ WINKEY,                       XK_r,      spawn,          {.v = rootterm } },
 	{ MODKEY|ControlMask,           XK_q,      spawn,          {.v = logout } },
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)

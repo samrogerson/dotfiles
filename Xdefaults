@@ -4,10 +4,17 @@
 !-------------------------------------------------------------------------------
 
 Xft.dpi:                    96
-Xft.antialias:              false
+Xft.antialias:              true
 Xft.rgba:                   rgb
 Xft.hinting:                true
 Xft.hintstyle:              hintslight
+
+!-------------------------------------------------------------------------------
+! XTERM settings
+!-------------------------------------------------------------------------------
+xterm*faceName:          terminus
+xterm*faceSize:          11
+xterm*eightBitInput:     false
 
 !-------------------------------------------------------------------------------
 ! URxvt settings
@@ -30,8 +37,8 @@ URxvt.lineSpace:            0
 
 ! Fonts
 URxvt.allow_bold:           true
-URxvt*font:xft:termsyn.icons-medium:size=17
-URxvt*boldFont:xft:termsyn.icons-bold:size=17
+URxvt*font:xft:terminus:pixelsize=15
+URxvt*boldFont:xft:terminus-bold:pixelsize=15
 
 ! Fix font space
 URxvt*letterSpace: 0

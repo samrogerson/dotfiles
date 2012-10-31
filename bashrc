@@ -34,7 +34,7 @@ export HISTCONTROL=erasedups
 shopt -s histappend 
 shopt -s checkwinsize
 
-export PS1="\[$BICyan\][ \[$Cyan\]\u\[$BCyan\]@\h \[$IWhite\]\W \[$BICyan\]]\[$Color_Off\] "
+export PS1="\[$BICyan\]\[$Cyan\]\u\[$BCyan\]@\h \[$IWhite\]\W\[$Color_Off\] $ "
 export EDITOR="vim"
 
 stty erase 

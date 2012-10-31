@@ -35,7 +35,7 @@ unclutter &
 #fehrndbkg="$HOME/bin/fehrndbkg.sh"
 #if [[ -f $fehrndbkg ]]; then
 #    sh $fehrndbkg &
-feh --bg-scale ~/.wallpaper/archlinux-256809.jpeg
+feh --bg-scale ~/.fehbg
 #fi
 
 synclient PalmDetect=1
@@ -49,6 +49,10 @@ fi
 # get a nice photo on login
 hash fswebcam && fswebcam -q --no-banner -r 1280x720 ~/private/login-photos/$(date +%Y-%m-%dT%H).jpg &
 hash chromium
+
+if [[ -f $HOME/.dropbox-dist/dropboxd ]]; then
+    ~/.dropbox-dist/dropboxd
+fi
 
 # swap caps lock and escape
 xmodmap -e "remove Lock = Caps_Lock"

@@ -14,7 +14,7 @@ static const Bool showbar           = True;     /* False means no bar */
 static const Bool topbar            = True;     /* False means bottom bar */
 
 /* tagging */
-static const char *tags[] = { "term", "web", "doc", "voip", "misc", "misc2",
+static const char *tags[] = { "term", "web", "doc", "voip", "misc", "video",
                               "music", "chat", "mail" };
 
 static const char java_name[] = "net-sourceforge-jnlp-runtime-Boot";
@@ -36,8 +36,9 @@ static const Rule rules[] = {
 	{ "Mumble",   NULL,       NULL,       1 << 3,       True,        -1 },
 	{ NULL,       NULL,       "mutt",     1 << 8,       False,       -1 },
     { java_name,  NULL,       NULL,       1 << 5,       True,        -1 },
-	{ NULL,       NULL,       "Vievo",    1 << 5,       True,        -1 },
-	{ "Wine",     NULL,       NULL,       1 << 5,       True,        -1 },
+	{ NULL,       NULL,       "Vievo",    1 << 4,       True,        -1 },
+	{ "Wine",     NULL,       NULL,       1 << 4,       True,        -1 },
+	{ "Vlc",      "vlc",      NULL,       1 << 5,       False,       -1 },
 	{ NULL,       NULL,       "despotify",1 << 6,       False,       -1 },
 	{ "Skype",    NULL,       NULL,       1 << 7,       False,       -1 },
 	{ "Chromium", mail_inst,  NULL,       1 << 8,       False,       -1 },

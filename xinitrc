@@ -51,7 +51,7 @@ hash fswebcam && fswebcam -q --no-banner -r 1280x720 ~/private/login-photos/$(da
 hash chromium
 
 if [[ -f $HOME/.dropbox-dist/dropboxd ]]; then
-    ~/.dropbox-dist/dropboxd
+    ~/.dropbox-dist/dropboxd &
 fi
 
 # swap caps lock and escape
@@ -70,5 +70,3 @@ if [[ -f $HOME/bin/startdwm ]]; then
 else
     exec dwm
 fi
-
-#read -n1 -p "lulZ"

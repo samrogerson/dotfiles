@@ -24,7 +24,7 @@ xsetroot -cursor_name left_ptr
 
 # compositing
 #xcompmgr &
-compton -cCfFGb -o 0.3
+#compton -cCfFGb -o 0.3
 
 # start urxvt daemon
 urxvtd -q -f -o &

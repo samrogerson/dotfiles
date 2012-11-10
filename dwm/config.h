@@ -48,6 +48,8 @@ static const Rule rules[] = {
 	{ NULL,       NULL,       nmon_name,  0,            True,        -1 },
 	{ NULL,       NULL,       vcon_name,  0,            True,        -1 },
 	{ "Tk",       NULL,       NULL,       0,            True,        -1 },
+	{ NULL,       NULL,       "Steam",    0,            True,        -1 },
+	{ "Steam",    NULL,       NULL,       0,            True,        -1 },
 };
 
 /* layout(s) */

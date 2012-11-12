@@ -35,7 +35,7 @@ unclutter &
 #fehrndbkg="$HOME/bin/fehrndbkg.sh"
 #if [[ -f $fehrndbkg ]]; then
 #    sh $fehrndbkg &
-~/.fehbg
+. ~/.fehbg
 #fi
 
 synclient PalmDetect=1

@@ -27,16 +27,20 @@ xsetroot -cursor_name left_ptr
 #compton -cCfFGb -o 0.3
 
 # start urxvt daemon
-urxvtd -q -f -o &
+hash urxvtd && urxvtd -q -f -o &
 # hide out mouse when not in use
-unclutter &
+hash unclutter && unclutter &
+# start ps3 media server
+hash pms && pms &
+# start sabnzbd
+hash sabnzbd && sabnzbd &
 
 # set background using feh
 if [[ -f ~/.fehbg ]]; then
     . ~/.fehbg &
 fi
 
-synclient PalmDetect=1
+hash synclient && synclient PalmDetect=1 &
 
 # D-Bus
 dbuslaunch="`which dbus-launch 2>/dev/null`"
@@ -58,13 +62,8 @@ xmodmap -e "keysym Escape = Caps_Lock"
 xmodmap -e "keysym Caps_Lock = Escape"
 xmodmap -e "add Lock = Caps_Lock"
 
-if [[ -f $HOME/bin/dwmstatus.sh ]]; then
-    $HOME/bin/dwmstatus.sh &
-fi
+hash systemd && systemd --user &
 
+hash dwmstatus && dwmstatus &
 ## window manager
-if [[ -f $HOME/bin/startdwm ]]; then
-    $HOME/bin/startdwm
-else
-    exec dwm
-fi
+hash startdwm && startdwm || exec dwm

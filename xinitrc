@@ -18,7 +18,7 @@ xset m 0 0
 # turn off pc speaker
 xset -b
 # set out keyboard to match being the uk
-setxkbmap gb
+#setxkbmap gb
 # set mouse pointer
 xsetroot -cursor_name left_ptr
 
@@ -32,11 +32,9 @@ urxvtd -q -f -o &
 unclutter &
 
 # set background using feh
-#fehrndbkg="$HOME/bin/fehrndbkg.sh"
-#if [[ -f $fehrndbkg ]]; then
-#    sh $fehrndbkg &
-. ~/.fehbg
-#fi
+if [[ -f ~/.fehbg ]]; then
+    . ~/.fehbg &
+fi
 
 synclient PalmDetect=1
 

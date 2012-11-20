@@ -1,6 +1,6 @@
 #! /bin/bash
 
-pathloc="# path:"
+pathloc="path:"
 
 # take command line argument to operate on directory
 if [[ $# -lt 1 ]];

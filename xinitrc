@@ -52,9 +52,9 @@ fi
 hash fswebcam && fswebcam -q --no-banner -r 1280x720 ~/private/login-photos/$(date +%Y-%m-%dT%H).jpg &
 hash chromium
 
-if [[ -f $HOME/.dropbox-dist/dropboxd ]]; then
-    ~/.dropbox-dist/dropboxd &
-fi
+hash dropboxd && dropboxd &
+
+hash mpd && mpd
 
 # swap caps lock and escape
 xmodmap -e "remove Lock = Caps_Lock"

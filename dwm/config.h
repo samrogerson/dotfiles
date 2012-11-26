@@ -83,6 +83,7 @@ static const char *dmenucmd[]   = { "dmenu_run", "-fn", font,
 static const char *termcmd[]    = { "urxvtc", NULL };
 //static const char *mailcmd[]    = { "urxvtc", "-e", "mutt", NULL };
 static const char *mailcmd[]    = { "chromium", "--app=http://www.gmail.com", NULL };
+static const char *sabcmd[]     = { "chromium", "--app=http://localhost:8080", NULL };
 static const char *volcmd[]     = { "urxvtc", "-e", "alsamixer", NULL };
 static const char *netmoncmd[]  = { "urxvtc", "-e", "wicd-curses", NULL };
 static const char *sysmoncmd[]  = { "urxvtc", "-e", "htop", NULL };
@@ -119,6 +120,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
 	{ WINKEY,                       XK_b,      spawn,          {.v = browsercmd } },
 	{ WINKEY,                       XK_m,      spawn,          {.v = mailcmd } },
+	{ WINKEY|ShiftMask,             XK_b,      spawn,          {.v = sabcmd } },
 	{ WINKEY,                       XK_v,      spawn,          {.v = volcmd } },
 	{ WINKEY,                       XK_w,      spawn,          {.v = netmoncmd } },
 	{ WINKEY,                       XK_t,      spawn,          {.v = sysmoncmd } },

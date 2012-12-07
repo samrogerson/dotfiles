@@ -197,7 +197,7 @@ set ai "Auto indent
 set si "Smart indent
 set wrap "Wrap lines
 
-set cc=79 "Colourcolumn 79
+set cc=80 "Colourcolumn 80
 
 
 """"""""""""""""""""""""""""""

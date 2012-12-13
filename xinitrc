@@ -12,7 +12,6 @@ xrdb -merge ~/.Xdefaults
 #xset +fp /usr/share/fonts/truetype/
 xset +fp /usr/share/fonts/TTF/
 xset +fp /usr/share/fonts/local/
-xset fp rehash
 # stop the mouse being retarded
 xset m 0 0
 # turn off pc speaker

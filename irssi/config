@@ -3,6 +3,8 @@ settings = {
     # Solarized
     theme = "solarized-universal";
     hilight_color = "= %R";
+    autolog = "yes";
+    autolog_colors = "yes";
   };
   core = { real_name = "Unknown"; user_name = "hyper"; nick = "hyper"; };
   "fe-text" = { actlist_sort = "refnum"; };

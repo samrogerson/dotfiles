@@ -2,7 +2,7 @@
 # path: $HOME/.bashrc
 #
 
-export PATH=$HOME/bin/:$HOME/local/bin/:$PATH
+export PATH=$HOME/bin/:$HOME/local/bin/:$PATH:$HOME/.gem/ruby/1.9.1/bin
 # If not running interactively, don't do anything
 if [[ $- != *i* ]]; then
     # allow remote qstat

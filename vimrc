@@ -165,7 +165,8 @@ set ffs=unix,dos,mac
 set guioptions-=T
 set guioptions-=m
 set guioptions-=r
-set guifont=Termsyn\ 16
+"set guifont=Termsyn\ 16
+set guifont=Source\ Code\ Pro\ 8
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Files, backups and undo
@@ -197,7 +198,7 @@ set ai "Auto indent
 set si "Smart indent
 set wrap "Wrap lines
 
-set cc=79 "Colourcolumn 79
+set cc=80 "Colourcolumn 80
 
 
 """"""""""""""""""""""""""""""

@@ -55,6 +55,8 @@ hash dropboxd && dropboxd &
 
 hash mpd && mpd
 
+hash VBoxClient-all && VBoxClient-all &
+
 # swap caps lock and escape
 xmodmap -e "remove Lock = Caps_Lock"
 xmodmap -e "keysym Escape = Caps_Lock"

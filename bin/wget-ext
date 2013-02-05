@@ -1,0 +1,10 @@
+#! /bin/bash
+
+links=`curl $1 | grep -o =[^[:space:]]*.$2`
+for link in $links; do 
+    clean_link=${link%%\">*}
+    clean_link=${clean_link:2}
+    wget $1/$clean_link
+done
+
+#wget -r -l 1 -A root $1

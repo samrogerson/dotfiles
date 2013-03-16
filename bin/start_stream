@@ -1,0 +1,26 @@
+#!/bin/bash
+
+INRES="1600x900"   # input resolution
+FPS="30"           # target FPS
+QUAL="fast"        # preset found in /usr/share/ffmpeg
+
+SIZE="1600x900"
+BITRATE="128k"
+FRAMERATE="20"
+
+KEYFILE=~/.twitchkey
+STREAM_KEY=`cat $KEYFILE`
+
+ffmpeg -f x11grab -s $INRES -r $FPS -i :0.0+160,90 \
+    -vcodec libx264 -preset slow -pix_fmt yuv420p \
+    -x264opts vbv-bufsize=3600:vbv-maxrate=1800:crf=23\
+    -threads 5 -f flv \
+    "rtmp://live.twitch.tv/app/$STREAM_KEY"
+
+    #-vb $BITRATE \
+#ffmpeg -f x11grab -s "$INRES" -r "$FPS" \
+    #-i :0.0+160,90 -f alsa -ac 2 \
+    #-vcodec libx264 -preset fast -s $OUTRES \
+    #-acodec libmp3lame -ar 44100 -threads 2 -q 5 \
+    #-f flv \
+    #"rtmp://live.twitch.tv/app/$STREAM_KEY"

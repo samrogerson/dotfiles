@@ -34,9 +34,7 @@ URxvt.loginShell:           true
 URxvt.saveLines:            12000
 URxvt.internalBorder:       3
 URxvt.lineSpace:            0
-
-URxvt.background: [70]#002b36
-
+!
 ! Fonts
 URxvt.allow_bold:           true
 URxvt*.font:xft:terminus-medium:pixelsize=15
@@ -53,14 +51,16 @@ URxvt.scrollBar:            false
 URxvt.perl-ext-common:      default,url-select,matcher
 URxvt.matcher.button:       1
 URxvt.urlLauncher:          chromium
+!
+! Pointer
+URxvt.pointerBlank:         true
 
 ! Cursor
 URxvt.cursorBlink:          true
-URxvt.cursorColor:          #657b83
 URxvt.cursorUnderline:      false
+URxvt.cursorColor:          #657b83
 
-! Pointer
-URxvt.pointerBlank:         true
+URxvt.background: [70]#002b36
 
 !! drop in Solarized colorscheme for Xresources/Xdefaults
 

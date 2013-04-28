@@ -23,7 +23,6 @@ xsetroot -cursor_name left_ptr
 
 # compositing
 #xcompmgr &
-compton -cCfFGb -o 0.3
 compton -c -r8 -l-12 -t-8  -b  -G  -f -D30 -I0.45 -O0.45   --paint-on-overlay \
     --unredir-if-possible  --backend glx --glx-no-stencil --glx-no-rebind-pixmap
 

@@ -24,7 +24,7 @@ xsetroot -cursor_name left_ptr
 # compositing
 #xcompmgr &
 compton -c -r8 -l-12 -t-8  -b  -G  -f -D30 -I0.45 -O0.45   --paint-on-overlay \
-    --unredir-if-possible  --backend glx --glx-no-stencil --glx-no-rebind-pixmap
+    --unredir-if-possible  --backend glx --glx-no-stencil #--glx-no-rebind-pixmap
 
 
 # start urxvt daemon
@@ -36,9 +36,12 @@ hash pms && pms &
 # start sabnzbd
 hash sabnzbd && sabnzbd &
 
-# set background using feh
-if [[ -f ~/.fehbg ]]; then
-    . ~/.fehbg &
+# set background
+#if [[ -f ~/.fehbg ]]; then
+    #. ~/.fehbg &
+#fi
+if [[ -d ~/.backgrounds ]]; then
+    hsetroot -fill ~/.backgrounds/spring_zomx_deviantart.jpg
 fi
 
 hash synclient && synclient PalmDetect=1 &

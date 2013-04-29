@@ -12,7 +12,7 @@ xrdb -merge ~/.Xdefaults
 #xset +fp /usr/share/fonts/truetype/
 xset +fp /usr/share/fonts/TTF/
 xset +fp /usr/share/fonts/local/
-# stop the mouse being retarded
+# turn acceleration off
 xset m 0 0
 # turn off pc speaker
 xset -b

@@ -36,7 +36,7 @@ plugins=(git archlinux mercurial)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-eval `dircolors ~/.dir_colors`
+eval `dircolors ~/.dircolors/dircolors.ansi-light`
 
 alias sroot='cdir=`pwd`; cd ~/packages/root/; source bin/thisroot.sh; cd $cdir; cdir=""'
 alias vimless='vim -u /usr/share/vim/vim73/macros/less.vim'

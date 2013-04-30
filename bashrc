@@ -17,7 +17,7 @@ if [ -f ~/.bash_colors ]; then
 fi
 
 if [ -f ~/.dir_colors ]; then
-    eval `dircolors  ~/.dir_colors`
+    eval `dircolors  ~/.dircolors/dircolors.ansi-light`
 fi
 
 if [ -f ~/.bash_aliases ]; then

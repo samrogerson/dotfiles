@@ -20,3 +20,14 @@ filterListDir : data.configDir + "/adblock_lists"
 //>adblock_subscriptions___CONFIG
 });
 //>adblock_subscriptions___SCRIPT
+//<userscripts___SCRIPT
+extensions.load("userscripts", {
+//<userscripts___CONFIG
+  // paths to userscripts, this extension will also load all scripts in 
+  // $XDG_CONFIG_HOME/dwb/greasemonkey, it will also load all scripts in
+  // $XDG_CONFIG_HOME/dwb/scripts but this is deprecated and will be
+  // disabled in future versions.
+  scripts : []
+//>userscripts___CONFIG
+});
+//>userscripts___SCRIPT

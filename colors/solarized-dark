@@ -44,6 +44,7 @@
 !
 ! URxvt*background:            S_base03
 
+URxvt*background:         [70]#002b36
 *background:              S_base03
 *foreground:              S_base0
 *fading:                  40

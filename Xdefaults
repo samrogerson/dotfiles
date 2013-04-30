@@ -1,9 +1,9 @@
 !! # path: $HOME/.Xdefaults
-#include "/home/hyper/.colors/solarized"
+#include "/home/hyper/.colors/solarized-light"
+
 !-------------------------------------------------------------------------------
 ! Xft settings
 !-------------------------------------------------------------------------------
-
 Xft.dpi:                    96
 Xft.antialias:              true
 Xft.rgba:                   rgb
@@ -16,13 +16,6 @@ Xft.hintstyle:              hintslight
 xterm*faceName:          terminus
 xterm*faceSize:          11
 xterm*eightBitInput:     false
-
-!-------------------------------------------------------------------------------
-! URxvt settings
-! Colours lifted from Solarized (http://ethanschoonover.com/solarized)
-! More info at:
-! http://pod.tst.eu/http://cvs.schmorp.de/rxvt-unicode/doc/rxvt.1.pod
-!-------------------------------------------------------------------------------
 
 URxvt.depth:                32
 URxvt.transparent:          false
@@ -56,6 +49,3 @@ URxvt.pointerBlank:         true
 ! Cursor
 URxvt.cursorBlink:          true
 URxvt.cursorUnderline:      false
-URxvt.cursorColor:          #657b83
-
-URxvt.background: [70]#002b36

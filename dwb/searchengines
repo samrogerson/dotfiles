@@ -1,3 +1,5 @@
 g http://www.google.co.uk/search?output=search&sclient=psy-ab&q=_dwb_search_submit_&oq=&gs_l=&pbx=1
 aur https://aur.archlinux.org/packages/?O=0&K=_dwb_search_submit_
 arxiv http://arxiv.org/search?query=_dwb_search_submit_
+yt http://www.youtube.com/results?search_query=_dwb_search_submit_&oq=&gs_l=
+tf2 http://etf2l.org/search/?q=_dwb_search_submit_

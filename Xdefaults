@@ -28,8 +28,8 @@ URxvt.lineSpace:            0
 
 ! Fonts
 URxvt.allow_bold:           true
-URxvt*.font:xft:terminus-medium:pixelsize=15
-URxvt*.boldFont:xft:terminus:bold:pixelsize=15
+URxvt*.font:xft:terminus-medium:pixelsize=12
+URxvt*.boldFont:xft:terminus:bold:pixelsize=12
 
 ! Fix font space
 URxvt*.letterSpace: 0
@@ -40,8 +40,9 @@ URxvt.scrollBar:            false
 
 ! Perl extensions
 URxvt.perl-ext-common:      default,matcher,clipboard
+URxvt.url-select.underline: true
 URxvt.matcher.button:       1
-URxvt.urlLauncher:          chromium
+URxvt.urlLauncher:          /usr/bin/dwb
 
 ! Pointer
 URxvt.pointerBlank:         true

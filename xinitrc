@@ -27,7 +27,7 @@ xsetroot -cursor_name left_ptr
 # start up various tools
 hash urxvtd && urxvtd -q -f -o &
 hash unclutter && unclutter &
-hash pms && pms &
+hash pms && tmux -2 new -s pms -d pms
 hash sabnzbd && sabnzbd &
 hash dropboxd && dropboxd &
 hash mpd && mpd
@@ -41,7 +41,7 @@ hash chromium
 
 # set the background
 if [[ -d ~/.backgrounds ]]; then
-    hsetroot -fill ~/.backgrounds/spring_zomx_deviantart.jpg
+    hsetroot -fill ~/.backgrounds/background
 fi
 
 # D-Bus
@@ -56,6 +56,12 @@ xmodmap -e "keysym Escape = Caps_Lock"
 xmodmap -e "keysym Caps_Lock = Escape"
 xmodmap -e "add Lock = Caps_Lock"
 
-## window manager
-hash dwmstatus && dwmstatus &
-hash startdwm && startdwm || exec dwm
+# for the future :)
+DEFAULT_SESSION="dwm"
+case $1 in
+    *)
+        hash dwmstatus && dwmstatus &
+        hash startdwm && startdwm || exec dwm
+        #exec dbus-launch dwm-launch
+    ;;
+esac

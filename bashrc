@@ -3,14 +3,6 @@
 #
 
 export PATH=$HOME/bin/:$HOME/local/bin/:$PATH:$HOME/.gem/ruby/1.9.1/bin
-# If not running interactively, don't do anything
-if [[ $- != *i* ]]; then
-    # allow remote qstat
-    if [[ "$HOSTNAME" == *hep.ph.ic.ac.uk ]]; then
-        export SGE_ROOT=/usr/share/gridengine
-    fi
-    return
-fi
 
 if [ -f ~/.bash_colors ]; then
     source ~/.bash_colors
@@ -38,16 +30,3 @@ export PS1="\[$BICyan\]\[$Cyan\]\u\[$BCyan\]@\h \[$IWhite\]\W\[$Color_Off\] $ "
 export EDITOR="vim"
 
 stty erase 
-
-if [[ "$HOSTNAME" == *hep.ph.ic.ac.uk ]]; then
-    export SCRAM_ARCH=slc5_amd64_gcc462
-    export X509_USER_PROXY=/home/hep/sr505/.MyProxy
-    source /vols/cms/grid/setup.sh -arch=slc5_amd64_gcc462
-elif [[ "$HOSTNAME" == *.fnal.gov ]]; then
-    source /uscmst1/prod/grid/gLite_SL5.sh
-    source /uscmst1/prod/sw/cms/bashrc prod
-    export SCRAM_ARCH=slc5_amd64_gcc462
-    source /uscmst1/prod/sw/cms/cmsset_default.sh
-elif [[ "$HOSTNAME" == *.cern.ch ]]; then
-    export SCRAM_ARCH=slc5_amd64_gcc462
-fi

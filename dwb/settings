@@ -147,6 +147,6 @@ scroll-step=0.00
 close-last-tab-policy=ignore
 foreground-color=#ffffff
 message-delay=2
-scheme-handler=
+scheme-handler=xdg-open
 default-font-size=12
 enable-offline-web-application-cache=true

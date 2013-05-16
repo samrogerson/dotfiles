@@ -15,6 +15,7 @@ ServerAliveCountMax 60
 Host lx0*
   HostName %h.hep.ph.ic.ac.uk
   User sr505
+
 Host lxplus
   HostName %h.cern.ch
   User samr

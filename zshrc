@@ -38,9 +38,7 @@ source $ZSH/oh-my-zsh.sh
 # Customize to your needs...
 eval `dircolors ~/.dircolors/dircolors.ansi-light`
 
-alias sroot='cdir=`pwd`; cd ~/packages/root/; source bin/thisroot.sh; cd $cdir; cdir=""'
 alias vimless='vim -u /usr/share/vim/vim73/macros/less.vim'
 alias tmux='tmux -2'
-alias composit='compton -c -C -b -r8 -l-12 -t-8  -b  -G  -f -D30 -I0.45 -O0.45   --paint-on-overlay --unredir-if-possible  --backend glx --glx-no-stencil'
 
 export PATH=$PATH:$HOME/bin/:$HOME/.gem/ruby/1.9.1/bin:

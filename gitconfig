@@ -4,8 +4,8 @@
     user = hyperfunk
     password = !python ~/bin/ghpw
 [user]
-    email = samr@cern.ch
-    name = Sam Rogerson
+    email = hyp3rfunk@gmail.com 
+    name = hyperfunk
 [color]
     diff = auto
     branch = auto

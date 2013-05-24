@@ -1,6 +1,6 @@
 # path: $HOME/.config/zathura/zathurarc
 
-set font "Terminus 9"
+set font "Terminus 8"
 set default-bg "#fdf6e3"
 set default-fg "#657b83"
 set statusbar-bg "#eee8d5"

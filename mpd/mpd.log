@@ -9552,3 +9552,9 @@ Nov 26 14:37 : added _Unsorted/Madeon - Pop Culture.mp3
 Nov 26 14:37 : added _Unsorted/nfHJtDxmEXYd.128.mp3
 Nov 26 14:37 : added _Unsorted/tNWNhYRRxU4x.128.mp3
 Nov 26 14:38 : mixer: Failed to read mixer for 'default detected output': no such mixer control: PCM
+Jul 04 19:44 : avahi: Client Disconnected, will reconnect shortly
+Jul 04 19:44 : avahi: Could not reconnect: An unexpected D-Bus error occured
+Jul 08 16:47 : avahi: Client Disconnected, will reconnect shortly
+Jul 08 16:47 : avahi: Could not reconnect: An unexpected D-Bus error occured
+Jul 10 19:42 : avahi: Client Disconnected, will reconnect shortly
+Jul 10 19:42 : avahi: Could not reconnect: An unexpected D-Bus error occured

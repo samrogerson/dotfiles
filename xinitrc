@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/bash
 #
 # path: $HOME/.xinitrc
 #
@@ -33,7 +33,7 @@ hash dropboxd && dropboxd &
 hash mpd && mpd
 hash VBoxClient-all && VBoxClient-all &
 hash synclient && synclient PalmDetect=1 &
-hash systemd && systemd --user &
+hash /usr/lib/systemd/systemd && /usr/lib/systemd/systemd --user &
 # get a nice photo on login
 hash fswebcam && fswebcam -q --no-banner -r 1280x720 ~/private/login-photos/$(date +%Y-%m-%dT%H).jpg &
 
@@ -65,3 +65,4 @@ case $1 in
         #exec dbus-launch dwm-launch
     ;;
 esac
+/usr/lib/systemd/systemd --user &

@@ -1,11 +1,11 @@
 # path: $HOME/.gitconfig
 
 [github]
-    user = hyperfunk
+    user = samrogerson
     password = !python ~/bin/ghpw
 [user]
     email = hyp3rfunk@gmail.com 
-    name = hyperfunk
+	name = Sam Rogerson
 [color]
     diff = auto
     branch = auto

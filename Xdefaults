@@ -1,5 +1,6 @@
 !! # path: $HOME/.Xdefaults
-#include "/home/hyper/.colors/solarized-light"
+!#include "/home/hyper/.colors/solarized-light"
+#include "/home/hyper/.colors/erosionedit"
 
 !-------------------------------------------------------------------------------
 ! Xft settings
@@ -8,7 +9,9 @@ Xft.dpi:                    96
 Xft.antialias:              true
 Xft.rgba:                   rgb
 Xft.hinting:                true
+Xft.autohint:            	false
 Xft.hintstyle:              hintslight
+Xft.lcdfilter:            	lcddefault
 
 !-------------------------------------------------------------------------------
 ! XTERM settings
@@ -30,6 +33,10 @@ URxvt.lineSpace:            0
 URxvt.allow_bold:           true
 URxvt*.font:xft:terminus-medium:pixelsize=12
 URxvt*.boldFont:xft:terminus:bold:pixelsize=12
+!urxvt*font: -*-limey-*-*-*-*-*-*-*-*-*-*-*-*
+!urxvt*boldFont: -*-limey-*-*-*-*-*-*-*-*-*-*-*-*
+!urxvt*italicFont: -*-limey-*-*-*-*-*-*-*-*-*-*-*-*
+!urxvt*bolditalicFont: -*-limey-*-*-*-*-*-*-*-*-*-*-*-*
 
 ! Fix font space
 URxvt*.letterSpace: 0

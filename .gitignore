@@ -2,6 +2,7 @@
 *.o
 *.hi
 *.error
+*.pid
 xmonad/xmonad-*
 xmonad/xmonad.errors
 mutt/cache

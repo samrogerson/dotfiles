@@ -31,3 +31,7 @@ Host li1
 Host fnal
   HostName cmslpc-sl5.fnal.gov
   User samr
+
+Host brickly
+  HostName 192.168.1.88
+  User hyper

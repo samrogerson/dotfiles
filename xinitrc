@@ -12,6 +12,7 @@ xset +fp /usr/share/fonts/TTF/
 xset +fp /usr/share/fonts/local/
 
 # turn acceleration off
+hash razercfg && razercfg -r 1:450
 xset m 0 0
 
 # turn off pc speaker

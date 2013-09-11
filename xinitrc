@@ -29,7 +29,7 @@ xsetroot -cursor_name left_ptr
 hash urxvtd && urxvtd -q -f -o &
 hash unclutter && unclutter &
 hash pms && tmux -2 new -s pms -d pms
-hash sabnzbd && sabnzbd &
+hash sabnzbd && tmux -2 new -s sab -d sabnzbd
 hash dropboxd && dropboxd &
 hash mpd && mpd
 hash VBoxClient-all && VBoxClient-all &

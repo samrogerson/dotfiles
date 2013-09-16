@@ -31,12 +31,10 @@ URxvt.lineSpace:            0
 
 ! Fonts
 URxvt.allow_bold:           true
-URxvt*.font:xft:terminus-medium:pixelsize=12
-URxvt*.boldFont:xft:terminus:bold:pixelsize=12
-!urxvt*font: -*-limey-*-*-*-*-*-*-*-*-*-*-*-*
-!urxvt*boldFont: -*-limey-*-*-*-*-*-*-*-*-*-*-*-*
-!urxvt*italicFont: -*-limey-*-*-*-*-*-*-*-*-*-*-*-*
-!urxvt*bolditalicFont: -*-limey-*-*-*-*-*-*-*-*-*-*-*-*
+!URxvt*.font:xft:terminus-medium:pixelsize=12
+!URxvt*.boldFont:xft:terminus:bold:pixelsize=12
+URxvt*.font:-lucy-tewi-medium-r-normal--11-90-75-75-p-58-iso10646-1
+URxvt*.boldFont:-lucy-tewi-bold-r-normal--11-90-75-75-p-58-iso10646-1
 
 ! Fix font space
 URxvt*.letterSpace: 0

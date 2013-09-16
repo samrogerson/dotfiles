@@ -28,8 +28,6 @@ xsetroot -cursor_name left_ptr
 # start up various tools
 hash urxvtd && urxvtd -q -f -o &
 hash unclutter && unclutter &
-hash pms && tmux -2 new -s pms -d pms
-hash sabnzbd && tmux -2 new -s sab -d sabnzbd
 hash dropboxd && dropboxd &
 hash mpd && mpd
 hash VBoxClient-all && VBoxClient-all &
@@ -37,6 +35,12 @@ hash synclient && synclient PalmDetect=1 &
 hash /usr/lib/systemd/systemd && /usr/lib/systemd/systemd --user &
 # get a nice photo on login
 hash fswebcam && fswebcam -q --no-banner -r 1280x720 ~/private/login-photos/$(date +%Y-%m-%dT%H).jpg &
+
+# tmux sessions
+hash mopidy && tmux -2 new -s mopidy -d mopidy
+#hash pms && tmux -2 new -s pms -d pms
+hash rygel && tmux -2 new -s rygel -d rygel
+hash sabnzbd && tmux -2 new -s sab -d sabnzbd
 
 hash chromium
 

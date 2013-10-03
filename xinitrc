@@ -10,6 +10,8 @@ xrdb ~/.Xdefaults
 #xset +fp /usr/share/fonts/truetype/
 xset +fp /usr/share/fonts/TTF/
 xset +fp /usr/share/fonts/local/
+xset +fp ~/.fonts
+xset fp rehash
 
 # turn acceleration off
 hash razercfg && razercfg -r 1:450

@@ -35,6 +35,8 @@ URxvt.allow_bold:           true
 !URxvt*.boldFont:xft:terminus:bold:pixelsize=12
 URxvt*.font:-lucy-tewi-medium-r-normal--11-90-75-75-p-58-iso10646-1
 URxvt*.boldFont:-lucy-tewi-bold-r-normal--11-90-75-75-p-58-iso10646-1
+!URxvt*.font: xft:Dina-medium:size=8:antialias=false
+!URxvt*.boldFont: xft:Dina-bold:size=8:antialias=false
 
 ! Fix font space
 URxvt*.letterSpace: 0

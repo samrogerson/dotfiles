@@ -1,12 +1,20 @@
 colors phallus
 
+set gui=tabs
+set tabnumbers
+set popups=tab,resized
+set incsearch
+set hlsearch
+set ignorecase
+set smartcase
+
 set autocomplete=false
-set hintchars=asdfghjkl;
+set hintchars=hjklasdfgyuiopqwertnmzxcvb
+" set hintchars=asdfghjkl;
 set noscrollbars
 
 map J gT
 map K gt
-
 
 map <silent> <C-F1> :js toggle_bottombar()<CR>
 
@@ -19,4 +27,3 @@ function toggle_bottombar() {
     bb.style.overflow = (bb.style.height == '') ? '' : 'hidden';
     }
 EOF
-

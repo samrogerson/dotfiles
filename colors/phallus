@@ -1,3 +1,5 @@
+! vim:nu:ai:si:et:ts=4:sw=4:ft=xdefaults:
+
 ! black
 URxvt*color15  : #505050
 URxvt*color7  : #505050

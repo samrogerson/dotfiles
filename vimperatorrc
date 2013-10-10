@@ -9,12 +9,16 @@ set ignorecase
 set smartcase
 
 set autocomplete=false
+set toolbars=noaddons,nobookmarks,nomenu,nonavigation,tabs
 set hintchars=hjklasdfgyuiopqwertnmzxcvb
 " set hintchars=asdfghjkl;
 set noscrollbars
 
-map J gT
-map K gt
+map J gt
+map K gT
+
+nnoremap j 3j
+nnoremap k 3k
 
 map <silent> <C-F1> :js toggle_bottombar()<CR>
 
@@ -27,3 +31,5 @@ function toggle_bottombar() {
     bb.style.overflow = (bb.style.height == '') ? '' : 'hidden';
     }
 EOF
+
+

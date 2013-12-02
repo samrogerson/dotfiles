@@ -1,6 +1,7 @@
 !! # path: $HOME/.Xdefaults
 !#include "/home/hyper/.colors/solarized-light"
-#include "/home/hyper/.colors/erosionedit"
+!#include "/home/hyper/.colors/erosionedit"
+#include "/home/hyper/.colors/molokai"
 
 !-------------------------------------------------------------------------------
 ! Xft settings
@@ -46,6 +47,7 @@ URxvt.scrollStyle:          rxvt
 URxvt.scrollBar:            false
 
 ! Perl extensions
+URxvt.perl-lib:             /usr/lib/urxvt/perl/
 URxvt.perl-ext-common:      default,matcher,clipboard
 URxvt.url-select.underline: true
 URxvt.matcher.button:       1

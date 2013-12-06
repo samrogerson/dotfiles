@@ -122,6 +122,7 @@ colorscheme molokai
     "hi CursorLineNr ctermfg=5 ctermbg=0 
     "hi CursorColumn ctermfg=none ctermbg=0
 ""}
+""" EROSION
 "" COLORS {
     "" syntax highlighting groups
     "hi Comment      ctermfg=12

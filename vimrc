@@ -92,8 +92,8 @@ let g:solarized_contrast="normal"
 let g:solarized_visibility="high"
 
 "colorscheme solarized
-"colorscheme jellybeans
-colorscheme molokai
+colorscheme jellybeans
+"colorscheme molokai
 "colorscheme default
 "colorscheme erosion
 "colorscheme phallus

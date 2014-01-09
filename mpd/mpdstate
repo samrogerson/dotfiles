@@ -7,6 +7,6 @@ single: 0
 consume: 0
 crossfade: 0
 mixrampdb: 0.000000
-mixrampdelay: nan
+mixrampdelay: -1.000000
 playlist_begin
 playlist_end

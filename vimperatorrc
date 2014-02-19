@@ -1,5 +1,3 @@
-colors phallus
-
 set gui=tabs
 set tabnumbers
 set popups=tab,resized
@@ -20,6 +18,11 @@ map K gT
 nnoremap j 3j
 nnoremap k 3k
 
+hi CmdLine>* font-family: Monaco
+hi CompDesc font-family: Monaco
+hi CompResult font-family: Monaco
+hi StatusLine font-family: Monaco
+
 map <silent> <C-F1> :js toggle_bottombar()<CR>
 
 :js << EOF
@@ -31,5 +34,3 @@ function toggle_bottombar() {
     bb.style.overflow = (bb.style.height == '') ? '' : 'hidden';
     }
 EOF
-
-

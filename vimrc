@@ -101,13 +101,12 @@ colorscheme jellybeans
 " Set utf8 as standard encoding and en_US as the standard language
 set encoding=utf8
 " Use Unix as the standard file type
-set ffs=unix,dos,mac
+set ffs=unix,mac,dos
 " turn off the menus
 set guioptions-=T
 set guioptions-=m
 set guioptions-=r
 "set guifont=Termsyn\ 16
-set guifont=Source\ Code\ Pro\ 8
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Files, backups and undo
@@ -205,3 +204,5 @@ function! HasPaste()
     en
     return ''
 endfunction
+
+map <C-n> :NERDTreeToggle<CR>

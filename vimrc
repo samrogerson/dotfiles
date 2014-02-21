@@ -18,6 +18,7 @@ set history=700
 filetype plugin on
 filetype indent on
 au BufNewFile,BufRead *.md set filetype=markdown
+au BufNewFile,BufRead *.gradle setf groovy
 
 " Set to auto read when a file is changed from the outside
 set autoread

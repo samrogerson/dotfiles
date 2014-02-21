@@ -13,3 +13,6 @@
 [submodule "dwm"]
 	path = dwm
 	url = git@github.com:hyperfunk/dwm.git
+[submodule "vim/bundle/vim-json"]
+	path = vim/bundle/vim-json
+	url = https://github.com/elzr/vim-json

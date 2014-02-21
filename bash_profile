@@ -1,13 +1,20 @@
-#
-# path: $HOME/.bash_profile
-#
+export CLICOLOR=1
+export LSCOLORS=GxFxCxDxBxegedabagaced
+export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Version/CurrentJDK/Home
 
-[[ -f ~/.bashrc ]] && . ~/.bashrc
+TRAILS_PATH=/Users/srogerson/tools/trails/bin/unix
+export PATH=$HOME/bin/:$TRAILS_PATH:$PATH
 
-if [[ "$HOSTNAME" != *.hep.ph.ic.ac.uk ]] && [[ "$HOSTNAME" != *.fnal.gov ]] && \
-	 [[ "$HOSTNAME" != lxplus*.cern.ch ]] && [[ "$HOSTNAME" != li186* ]];
-then
-    if [[ -z $DISPLAY && ! -e /tmp/.X11-unix/X0 ]] && (( EUID )); then
-        exec startx
-    fi
-fi
+#set a decent size
+export HISTSIZE=100000
+#ignore duplicate consecuetive lines
+export HISTCONTROL=$HISTCONTROL${HISTCONTROL+,}ignoredups
+#erase duplicates
+export HISTCONTROL=erasedups
+#append to the bash_history file on exit, rather than over-writing
+shopt -s histappend 
+shopt -s checkwinsize
+
+export EDITOR="vim"
+
+stty erase 

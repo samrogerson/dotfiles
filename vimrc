@@ -20,6 +20,7 @@ filetype indent on
 au BufNewFile,BufRead *.md set filetype=markdown
 au BufNewFile,BufRead *.gradle setf groovy
 au BufRead,BufNewFile *.scala set filetype=scala
+au BufRead,BufNewFile *.avdl setlocal filetype=avro-idl
 
 " Set to auto read when a file is changed from the outside
 set autoread

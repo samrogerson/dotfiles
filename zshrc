@@ -31,7 +31,7 @@ ZSH_THEME="simple"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git git-flow gradle)
+plugins=(git git-flow)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -40,5 +40,6 @@ $(command -v dircolors) && eval `dircolors ~/.dircolors/dircolors.ansi-light`
 
 alias vimless='vim -u /usr/share/vim/vim73/macros/less.vim'
 alias tmux='tmux -2'
+alias gw='./gradlew'
 
 export DISABLE_AUTO_TITLE=true

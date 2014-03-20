@@ -19,6 +19,7 @@ filetype plugin on
 filetype indent on
 au BufNewFile,BufRead *.md set filetype=markdown
 au BufNewFile,BufRead *.gradle setf groovy
+au BufRead,BufNewFile *.gen setf groovy
 au BufRead,BufNewFile *.scala set filetype=scala
 au BufRead,BufNewFile *.avdl setlocal filetype=avro-idl
 
@@ -46,7 +47,7 @@ set wildignore=*.o,*~,*.pyc,*.so,*.d
 "Always show current position
 set ruler
 " Height of the command bar
-set cmdheight=2
+set cmdheight=1
 " A buffer becomes hidden when it is abandoned
 set hid
 " Configure backspace so it acts as it should act

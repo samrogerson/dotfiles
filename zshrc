@@ -41,5 +41,3 @@ $(command -v dircolors) && eval `dircolors ~/.dircolors/dircolors.ansi-light`
 alias vimless='vim -u /usr/share/vim/vim73/macros/less.vim'
 alias tmux='tmux -2'
 alias gw='./gradlew'
-
-export DISABLE_AUTO_TITLE=true

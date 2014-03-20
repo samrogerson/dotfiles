@@ -1,3 +1,5 @@
+# path: $HOME/.bashrc
+
 if [ -f ~/.bash_colors ]; then
     source ~/.bash_colors
 fi

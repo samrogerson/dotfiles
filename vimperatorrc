@@ -18,10 +18,10 @@ map K gT
 nnoremap j 3j
 nnoremap k 3k
 
-hi CmdLine>* font-family: Monaco
-hi CompDesc font-family: Monaco
-hi CompResult font-family: Monaco
-hi StatusLine font-family: Monaco
+hi CmdLine>* font-family: PragmataPro
+hi CompDesc font-family: PragmataPro
+hi CompResult font-family: PragmataPro
+hi StatusLine font-family: PragmataPro
 
 map <silent> <C-F1> :js toggle_bottombar()<CR>
 

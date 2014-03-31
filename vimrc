@@ -95,13 +95,11 @@ let g:solarized_termtrans=1
 let g:solarized_contrast="normal"
 let g:solarized_visibility="high"
 
-"colorscheme solarized
 colorscheme jellybeans
-"colorscheme molokai
-"colorscheme default
-"colorscheme erosion
-"colorscheme phallus
-"
+" Bright CursorLine
+hi Cursorline term=bold  term=bold
+set cursorline
+
 " Set utf8 as standard encoding and en_US as the standard language
 set encoding=utf8
 " Use Unix as the standard file type

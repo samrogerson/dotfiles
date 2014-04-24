@@ -20,6 +20,7 @@ filetype indent on
 au BufNewFile,BufRead *.md set filetype=markdown
 au BufNewFile,BufRead *.gradle setf groovy
 au BufRead,BufNewFile *.gen setf groovy
+au BufRead,BufNewFile *.pgen setf groovy
 au BufRead,BufNewFile *.scala set filetype=scala
 au BufRead,BufNewFile *.avdl setlocal filetype=avro-idl
 
@@ -95,7 +96,9 @@ let g:solarized_termtrans=1
 let g:solarized_contrast="normal"
 let g:solarized_visibility="high"
 
-colorscheme jellybeans
+"colorscheme jellybeans
+colorscheme solarized
+set background=dark
 " Bright CursorLine
 hi Cursorline term=bold  term=bold
 set cursorline

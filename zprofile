@@ -1,7 +1,9 @@
 # path: $HOME/.zprofile
 export CLICOLOR=1
-export LSCOLORS=GxFxCxDxBxegedabagaced
-export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Versions/CurrentJDK/Home/
+
+export JAVA6=/System/Library/Frameworks/JavaVM.framework/Versions/1.6.0/Home
+export JAVA7=/System/Library/Frameworks/JavaVM.framework/Versions/CurrentJDK/Home/
+export JAVA_HOME=$JAVA6
 
 TRAILS_PATH=/Users/srogerson/tools/trails/bin/unix
 export PATH=$HOME/bin/:$TRAILS_PATH:$PATH

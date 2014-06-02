@@ -44,7 +44,7 @@ set wildmode=longest,list,full
 " Turn on the WiLd menu
 set wildmenu
 " Ignore compiled files
-set wildignore=*.o,*~,*.pyc,*.so,*.d
+set wildignore=*.o,*~,*.pyc,*.so,*.d,*.class
 "Always show current position
 set ruler
 " Height of the command bar
@@ -133,12 +133,12 @@ set shiftwidth=4
 set tabstop=4
 " Linebreak on 80 characters
 set lbr
-set tw=100
+set tw=80
 set ai "Auto indent
 set si "Smart indent
 set wrap "Wrap lines
 "Colourcolumn
-set cc=100
+set cc=80
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Moving around, tabs, windows and buffers

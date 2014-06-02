@@ -25,3 +25,5 @@ stty erase 
 if [[ -z $DISPLAY && ! -e /tmp/.X11-unix/X0 ]] && (( EUID )) && $( command -v startx ); then
     exec startx
 fi
+
+VIRTUAL_ENV_DISABLE_PROMPT=1 source /Users/srogerson/Library/Enthought/Canopy_64bit/User/bin/activate

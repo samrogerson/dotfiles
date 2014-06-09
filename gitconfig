@@ -2,9 +2,8 @@
 
 [github]
     user = samrogerson
-    password = !python ~/bin/ghpw
 [user]
-    email = hyp3rfunk@gmail.com 
+    email = rogerson.samuel@gmail.com 
 	name = Sam Rogerson
 [color]
     diff = auto
@@ -17,3 +16,6 @@
     ui = auto
 [alias]
     graph = log --decorate --graph --oneline
+    st = status --short
+    co = checkout
+    ci = commit

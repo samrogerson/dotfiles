@@ -36,15 +36,4 @@ plugins=(git git-flow)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-$(command -v dircolors) && eval `dircolors ~/.dircolors/dircolors.ansi-light`
-
-alias vimless='vim -u /usr/share/vim/vim73/macros/less.vim'
-alias tmux='tmux -2'
-
-alias gw='./gradlew'
-alias gw6='JAVA_HOME=${JAVA6} gw'
-alias gw7='JAVA_HOME=${JAVA7} gw'
-alias j6='export JAVA_HOME=${JAVA6}'
-alias j7='export JAVA_HOME=${JAVA7}'
-
-#bindkey -v
+#$(command -v dircolors) && eval `dircolors ~/.dircolors/dircolors.ansi-light`

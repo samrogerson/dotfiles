@@ -55,18 +55,18 @@ set hid
 set backspace=eol,start,indent
 " Ignore case when searching
 set ignorecase
-" When searching try to be smart about cases 
+" When searching try to be smart about cases
 set smartcase
 " Highlight search results
 set hlsearch
 " Makes search act like search in modern browsers
-set incsearch 
+set incsearch
 " Don't redraw while executing macros (good performance config)
-set lazyredraw 
+set lazyredraw
 " For regular expressions turn magic on
 set magic
 " Show matching brackets when text indicator is over them
-set showmatch 
+set showmatch
 " How many tenths of a second to blink when matching brackets
 set mat=2
 " No annoying sound on errors
@@ -80,7 +80,7 @@ set tm=500
 " => Colors and Fonts
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Enable syntax highlighting
-syntax enable 
+syntax enable
 " Set extra options when running in GUI mode
 if has("gui_running")
     set guioptions-=T
@@ -148,7 +148,7 @@ map j gj
 map k gk
 " Disable highlight when <leader><cr> is pressed
 map <silent> <leader><cr> :noh<cr>
-" Specify the behavior when switching between buffers 
+" Specify the behavior when switching between buffers
 try
   set switchbuf=useopen,usetab,newtab
   set stal=2
@@ -197,6 +197,7 @@ map <leader>ss :setlocal spell!<cr>
 noremap <Leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
 " Toggle paste mode on and off
 map <leader>pp :setlocal paste!<cr>
+
 au FocusLost * :set number
 au FocusGained * :set relativenumber
 au InsertEnter * :set number
@@ -213,3 +214,5 @@ function! HasPaste()
     en
     return ''
 endfunction
+
+let g:airline_powerline_fonts = 1

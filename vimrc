@@ -197,6 +197,10 @@ map <leader>ss :setlocal spell!<cr>
 noremap <Leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
 " Toggle paste mode on and off
 map <leader>pp :setlocal paste!<cr>
+au FocusLost * :set number
+au FocusGained * :set relativenumber
+au InsertEnter * :set number
+au InsertLeave * :set relativenumber
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -209,5 +213,3 @@ function! HasPaste()
     en
     return ''
 endfunction
-
-map <C-n> :NERDTreeToggle<CR>

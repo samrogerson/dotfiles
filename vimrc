@@ -138,7 +138,9 @@ set ai "Auto indent
 set si "Smart indent
 set wrap "Wrap lines
 "Colourcolumn
-set cc=80
+if exists('+cc')
+    set cc=80
+endif
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Moving around, tabs, windows and buffers

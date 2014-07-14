@@ -199,6 +199,7 @@ map <leader>ss :setlocal spell!<cr>
 noremap <Leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
 " Toggle paste mode on and off
 map <leader>pp :setlocal paste!<cr>
+map <leader>j :!python -mjson.tool <cr>
 
 au FocusLost * :set number
 au FocusGained * :set relativenumber

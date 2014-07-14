@@ -27,3 +27,4 @@ if [[ -z $DISPLAY && ! -e /tmp/.X11-unix/X0 ]] && (( EUID )) && $( command -v st
 fi
 
 VIRTUAL_ENV_DISABLE_PROMPT=1 source /Users/srogerson/Library/Enthought/Canopy_64bit/User/bin/activate
+export PYTHONPATH="$HOME/code/notebooks/pylibs/:$PYTHONPATH"

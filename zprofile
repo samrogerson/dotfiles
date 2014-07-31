@@ -1,12 +1,43 @@
 # path: $HOME/.zprofile
-export CLICOLOR=1
+#
+pathmunge() {
+    case ":$PATH:" in
+            *:"$1":*)
+                ;;
+            *)
+                if [ "$2" = "after" ]; then
+                    PATH=$PATH:$1
+                else
+                    PATH=$1:$PATH
+                fi
+                ;;
+    esac
+}
 
-export JAVA6=/System/Library/Frameworks/JavaVM.framework/Versions/1.6.0/Home
-export JAVA7=/System/Library/Frameworks/JavaVM.framework/Versions/CurrentJDK/Home/
+case `uname -s` in
+    Darwin)
+        export CLICOLOR=1
+        JAVA6=/System/Library/Frameworks/JavaVM.framework/Versions/1.6.0/Home
+        JAVA7=/System/Library/Frameworks/JavaVM.framework/Versions/CurrentJDK/Home/
+        export JAVA6
+        export JAVA7
+        TRAILS_PATH=/Users/srogerson/tools/trails/bin/unix
+        local pyactivate=/Users/srogerson/Library/Enthought/Canopy_64bit/User/bin/activate
+        if [[ -f $pyactivate ]]; then
+            VIRTUAL_ENV_DISABLE_PROMPT=1 source "$pyactivate"
+        fi
+        ;;
+    *)
+
+esac
+pathmunge /usr/local/sbin
+pathmunge $TRAILS_PATH
+pathmunge $HOME/bin
+# brew needs this before bin even if its already in the path
+PATH=/usr/local/bin:$PATH
+export PATH
+
 export JAVA_HOME=$JAVA6
-
-TRAILS_PATH=/Users/srogerson/tools/trails/bin/unix
-export PATH=$HOME/bin/:$TRAILS_PATH:$PATH
 
 #set a decent size
 export HISTSIZE=100000
@@ -26,5 +57,4 @@ if [[ -z $DISPLAY && ! -e /tmp/.X11-unix/X0 ]] && (( EUID )) && $( command -v st
     exec startx
 fi
 
-VIRTUAL_ENV_DISABLE_PROMPT=1 source /Users/srogerson/Library/Enthought/Canopy_64bit/User/bin/activate
-export PYTHONPATH="$HOME/code/notebooks/pylibs/:$PYTHONPATH"
+export PYTHONPATH="$HOME/git/notebooks/pylibs/:$PYTHONPATH"

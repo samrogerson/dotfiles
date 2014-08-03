@@ -1,4 +1,5 @@
 #! /usr/bin/env zsh
+#
 
 # path: $HOME/.zaliases
 alias vimless='vim -u /usr/share/vim/vim73/macros/less.vim'
@@ -10,13 +11,17 @@ alias gw7='JAVA_HOME=${JAVA7} gw'
 alias j6='export JAVA_HOME=${JAVA6}'
 alias j7='export JAVA_HOME=${JAVA7}'
 
-ntfy() {
-    local msg=""
-    "$@"
-    if [[ $? == 0 ]] ; then
-        msg="Run completed"
-    else
-        msg="Run failed"
-    fi
-    terminal-notifier -message "$msg" -title "`basename \`pwd\``: $*"
-}
+case `uname -s` in
+    Darwin)
+        alias vlc='/Applications/VLC.app/Contents/MacOS/VLC'
+        ntfy() {
+            local msg=""
+            "$@"
+            if [[ $? == 0 ]] ; then
+                msg="Run completed"
+            else
+                msg="Run failed"
+            fi
+            terminal-notifier -message "$msg" -title "`basename \`pwd\``: $*"
+        }
+esac

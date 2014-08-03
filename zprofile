@@ -27,9 +27,8 @@ case `uname -s` in
             VIRTUAL_ENV_DISABLE_PROMPT=1 source "$pyactivate"
         fi
         ;;
-    *)
-
 esac
+
 pathmunge /usr/local/sbin
 pathmunge $TRAILS_PATH
 pathmunge $HOME/bin

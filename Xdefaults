@@ -1,7 +1,7 @@
 !! # path: $HOME/.Xdefaults
 !#include "/home/hyper/.colors/solarized-light"
 !#include "/home/hyper/.colors/erosionedit"
-#include "/home/hyper/.colors/molokai"
+!#include "/home/samr/.colors/molokai"
 
 !-------------------------------------------------------------------------------
 ! Xft settings
@@ -32,12 +32,8 @@ URxvt.lineSpace:            0
 
 ! Fonts
 URxvt.allow_bold:           true
-!URxvt*.font:xft:terminus-medium:pixelsize=12
-!URxvt*.boldFont:xft:terminus:bold:pixelsize=12
-URxvt*.font:-lucy-tewi-medium-r-normal--11-90-75-75-p-58-iso10646-1
-URxvt*.boldFont:-lucy-tewi-bold-r-normal--11-90-75-75-p-58-iso10646-1
-!URxvt*.font: xft:Dina-medium:size=8:antialias=false
-!URxvt*.boldFont: xft:Dina-bold:size=8:antialias=false
+URxvt*.font:xft:terminus-medium:pixelsize=12
+URxvt*.boldFont:xft:terminus:bold:pixelsize=12
 
 ! Fix font space
 URxvt*.letterSpace: 0

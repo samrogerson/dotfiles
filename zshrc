@@ -37,3 +37,4 @@ source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 #$(command -v dircolors) && eval `dircolors ~/.dircolors/dircolors.ansi-light`
+. /usr/share/zsh/site-contrib/powerline.zsh

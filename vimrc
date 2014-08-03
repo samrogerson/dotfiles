@@ -96,7 +96,11 @@ let g:solarized_termtrans=1
 let g:solarized_contrast="normal"
 let g:solarized_visibility="high"
 
-colorscheme solarized
+if has('unix')
+    colorscheme jellybeans
+elseif has('mac')
+    colorscheme soalrized
+endif
 set background=light
 " Bright CursorLine
 hi Cursorline term=bold  term=bold

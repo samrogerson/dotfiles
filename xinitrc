@@ -28,7 +28,7 @@ xsetroot -cursor_name left_ptr
     #--unredir-if-possible  --backend glx --glx-no-stencil #--glx-no-rebind-pixmap
 
 # start up various tools
-hash urxvtd && urxvtd -q -f -o &
+#hash urxvtd && urxvtd -q -f -o &
 hash unclutter && unclutter &
 hash dropboxd && dropboxd &
 hash mpd && mpd

@@ -48,7 +48,7 @@ hash chromium
 
 # set the background
 if [[ -d ~/.backgrounds ]]; then
-    hsetroot -full ~/.backgrounds/background
+    hash feh && feh --bg-scale ~/.backgrounds/background
 fi
 
 # D-Bus

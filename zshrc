@@ -37,4 +37,8 @@ source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 #$(command -v dircolors) && eval `dircolors ~/.dircolors/dircolors.ansi-light`
-. /usr/share/zsh/site-contrib/powerline.zsh
+if [[ `uname -s` == "Darwin" ]]; then
+    source /usr/local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh
+else
+    source /usr/share/zsh/site-contrib/powerline.zsh
+fi

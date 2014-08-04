@@ -101,6 +101,7 @@ if has('unix')
     let s:uname = system("echo -n \"$(uname)\"")
     if s:uname == "Darwin"
         colorscheme solarized
+        source /usr/local/lib/python2.7/site-packages/powerline/bindings/vim/plugin/powerline.vim
     endif
 endif
 set background=light
@@ -175,7 +176,7 @@ set viminfo^=%
 " Always show the status line
 set laststatus=2
 " Format the status line
-set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l%4v
+"set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l%4v
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

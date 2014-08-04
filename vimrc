@@ -98,8 +98,10 @@ let g:solarized_visibility="high"
 
 if has('unix')
     colorscheme jellybeans
-elseif has('mac')
-    colorscheme soalrized
+    let s:uname = system("echo -n \"$(uname)\"")
+    if s:uname == "Darwin"
+        colorscheme solarized
+    endif
 endif
 set background=light
 " Bright CursorLine

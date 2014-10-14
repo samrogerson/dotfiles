@@ -56,4 +56,4 @@ if [[ -z $DISPLAY && ! -e /tmp/.X11-unix/X0 ]] && (( EUID )) && $( command -v st
     exec startx
 fi
 
-export PYTHONPATH="$HOME/git/notebooks/pylibs/:$PYTHONPATH"
+export PYTHONPATH="$HOME/git/pylibs/:$PYTHONPATH"

@@ -139,13 +139,13 @@ set shiftwidth=4
 set tabstop=4
 " Linebreak on 80 characters
 set lbr
-set tw=80
+set tw=100
 set ai "Auto indent
 set si "Smart indent
 set wrap "Wrap lines
 "Colourcolumn
 if exists('+cc')
-    set cc=80
+    set cc=100
 endif
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

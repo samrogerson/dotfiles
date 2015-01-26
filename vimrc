@@ -29,8 +29,8 @@ set autoread
 
 " With a map leader it's possible to do extra key combinations
 " like <leader>w saves the current file
-let mapleader = "\<space>"
-let g:mapleader = "\<space>"
+let mapleader = "\\"
+let g:mapleader = "\\"
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => VIM user interface
@@ -104,7 +104,7 @@ if has('unix')
         source /usr/local/lib/python2.7/site-packages/powerline/bindings/vim/plugin/powerline.vim
     endif
 endif
-set background=light
+set background=dark
 " Bright CursorLine
 hi Cursorline term=bold  term=bold
 set cursorline

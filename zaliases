@@ -1,15 +1,17 @@
 #! /usr/bin/env zsh
-#
 
 # path: $HOME/.zaliases
+
 alias vimless='vim -u /usr/share/vim/vim73/macros/less.vim'
 alias tmux='tmux -2'
 
 alias gw='./gradlew'
 alias gw6='JAVA_HOME=${JAVA6} gw'
 alias gw7='JAVA_HOME=${JAVA7} gw'
+alias gw8='JAVA_HOME=${JAVA8} gw'
 alias j6='export JAVA_HOME=${JAVA6}'
 alias j7='export JAVA_HOME=${JAVA7}'
+alias j8='export JAVA_HOME=${JAVA8}'
 
 case `uname -s` in
     Darwin)

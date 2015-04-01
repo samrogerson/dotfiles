@@ -18,10 +18,10 @@ map K gT
 nnoremap j 3j
 nnoremap k 3k
 
-hi CmdLine>* font-family: PragmataPro
-hi CompDesc font-family: PragmataPro
-hi CompResult font-family: PragmataPro
-hi StatusLine font-family: PragmataPro
+hi CmdLine>* font-family: Menlo
+hi CompDesc font-family: Menlo
+hi CompResult font-family: Menlo
+hi StatusLine font-family: Menlo
 
 hi Hint font-family: monospace; font-size: 10px; font-weight: normal; text-transform: uppercase; color: white; background-color: red; border-color: ButtonShadow; border-width: 0px; border-style: solid; padding: 0px 1px 0px 1px; 
 

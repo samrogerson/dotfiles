@@ -19,3 +19,7 @@
     st = status --short
     co = checkout
     ci = commit
+[credential]
+	helper = cache
+[push]
+	default = simple

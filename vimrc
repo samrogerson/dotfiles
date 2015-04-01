@@ -21,6 +21,7 @@ au BufNewFile,BufRead *.md set filetype=markdown
 au BufNewFile,BufRead *.gradle setf groovy
 au BufRead,BufNewFile *.gen setf groovy
 au BufRead,BufNewFile *.pgen setf groovy
+au BufRead,BufNewFile *.mesa setf groovy
 au BufRead,BufNewFile *.scala set filetype=scala
 au BufRead,BufNewFile *.avdl setlocal filetype=avro-idl
 

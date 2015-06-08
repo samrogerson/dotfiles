@@ -1,0 +1,148 @@
+# path: $HOME/.slate
+# Configs
+config defaultToCurrentScreen true
+config nudgePercentOf screenSize
+config resizePercentOf screenSize
+config secondsBetweenRepeat 0.1
+config checkDefaultsOnLoad true
+config focusCheckWidthMax 3000
+config windowHintsShowIcons true
+config windowHintsIgnoreHiddenWindows false
+#config windowHintsDuration 5
+config windowHintsSpread true
+#config windowHintsOrder persist
+ 
+# Monitor Aliases
+alias mon-laptop 0
+alias mon-thunderbolt 1
+ 
+# Misc Aliases
+alias showHintsLeftHand hint AOEUIYQJKX
+alias showNormalHint hint AOEUIDHTNSYXFBPKGMCW
+alias browser 'Chrome'
+alias editor 'MacVim'
+ 
+# Abstract positions
+alias full move screenOriginX;screenOriginY screenSizeX;screenSizeY
+alias lefthalf move screenOriginX;screenOriginY screenSizeX/2;screenSizeY
+alias lefttopq move screenOriginX;screenOriginY screenSizeX/2;screenSizeY/2
+alias leftbottomq move screenOriginX;screenOriginY+screenSizeY/2 screenSizeX/2;screenSizeY/2
+alias righthalf move screenOriginX+screenSizeX/2;screenOriginY screenSizeX/2;screenSizeY
+alias righttopq move screenOriginX+screenSizeX/2;screenOriginY screenSizeX/2;screenSizeY/2
+alias rightbottomq move screenOriginX+screenSizeX/2;screenOriginY+screenSizeY/2 screenSizeX/2;screenSizeY/2
+alias rightmost move screenOriginX+screenSizeX*0.4;screenOriginY screenSizeX*0.6;screenSizeY
+alias rightless move screenOriginX+screenSizeX*0.6;screenOriginY screenSizeX*0.4;screenSizeY
+alias leftmost move screenOriginX;screenOriginY screenSizeX*0.6;screenSizeY
+alias leftless move screenOriginX;screenOriginY screenSizeX*0.4;screenSizeY
+alias tophalf move screenOriginX;screenOriginY screenSizeX;screenSizeY/2
+alias bottomhalf move screenOriginX;screenOriginY+screenSizeY/2 screenSizeX;screenSizeY/2
+
+# Concrete positions
+alias 1-full move screenOriginX;screenOriginY screenSizeX;screenSizeY ${mon-laptop}
+alias 1-left move screenOriginX;screenOriginY screenSizeX/2;screenSizeY ${mon-laptop}
+alias 1-right move screenOriginX+screenSizeX/2;screenOriginY screenSizeX/2;screenSizeY ${mon-laptop}
+alias 2-left move screenOriginX;screenOriginY screenSizeX/2;screenSizeY ${mon-thunderbolt}
+alias 2-right move screenOriginX+screenSizeX/2;screenOriginY screenSizeX/2;screenSizeY ${mon-thunderbolt}
+alias 2-righttop move screenOriginX+screenSizeX/2;screenOriginY screenSizeX/2;screenSizeY/2 ${mon-thunderbolt}
+alias 2-lefttop move screenOriginX;screenOriginY screenSizeX/2;screenSizeY/2 ${mon-thunderbolt}
+alias 2-rightbottom move screenOriginX+screenSizeX/2;screenOriginY+screenSizeY/2 screenSizeX/2;screenSizeY/2 ${mon-thunderbolt}
+alias 2-leftbottom move screenOriginX;screenOriginY+screenSizeY/2 screenSizeX/2;screenSizeY/2 ${mon-thunderbolt}
+ 
+# 1 big monitor layout
+layout 1bigmonitor 'iTerm':REPEAT ${2-righttop}
+layout 1bigmonitor 'Chrome':REPEAT ${2-leftbottom}
+layout 1bigmonitor 'Mail':REPEAT ${2-righttop}
+layout 1bigmonitor 'HipChat':REPEAT ${2-rightbottom}
+layout 1bigmonitor 'Calendar':REPEAT ${2-leftbottom}
+layout 1bigmonitor 'iTunes':REPEAT ${2-leftbottom}
+layout 1bigmonitor 'OmniFocus':REPEAT ${2-lefttop}
+layout 1bigmonitor 'Evernote':REPEAT ${2-lefttop}
+layout 1bigmonitor 'Messages':REPEAT ${2-rightbottom}
+
+# 2 Monitor layout
+layout 2monitors 'iTerm':MAIN_FIRST ${2-lefttop} | ${1-left}
+layout 2monitors 'Chrome':MAIN_FIRST ${2-righttop} | ${1-right}
+layout 2monitors 'Mail':REPEAT ${2-rightbottom}
+layout 2monitors 'HipChat':REPEAT ${2-rightbottom}
+layout 2monitors 'Calendar':REPEAT ${2-leftbottom}
+layout 2monitors 'iTunes':REPEAT ${1-full}
+layout 2monitors 'OmniFocus':REPEAT ${1-full}
+layout 2monitors 'Evernote':REPEAT ${1-full}
+layout 2monitors 'Messages':REPEAT ${1-full}
+ 
+# 1 Monitor layout
+layout 1monitor 'iTerm':MAIN_FIRST ${full}
+layout 1monitor 'Chrome':MAIN_FIRST ${full}
+layout 1monitor 'Mail':MAIN_FIRST ${full}
+layout 1monitor 'HipChat':MAIN_FIRST ${full}
+layout 1monitor 'Messages':MAIN_FIRST ${full}
+layout 1monitor 'Evernote':MAIN_FIRST ${full}
+layout 1monitor 'OmniFocus':MAIN_FIRST ${full}
+layout 1monitor 'Calendar':MAIN_FIRST ${full}
+ 
+# Default Layouts
+default 1bigmonitor resolutions:${mon-thunderbolt}
+default 2monitors resolutions:${mon-laptop};${mon-thunderbolt}
+default 1monitor resolutions:${mon-laptop}
+ 
+# Numpad location Bindings
+#bind pad0 ${showHintsLeftHand}
+#bind pad1 ${leftless}
+#bind pad2 push bottom bar-resize:screenSizeY/2
+#bind pad3 ${rightless}
+#bind pad4 ${lefthalf}
+#bind pad5 ${full}
+#bind pad6 ${righthalf}
+#bind pad7 ${leftmost}
+#bind pad8 push top bar-resize:screenSizeY/2
+#bind pad9 ${rightmost}
+#bind padEnter grid padding:5 ${mon-laptop}:6,2 ${mon-thunderbolt}:8,3
+#bind pad+ throw next
+#bind pad. focus behind
+#bind pad* layout 2monitors
+#bind pad/ layout 1monitor
+ 
+bind e:cmd ${showNormalHint}
+ 
+# ======================================
+# The HYPER key
+# ======================================
+ 
+alias hyper cmd
+ 
+# Location bindings
+#gc
+bind g:${hyper} ${lefttopq}
+bind c:${hyper} ${righttopq}
+#htn
+bind h:${hyper} ${lefthalf}
+bind t:${hyper} ${righthalf}
+bind n:${hyper} ${full}
+#mw
+bind m:${hyper} ${leftbottomq}
+bind w:${hyper} ${rightbottomq}
+#r
+bind r:${hyper} throw next
+#pk
+bind p:${hyper} ${tophalf}
+bind k:${hyper} ${bottomhalf}
+
+# Layout bindings
+bind 6:${hyper} layout 1bigmonitor
+bind 2:${hyper} layout 2monitors
+bind 1:${hyper} layout 1monitor
+
+# 
+bind 5:${hyper} relaunch
+
+# focus Bindings
+bind right:${hyper} focus right
+bind left:${hyper} focus left
+bind up:${hyper} focus up
+bind down:${hyper} focus down
+ 
+# App bindings
+bind e:${hyper} focus ${browser}
+bind u:${hyper} focus ${editor}
+bind l:${hyper} focus 'Mail'
+bind i:${hyper} focus 'iTerm'

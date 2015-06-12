@@ -102,14 +102,15 @@ default 1monitor resolutions:${mon-laptop}
 #bind pad* layout 2monitors
 #bind pad/ layout 1monitor
  
-bind e:cmd ${showNormalHint}
  
 # ======================================
 # The HYPER key
 # ======================================
  
-alias hyper cmd
+alias hyper ctrl;shift;alt;cmd
  
+bind e:${hyper} ${showNormalHint}
+
 # Location bindings
 #gc
 bind g:${hyper} ${lefttopq}

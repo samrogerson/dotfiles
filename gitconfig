@@ -19,6 +19,7 @@
     st = status --short
     co = checkout
     ci = commit
+	create-pull-request = !sh -c 'stash pull-request $0'
 [credential]
 	helper = cache
 [push]

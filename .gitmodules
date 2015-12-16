@@ -55,3 +55,12 @@
 [submodule "prezto"]
 	path = prezto
 	url = https://github.com/sorin-ionescu/prezto.git
+[submodule "vim/bundle/tomorrow-theme"]
+	path = vim/bundle/tomorrow-theme
+	url = https://github.com/chriskempson/tomorrow-theme
+[submodule "vim/bundle/lizard"]
+	path = vim/bundle/lizard
+	url = https://github.com/gilsondev/lizard.git
+[submodule "vim/bundle/vim-hybrid"]
+	path = vim/bundle/vim-hybrid
+	url = https://github.com/w0ng/vim-hybrid.git

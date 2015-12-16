@@ -103,7 +103,9 @@ if has('unix')
     let s:uname = system("echo -n \"$(uname)\"")
     if s:uname == "Darwin"
         colorscheme solarized
-        source /usr/local/lib/python2.7/site-packages/powerline/bindings/vim/plugin/powerline.vim
+        python from powerline.vim import setup as powerline_setup
+        python powerline_setup()
+        python del powerline_setup
     endif
 endif
 set background=dark
@@ -119,7 +121,7 @@ set ffs=unix,mac,dos
 set guioptions-=T
 set guioptions-=m
 set guioptions-=r
-"set guifont=Termsyn\ 16
+set guifont="DejaVu Sans Mono for Powerline"
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Files, backups and undo
@@ -128,6 +130,8 @@ set guioptions-=r
 set nobackup
 set nowb
 set noswapfile
+set undofile
+set undodir=~/.vim/undo
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Text, tab and indent related
@@ -147,7 +151,7 @@ set si "Smart indent
 set wrap "Wrap lines
 "Colourcolumn
 if exists('+cc')
-    set cc=100
+    set cc=80
 endif
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

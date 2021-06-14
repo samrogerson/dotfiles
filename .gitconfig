@@ -1,0 +1,9 @@
+[init]
+	defaultBranch = main
+[user]
+	email = sam@rgrsn.me
+	name = Sam Rogerson
+[hub]
+	host = github.palantir.build
+[url "git@github.palantir.build:"]
+	insteadOf = https://github.palantir.build

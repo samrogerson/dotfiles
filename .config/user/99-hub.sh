@@ -1,2 +1,1 @@
-export GITHUB_HOST=github.palantir.build
-eval "$(hub alias -s)"
+# eval "$(hub alias -s)"

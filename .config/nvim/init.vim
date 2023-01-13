@@ -11,3 +11,7 @@ set cursorcolumn
 set nu
 set laststatus=2
 set t_Co=256
+
+packadd! dracula_pro
+let g:dracula_colorterm = 0
+colorscheme dracula_pro

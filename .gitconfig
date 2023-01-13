@@ -1,9 +1,20 @@
 [init]
 	defaultBranch = main
 [user]
-	email = sam@rgrsn.me
+	email = sam.rogerson@helsing.ai
 	name = Sam Rogerson
-[hub]
-	host = github.palantir.build
-[url "git@github.palantir.build:"]
-	insteadOf = https://github.palantir.build
+[alias]
+	co = checkout
+	ci = commit
+	st = status
+	sts = status --short
+    bump = commit --allow-empty -m "bump"
+[pull]
+	ff = only
+[filter "lfs"]
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+[core]
+	editor = nvim

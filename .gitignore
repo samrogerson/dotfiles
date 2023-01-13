@@ -1,0 +1,9 @@
+.config/jgit
+.config/nvim/pack
+.config/tmux/plugins
+.config/zsh/.zsh_history
+.config/zsh/.zcompdump
+.config/configstore
+.config/iterm2/AppSupport
+
+.ssh/config.d

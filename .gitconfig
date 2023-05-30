@@ -18,3 +18,7 @@
 	smudge = git-lfs smudge -- %f
 [core]
 	editor = nvim
+	excludesfile = /Users/samrogerson/.gitignore
+
+[credential]
+    helper = store

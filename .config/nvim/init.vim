@@ -8,6 +8,8 @@ set noswapfile
 set cursorline
 set cursorcolumn
 
+set colorcolumn=120
+
 set nu
 set laststatus=2
 set t_Co=256

@@ -3,6 +3,7 @@
 .config/tmux/plugins
 .config/zsh/.zsh_history
 .config/zsh/.zcompdump
+.config/zsh/.zsh_sessions
 .config/configstore
 .config/iterm2/AppSupport
 

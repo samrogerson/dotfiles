@@ -1,0 +1,5 @@
+[auth."helsing.jfrog.io"]
+username = "sam.rogerson@helsing.ai"
+
+[auth."gitlab.helsing-dev.ai"]
+username = "sam.rogerson@helsing.ai"

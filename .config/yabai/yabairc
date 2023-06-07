@@ -1,0 +1,29 @@
+# global settings
+yabai -m config mouse_follows_focus off
+yabai -m config focus_follows_mouse off
+yabai -m config window_border on
+yabai -m config window_border_width 2
+yabai -m config active_window_border_color 0xff83a598 # blue
+yabai -m config normal_window_border_color 0xff665c54
+yabai -m config split_ratio 0.50
+yabai -m config auto_balance off
+yabai -m config mouse_modifier ctrl
+yabai -m config mouse_action1 move
+yabai -m config mouse_action2 resize
+yabai -m config window_topmost off
+
+# general space settings
+yabai -m config layout bsp
+yabai -m config window_placement second_child
+
+# Float Windows
+yabai -m rule --add app=Finder manage=off
+yabai -m rule --add app="^System Settings$" manage=off
+yabai -m rule --add app="^1Password$" manage=off
+yabai -m rule --add app="^Font Book$" manage=off
+yabai -m rule --add app="^Digital Colour Meter$" manage=off
+yabai -m rule --add app="^Raycast$" manage=off
+yabai -m rule --add app="^Microsoft Teams$" manage=off
+yabai -m rule --add app="^Zscaler" manage=off
+
+echo "yabai configuration loaded.."

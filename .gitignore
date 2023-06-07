@@ -6,5 +6,8 @@
 .config/zsh/.zsh_sessions
 .config/configstore
 .config/iterm2/AppSupport
+.config/priv
 
 .ssh/config.d
+.ssh/id_*
+.ssh/known_hosts
